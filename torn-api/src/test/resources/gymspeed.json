@@ -1,0 +1,1378 @@
+{
+  "contributors": {
+    "gymspeed": {
+      "1413127": {
+        "contributed": 438195,
+        "in_faction": 1
+      },
+      "225011": {
+        "contributed": 436515,
+        "in_faction": 1
+      },
+      "1286893": {
+        "contributed": 434390,
+        "in_faction": 1
+      },
+      "372369": {
+        "contributed": 394640,
+        "in_faction": 1
+      },
+      "2092393": {
+        "contributed": 371460,
+        "in_faction": 1
+      },
+      "79148": {
+        "contributed": 316565,
+        "in_faction": 1
+      },
+      "248367": {
+        "contributed": 313955,
+        "in_faction": 1
+      },
+      "1923955": {
+        "contributed": 265170,
+        "in_faction": 0
+      },
+      "2222285": {
+        "contributed": 238655,
+        "in_faction": 1
+      },
+      "887003": {
+        "contributed": 237850,
+        "in_faction": 1
+      },
+      "1944535": {
+        "contributed": 231050,
+        "in_faction": 1
+      },
+      "353853": {
+        "contributed": 230615,
+        "in_faction": 0
+      },
+      "2058787": {
+        "contributed": 230225,
+        "in_faction": 1
+      },
+      "1832621": {
+        "contributed": 230065,
+        "in_faction": 1
+      },
+      "1801731": {
+        "contributed": 224835,
+        "in_faction": 0
+      },
+      "2112841": {
+        "contributed": 216435,
+        "in_faction": 1
+      },
+      "2172225": {
+        "contributed": 212235,
+        "in_faction": 1
+      },
+      "893861": {
+        "contributed": 207085,
+        "in_faction": 0
+      },
+      "1903715": {
+        "contributed": 203775,
+        "in_faction": 1
+      },
+      "1746371": {
+        "contributed": 198840,
+        "in_faction": 1
+      },
+      "80036": {
+        "contributed": 192745,
+        "in_faction": 1
+      },
+      "2093367": {
+        "contributed": 185895,
+        "in_faction": 0
+      },
+      "1280063": {
+        "contributed": 184820,
+        "in_faction": 1
+      },
+      "182623": {
+        "contributed": 179730,
+        "in_faction": 0
+      },
+      "574315": {
+        "contributed": 173190,
+        "in_faction": 1
+      },
+      "2015200": {
+        "contributed": 170660,
+        "in_faction": 1
+      },
+      "2104114": {
+        "contributed": 161235,
+        "in_faction": 1
+      },
+      "384108": {
+        "contributed": 158720,
+        "in_faction": 1
+      },
+      "2113660": {
+        "contributed": 154440,
+        "in_faction": 0
+      },
+      "1994452": {
+        "contributed": 154320,
+        "in_faction": 1
+      },
+      "465182": {
+        "contributed": 152005,
+        "in_faction": 1
+      },
+      "1162052": {
+        "contributed": 146905,
+        "in_faction": 0
+      },
+      "2163841": {
+        "contributed": 143525,
+        "in_faction": 1
+      },
+      "1563257": {
+        "contributed": 143010,
+        "in_faction": 1
+      },
+      "1519188": {
+        "contributed": 129330,
+        "in_faction": 1
+      },
+      "717290": {
+        "contributed": 129280,
+        "in_faction": 1
+      },
+      "1647577": {
+        "contributed": 127340,
+        "in_faction": 0
+      },
+      "1801352": {
+        "contributed": 126845,
+        "in_faction": 1
+      },
+      "544391": {
+        "contributed": 124825,
+        "in_faction": 1
+      },
+      "2003679": {
+        "contributed": 123750,
+        "in_faction": 1
+      },
+      "919608": {
+        "contributed": 123550,
+        "in_faction": 0
+      },
+      "2299907": {
+        "contributed": 122815,
+        "in_faction": 1
+      },
+      "255426": {
+        "contributed": 118935,
+        "in_faction": 0
+      },
+      "2038706": {
+        "contributed": 118250,
+        "in_faction": 1
+      },
+      "2102262": {
+        "contributed": 115610,
+        "in_faction": 0
+      },
+      "2058049": {
+        "contributed": 114610,
+        "in_faction": 1
+      },
+      "528024": {
+        "contributed": 114155,
+        "in_faction": 1
+      },
+      "33954": {
+        "contributed": 113420,
+        "in_faction": 0
+      },
+      "1419046": {
+        "contributed": 112345,
+        "in_faction": 1
+      },
+      "2098045": {
+        "contributed": 112115,
+        "in_faction": 1
+      },
+      "867156": {
+        "contributed": 108780,
+        "in_faction": 1
+      },
+      "2160167": {
+        "contributed": 103685,
+        "in_faction": 1
+      },
+      "527397": {
+        "contributed": 103240,
+        "in_faction": 1
+      },
+      "2162919": {
+        "contributed": 101615,
+        "in_faction": 1
+      },
+      "2093361": {
+        "contributed": 101475,
+        "in_faction": 0
+      },
+      "536670": {
+        "contributed": 99745,
+        "in_faction": 0
+      },
+      "1697040": {
+        "contributed": 95280,
+        "in_faction": 0
+      },
+      "2173489": {
+        "contributed": 94600,
+        "in_faction": 0
+      },
+      "2433583": {
+        "contributed": 93955,
+        "in_faction": 0
+      },
+      "34298": {
+        "contributed": 93330,
+        "in_faction": 0
+      },
+      "2098746": {
+        "contributed": 88805,
+        "in_faction": 0
+      },
+      "675507": {
+        "contributed": 86600,
+        "in_faction": 0
+      },
+      "307626": {
+        "contributed": 86070,
+        "in_faction": 1
+      },
+      "295233": {
+        "contributed": 84745,
+        "in_faction": 1
+      },
+      "2093418": {
+        "contributed": 82615,
+        "in_faction": 0
+      },
+      "2048176": {
+        "contributed": 79470,
+        "in_faction": 0
+      },
+      "2098043": {
+        "contributed": 77010,
+        "in_faction": 0
+      },
+      "2117604": {
+        "contributed": 76100,
+        "in_faction": 0
+      },
+      "62963": {
+        "contributed": 76050,
+        "in_faction": 0
+      },
+      "1558890": {
+        "contributed": 73425,
+        "in_faction": 0
+      },
+      "2115964": {
+        "contributed": 72990,
+        "in_faction": 0
+      },
+      "2354229": {
+        "contributed": 71950,
+        "in_faction": 1
+      },
+      "2100385": {
+        "contributed": 71265,
+        "in_faction": 0
+      },
+      "1964050": {
+        "contributed": 69670,
+        "in_faction": 0
+      },
+      "2262304": {
+        "contributed": 68850,
+        "in_faction": 0
+      },
+      "22115": {
+        "contributed": 68505,
+        "in_faction": 0
+      },
+      "1183116": {
+        "contributed": 67980,
+        "in_faction": 1
+      },
+      "512875": {
+        "contributed": 65330,
+        "in_faction": 1
+      },
+      "1818631": {
+        "contributed": 62860,
+        "in_faction": 1
+      },
+      "1700315": {
+        "contributed": 62555,
+        "in_faction": 1
+      },
+      "2112062": {
+        "contributed": 62270,
+        "in_faction": 0
+      },
+      "2340663": {
+        "contributed": 60150,
+        "in_faction": 1
+      },
+      "2245140": {
+        "contributed": 59490,
+        "in_faction": 0
+      },
+      "2042310": {
+        "contributed": 59260,
+        "in_faction": 0
+      },
+      "1467320": {
+        "contributed": 59060,
+        "in_faction": 1
+      },
+      "1404326": {
+        "contributed": 58535,
+        "in_faction": 0
+      },
+      "2211394": {
+        "contributed": 58055,
+        "in_faction": 1
+      },
+      "2103701": {
+        "contributed": 56120,
+        "in_faction": 0
+      },
+      "202437": {
+        "contributed": 55210,
+        "in_faction": 1
+      },
+      "1961768": {
+        "contributed": 54710,
+        "in_faction": 1
+      },
+      "2337402": {
+        "contributed": 54440,
+        "in_faction": 0
+      },
+      "1675490": {
+        "contributed": 53380,
+        "in_faction": 0
+      },
+      "1913341": {
+        "contributed": 52840,
+        "in_faction": 1
+      },
+      "2093366": {
+        "contributed": 52335,
+        "in_faction": 0
+      },
+      "2130567": {
+        "contributed": 52260,
+        "in_faction": 1
+      },
+      "235072": {
+        "contributed": 51765,
+        "in_faction": 1
+      },
+      "2346077": {
+        "contributed": 50905,
+        "in_faction": 1
+      },
+      "4595": {
+        "contributed": 49690,
+        "in_faction": 0
+      },
+      "1613474": {
+        "contributed": 47165,
+        "in_faction": 0
+      },
+      "1446944": {
+        "contributed": 46000,
+        "in_faction": 1
+      },
+      "2389866": {
+        "contributed": 45630,
+        "in_faction": 0
+      },
+      "424099": {
+        "contributed": 45220,
+        "in_faction": 0
+      },
+      "2005443": {
+        "contributed": 44150,
+        "in_faction": 0
+      },
+      "2005264": {
+        "contributed": 42880,
+        "in_faction": 1
+      },
+      "2525435": {
+        "contributed": 42415,
+        "in_faction": 1
+      },
+      "2094474": {
+        "contributed": 42180,
+        "in_faction": 0
+      },
+      "1937319": {
+        "contributed": 42125,
+        "in_faction": 0
+      },
+      "522196": {
+        "contributed": 41980,
+        "in_faction": 0
+      },
+      "931420": {
+        "contributed": 39830,
+        "in_faction": 1
+      },
+      "2093051": {
+        "contributed": 39610,
+        "in_faction": 0
+      },
+      "606826": {
+        "contributed": 39000,
+        "in_faction": 1
+      },
+      "952751": {
+        "contributed": 38840,
+        "in_faction": 0
+      },
+      "532344": {
+        "contributed": 38700,
+        "in_faction": 0
+      },
+      "1850596": {
+        "contributed": 38380,
+        "in_faction": 0
+      },
+      "1130241": {
+        "contributed": 38330,
+        "in_faction": 0
+      },
+      "1426779": {
+        "contributed": 37900,
+        "in_faction": 0
+      },
+      "2413496": {
+        "contributed": 36820,
+        "in_faction": 0
+      },
+      "519291": {
+        "contributed": 35500,
+        "in_faction": 1
+      },
+      "2091699": {
+        "contributed": 35410,
+        "in_faction": 0
+      },
+      "1959482": {
+        "contributed": 35230,
+        "in_faction": 1
+      },
+      "160743": {
+        "contributed": 33760,
+        "in_faction": 0
+      },
+      "2513229": {
+        "contributed": 32340,
+        "in_faction": 1
+      },
+      "551132": {
+        "contributed": 31840,
+        "in_faction": 0
+      },
+      "2093416": {
+        "contributed": 31245,
+        "in_faction": 0
+      },
+      "1571189": {
+        "contributed": 31090,
+        "in_faction": 0
+      },
+      "90282": {
+        "contributed": 30650,
+        "in_faction": 0
+      },
+      "2383115": {
+        "contributed": 30205,
+        "in_faction": 0
+      },
+      "2095316": {
+        "contributed": 29115,
+        "in_faction": 0
+      },
+      "2518230": {
+        "contributed": 28950,
+        "in_faction": 1
+      },
+      "1464484": {
+        "contributed": 27630,
+        "in_faction": 0
+      },
+      "2274512": {
+        "contributed": 26480,
+        "in_faction": 1
+      },
+      "2080116": {
+        "contributed": 25550,
+        "in_faction": 0
+      },
+      "2287457": {
+        "contributed": 25520,
+        "in_faction": 0
+      },
+      "1632567": {
+        "contributed": 25500,
+        "in_faction": 0
+      },
+      "1043922": {
+        "contributed": 25360,
+        "in_faction": 0
+      },
+      "2116184": {
+        "contributed": 25000,
+        "in_faction": 0
+      },
+      "1290526": {
+        "contributed": 24975,
+        "in_faction": 0
+      },
+      "578767": {
+        "contributed": 23585,
+        "in_faction": 0
+      },
+      "2315063": {
+        "contributed": 22900,
+        "in_faction": 0
+      },
+      "1279274": {
+        "contributed": 22860,
+        "in_faction": 0
+      },
+      "221006": {
+        "contributed": 22420,
+        "in_faction": 0
+      },
+      "1991347": {
+        "contributed": 22400,
+        "in_faction": 0
+      },
+      "894553": {
+        "contributed": 22360,
+        "in_faction": 0
+      },
+      "527242": {
+        "contributed": 21905,
+        "in_faction": 0
+      },
+      "2016267": {
+        "contributed": 21750,
+        "in_faction": 0
+      },
+      "2346087": {
+        "contributed": 21425,
+        "in_faction": 1
+      },
+      "2071334": {
+        "contributed": 20870,
+        "in_faction": 0
+      },
+      "2093030": {
+        "contributed": 20635,
+        "in_faction": 0
+      },
+      "2077697": {
+        "contributed": 20540,
+        "in_faction": 0
+      },
+      "57158": {
+        "contributed": 20330,
+        "in_faction": 0
+      },
+      "2092929": {
+        "contributed": 19835,
+        "in_faction": 0
+      },
+      "2090157": {
+        "contributed": 19600,
+        "in_faction": 0
+      },
+      "1039230": {
+        "contributed": 19480,
+        "in_faction": 0
+      },
+      "2338543": {
+        "contributed": 18920,
+        "in_faction": 1
+      },
+      "588981": {
+        "contributed": 18830,
+        "in_faction": 0
+      },
+      "2563801": {
+        "contributed": 18610,
+        "in_faction": 0
+      },
+      "1202829": {
+        "contributed": 18320,
+        "in_faction": 0
+      },
+      "2076725": {
+        "contributed": 17535,
+        "in_faction": 0
+      },
+      "352299": {
+        "contributed": 16950,
+        "in_faction": 0
+      },
+      "2108738": {
+        "contributed": 16950,
+        "in_faction": 0
+      },
+      "1195126": {
+        "contributed": 16575,
+        "in_faction": 0
+      },
+      "2479027": {
+        "contributed": 16380,
+        "in_faction": 0
+      },
+      "2175882": {
+        "contributed": 16265,
+        "in_faction": 0
+      },
+      "2098125": {
+        "contributed": 16205,
+        "in_faction": 0
+      },
+      "2438428": {
+        "contributed": 16200,
+        "in_faction": 1
+      },
+      "2385186": {
+        "contributed": 15720,
+        "in_faction": 1
+      },
+      "2112351": {
+        "contributed": 15370,
+        "in_faction": 0
+      },
+      "525352": {
+        "contributed": 15050,
+        "in_faction": 0
+      },
+      "2363342": {
+        "contributed": 15050,
+        "in_faction": 1
+      },
+      "2282199": {
+        "contributed": 14920,
+        "in_faction": 0
+      },
+      "1025410": {
+        "contributed": 13740,
+        "in_faction": 0
+      },
+      "946343": {
+        "contributed": 13470,
+        "in_faction": 0
+      },
+      "2083233": {
+        "contributed": 13190,
+        "in_faction": 0
+      },
+      "1850748": {
+        "contributed": 12990,
+        "in_faction": 0
+      },
+      "2052857": {
+        "contributed": 12990,
+        "in_faction": 0
+      },
+      "524028": {
+        "contributed": 12810,
+        "in_faction": 1
+      },
+      "2433736": {
+        "contributed": 12610,
+        "in_faction": 0
+      },
+      "1315155": {
+        "contributed": 11880,
+        "in_faction": 0
+      },
+      "2393555": {
+        "contributed": 11570,
+        "in_faction": 0
+      },
+      "2569763": {
+        "contributed": 11500,
+        "in_faction": 1
+      },
+      "1955477": {
+        "contributed": 11360,
+        "in_faction": 0
+      },
+      "1614089": {
+        "contributed": 11110,
+        "in_faction": 0
+      },
+      "2097732": {
+        "contributed": 11050,
+        "in_faction": 0
+      },
+      "529166": {
+        "contributed": 10810,
+        "in_faction": 0
+      },
+      "2594452": {
+        "contributed": 10485,
+        "in_faction": 1
+      },
+      "2078188": {
+        "contributed": 10250,
+        "in_faction": 0
+      },
+      "2573890": {
+        "contributed": 10150,
+        "in_faction": 1
+      },
+      "2057339": {
+        "contributed": 9990,
+        "in_faction": 0
+      },
+      "1902179": {
+        "contributed": 9750,
+        "in_faction": 0
+      },
+      "1885009": {
+        "contributed": 9630,
+        "in_faction": 0
+      },
+      "859510": {
+        "contributed": 9455,
+        "in_faction": 0
+      },
+      "2460056": {
+        "contributed": 9110,
+        "in_faction": 1
+      },
+      "2233606": {
+        "contributed": 9030,
+        "in_faction": 1
+      },
+      "2106608": {
+        "contributed": 8920,
+        "in_faction": 0
+      },
+      "2112959": {
+        "contributed": 8625,
+        "in_faction": 0
+      },
+      "2005391": {
+        "contributed": 8480,
+        "in_faction": 0
+      },
+      "2128154": {
+        "contributed": 8270,
+        "in_faction": 0
+      },
+      "2128736": {
+        "contributed": 7920,
+        "in_faction": 0
+      },
+      "1181829": {
+        "contributed": 7900,
+        "in_faction": 0
+      },
+      "2102595": {
+        "contributed": 7750,
+        "in_faction": 1
+      },
+      "1536735": {
+        "contributed": 7710,
+        "in_faction": 0
+      },
+      "1870531": {
+        "contributed": 7470,
+        "in_faction": 1
+      },
+      "679816": {
+        "contributed": 7425,
+        "in_faction": 0
+      },
+      "2261603": {
+        "contributed": 7390,
+        "in_faction": 0
+      },
+      "2047558": {
+        "contributed": 7335,
+        "in_faction": 0
+      },
+      "436325": {
+        "contributed": 7170,
+        "in_faction": 0
+      },
+      "538653": {
+        "contributed": 7150,
+        "in_faction": 0
+      },
+      "1963196": {
+        "contributed": 7070,
+        "in_faction": 0
+      },
+      "2098634": {
+        "contributed": 7050,
+        "in_faction": 0
+      },
+      "1074079": {
+        "contributed": 6840,
+        "in_faction": 0
+      },
+      "2621571": {
+        "contributed": 6840,
+        "in_faction": 0
+      },
+      "2367854": {
+        "contributed": 6810,
+        "in_faction": 0
+      },
+      "680661": {
+        "contributed": 6750,
+        "in_faction": 0
+      },
+      "1461163": {
+        "contributed": 6690,
+        "in_faction": 0
+      },
+      "2204872": {
+        "contributed": 6560,
+        "in_faction": 0
+      },
+      "2167321": {
+        "contributed": 6530,
+        "in_faction": 0
+      },
+      "631964": {
+        "contributed": 6480,
+        "in_faction": 0
+      },
+      "1691090": {
+        "contributed": 6440,
+        "in_faction": 0
+      },
+      "1001196": {
+        "contributed": 6100,
+        "in_faction": 0
+      },
+      "2558180": {
+        "contributed": 6020,
+        "in_faction": 0
+      },
+      "2290511": {
+        "contributed": 5900,
+        "in_faction": 0
+      },
+      "2349315": {
+        "contributed": 5860,
+        "in_faction": 0
+      },
+      "2089934": {
+        "contributed": 5345,
+        "in_faction": 0
+      },
+      "1985070": {
+        "contributed": 4890,
+        "in_faction": 0
+      },
+      "2273441": {
+        "contributed": 4870,
+        "in_faction": 0
+      },
+      "1993977": {
+        "contributed": 4610,
+        "in_faction": 0
+      },
+      "2098020": {
+        "contributed": 4580,
+        "in_faction": 0
+      },
+      "2202095": {
+        "contributed": 4280,
+        "in_faction": 0
+      },
+      "2254125": {
+        "contributed": 4180,
+        "in_faction": 0
+      },
+      "2265374": {
+        "contributed": 4170,
+        "in_faction": 0
+      },
+      "2109065": {
+        "contributed": 4035,
+        "in_faction": 0
+      },
+      "2252531": {
+        "contributed": 3750,
+        "in_faction": 0
+      },
+      "2148971": {
+        "contributed": 3680,
+        "in_faction": 1
+      },
+      "1977719": {
+        "contributed": 3650,
+        "in_faction": 0
+      },
+      "2450249": {
+        "contributed": 3650,
+        "in_faction": 0
+      },
+      "904255": {
+        "contributed": 3550,
+        "in_faction": 0
+      },
+      "2093472": {
+        "contributed": 3550,
+        "in_faction": 0
+      },
+      "1646264": {
+        "contributed": 3510,
+        "in_faction": 0
+      },
+      "2601735": {
+        "contributed": 3420,
+        "in_faction": 1
+      },
+      "2100961": {
+        "contributed": 3325,
+        "in_faction": 0
+      },
+      "2226835": {
+        "contributed": 3285,
+        "in_faction": 0
+      },
+      "1988413": {
+        "contributed": 3250,
+        "in_faction": 0
+      },
+      "2466295": {
+        "contributed": 3240,
+        "in_faction": 0
+      },
+      "1957207": {
+        "contributed": 3230,
+        "in_faction": 0
+      },
+      "2091498": {
+        "contributed": 3120,
+        "in_faction": 0
+      },
+      "2425714": {
+        "contributed": 2950,
+        "in_faction": 0
+      },
+      "2484879": {
+        "contributed": 2750,
+        "in_faction": 0
+      },
+      "2224030": {
+        "contributed": 2700,
+        "in_faction": 0
+      },
+      "2322873": {
+        "contributed": 2700,
+        "in_faction": 1
+      },
+      "2488850": {
+        "contributed": 2590,
+        "in_faction": 1
+      },
+      "905255": {
+        "contributed": 2445,
+        "in_faction": 0
+      },
+      "2065055": {
+        "contributed": 2310,
+        "in_faction": 0
+      },
+      "1851357": {
+        "contributed": 2100,
+        "in_faction": 0
+      },
+      "2337605": {
+        "contributed": 2100,
+        "in_faction": 0
+      },
+      "2600123": {
+        "contributed": 2100,
+        "in_faction": 1
+      },
+      "2099313": {
+        "contributed": 2070,
+        "in_faction": 0
+      },
+      "2175576": {
+        "contributed": 1980,
+        "in_faction": 1
+      },
+      "2094059": {
+        "contributed": 1975,
+        "in_faction": 0
+      },
+      "506464": {
+        "contributed": 1950,
+        "in_faction": 0
+      },
+      "2306065": {
+        "contributed": 1865,
+        "in_faction": 0
+      },
+      "1637165": {
+        "contributed": 1860,
+        "in_faction": 0
+      },
+      "2540286": {
+        "contributed": 1840,
+        "in_faction": 0
+      },
+      "194889": {
+        "contributed": 1830,
+        "in_faction": 0
+      },
+      "2361877": {
+        "contributed": 1790,
+        "in_faction": 0
+      },
+      "1763579": {
+        "contributed": 1780,
+        "in_faction": 0
+      },
+      "2103208": {
+        "contributed": 1615,
+        "in_faction": 0
+      },
+      "1419093": {
+        "contributed": 1570,
+        "in_faction": 0
+      },
+      "2601839": {
+        "contributed": 1500,
+        "in_faction": 0
+      },
+      "928612": {
+        "contributed": 1450,
+        "in_faction": 0
+      },
+      "2136611": {
+        "contributed": 1300,
+        "in_faction": 0
+      },
+      "2189660": {
+        "contributed": 1235,
+        "in_faction": 0
+      },
+      "2162977": {
+        "contributed": 1215,
+        "in_faction": 0
+      },
+      "2570992": {
+        "contributed": 1210,
+        "in_faction": 0
+      },
+      "2327674": {
+        "contributed": 1150,
+        "in_faction": 0
+      },
+      "2181436": {
+        "contributed": 1105,
+        "in_faction": 0
+      },
+      "2102291": {
+        "contributed": 1100,
+        "in_faction": 0
+      },
+      "50371": {
+        "contributed": 1060,
+        "in_faction": 0
+      },
+      "2120047": {
+        "contributed": 1010,
+        "in_faction": 0
+      },
+      "2089231": {
+        "contributed": 905,
+        "in_faction": 0
+      },
+      "1158598": {
+        "contributed": 900,
+        "in_faction": 0
+      },
+      "2571130": {
+        "contributed": 885,
+        "in_faction": 0
+      },
+      "2518745": {
+        "contributed": 805,
+        "in_faction": 0
+      },
+      "2107356": {
+        "contributed": 760,
+        "in_faction": 0
+      },
+      "224402": {
+        "contributed": 720,
+        "in_faction": 0
+      },
+      "2238335": {
+        "contributed": 700,
+        "in_faction": 0
+      },
+      "2391705": {
+        "contributed": 655,
+        "in_faction": 0
+      },
+      "2520796": {
+        "contributed": 640,
+        "in_faction": 0
+      },
+      "2333656": {
+        "contributed": 635,
+        "in_faction": 0
+      },
+      "2040506": {
+        "contributed": 550,
+        "in_faction": 0
+      },
+      "2089408": {
+        "contributed": 550,
+        "in_faction": 0
+      },
+      "1302879": {
+        "contributed": 540,
+        "in_faction": 0
+      },
+      "1592260": {
+        "contributed": 530,
+        "in_faction": 0
+      },
+      "1310774": {
+        "contributed": 505,
+        "in_faction": 0
+      },
+      "2100204": {
+        "contributed": 480,
+        "in_faction": 0
+      },
+      "543837": {
+        "contributed": 475,
+        "in_faction": 0
+      },
+      "1065848": {
+        "contributed": 460,
+        "in_faction": 0
+      },
+      "1714487": {
+        "contributed": 420,
+        "in_faction": 0
+      },
+      "1824541": {
+        "contributed": 405,
+        "in_faction": 0
+      },
+      "2265920": {
+        "contributed": 400,
+        "in_faction": 0
+      },
+      "2184889": {
+        "contributed": 380,
+        "in_faction": 0
+      },
+      "467164": {
+        "contributed": 350,
+        "in_faction": 0
+      },
+      "2538003": {
+        "contributed": 350,
+        "in_faction": 0
+      },
+      "828048": {
+        "contributed": 320,
+        "in_faction": 0
+      },
+      "1584907": {
+        "contributed": 300,
+        "in_faction": 0
+      },
+      "2513805": {
+        "contributed": 300,
+        "in_faction": 0
+      },
+      "2254421": {
+        "contributed": 280,
+        "in_faction": 0
+      },
+      "2335453": {
+        "contributed": 250,
+        "in_faction": 0
+      },
+      "2094597": {
+        "contributed": 225,
+        "in_faction": 0
+      },
+      "1649779": {
+        "contributed": 210,
+        "in_faction": 0
+      },
+      "2190882": {
+        "contributed": 180,
+        "in_faction": 0
+      },
+      "2142313": {
+        "contributed": 175,
+        "in_faction": 0
+      },
+      "2189647": {
+        "contributed": 170,
+        "in_faction": 0
+      },
+      "2056079": {
+        "contributed": 165,
+        "in_faction": 0
+      },
+      "1373916": {
+        "contributed": 160,
+        "in_faction": 0
+      },
+      "2144773": {
+        "contributed": 160,
+        "in_faction": 0
+      },
+      "969452": {
+        "contributed": 150,
+        "in_faction": 0
+      },
+      "1033180": {
+        "contributed": 150,
+        "in_faction": 0
+      },
+      "2337867": {
+        "contributed": 140,
+        "in_faction": 0
+      },
+      "2346710": {
+        "contributed": 135,
+        "in_faction": 0
+      },
+      "1844717": {
+        "contributed": 130,
+        "in_faction": 0
+      },
+      "2234872": {
+        "contributed": 120,
+        "in_faction": 0
+      },
+      "1616803": {
+        "contributed": 110,
+        "in_faction": 0
+      },
+      "2099318": {
+        "contributed": 105,
+        "in_faction": 0
+      },
+      "969242": {
+        "contributed": 100,
+        "in_faction": 0
+      },
+      "1955414": {
+        "contributed": 100,
+        "in_faction": 0
+      },
+      "2092488": {
+        "contributed": 100,
+        "in_faction": 0
+      },
+      "2565477": {
+        "contributed": 100,
+        "in_faction": 0
+      },
+      "2571727": {
+        "contributed": 100,
+        "in_faction": 0
+      },
+      "352097": {
+        "contributed": 75,
+        "in_faction": 1
+      },
+      "2179248": {
+        "contributed": 75,
+        "in_faction": 0
+      },
+      "2099351": {
+        "contributed": 65,
+        "in_faction": 0
+      },
+      "198056": {
+        "contributed": 50,
+        "in_faction": 0
+      },
+      "2103545": {
+        "contributed": 50,
+        "in_faction": 0
+      },
+      "2090782": {
+        "contributed": 45,
+        "in_faction": 0
+      },
+      "2181555": {
+        "contributed": 45,
+        "in_faction": 0
+      },
+      "1687344": {
+        "contributed": 30,
+        "in_faction": 0
+      },
+      "2047010": {
+        "contributed": 25,
+        "in_faction": 0
+      },
+      "1641178": {
+        "contributed": 20,
+        "in_faction": 0
+      },
+      "897623": {
+        "contributed": 15,
+        "in_faction": 0
+      },
+      "656797": {
+        "contributed": 10,
+        "in_faction": 0
+      },
+      "869170": {
+        "contributed": 10,
+        "in_faction": 0
+      },
+      "1356388": {
+        "contributed": 10,
+        "in_faction": 0
+      },
+      "1850906": {
+        "contributed": 5,
+        "in_faction": 0
+      }
+    }
+  }
+}
