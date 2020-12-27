@@ -7,8 +7,10 @@ import com.torn.api.model.faction.Contributor;
 import com.torn.api.model.faction.Member;
 import com.torn.api.model.faction.Stat;
 import com.torn.assistant.model.dto.ContributionHistoryDTO;
+import com.torn.assistant.model.dto.DataPointDTO;
 import com.torn.assistant.model.dto.StatDTO;
 import com.torn.assistant.model.dto.UserContributionDTO;
+import com.torn.assistant.model.dto.UserContributionDetailedDTO;
 import com.torn.assistant.model.dto.UserContributionSummaryDTO;
 import com.torn.assistant.persistence.dao.ContributionHistoryDao;
 import com.torn.assistant.persistence.dao.UserDao;
@@ -21,6 +23,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
+import javax.swing.text.html.Option;
 import javax.transaction.Transactional;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
@@ -29,9 +32,11 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 import static com.torn.api.client.FactionApiClient.getMembers;
+import static com.torn.assistant.utils.DateUtils.toDate;
 
 @Service
 public class FactionStatsService {
@@ -51,6 +56,55 @@ public class FactionStatsService {
                 .stream()
                 .map(contributionHistory -> Date.from(contributionHistory.getFetchedAt().atZone(ZoneId.systemDefault()).toInstant()))
                 .collect(Collectors.toList());
+    }
+
+    public UserContributionDetailedDTO getUserContributionDetailedForUser(Long userId, Date start, Date end) {
+        List<ContributionHistory> fetchedContributions = contributionHistoryDao.findByFetchedAtBetweenOrderByFetchedAtAsc(LocalDateTime.ofInstant(start.toInstant(), ZoneId.systemDefault()),
+                LocalDateTime.ofInstant(end.toInstant(), ZoneId.systemDefault()));
+
+        UserContributionDetailedDTO contributionDetailedDTO = new UserContributionDetailedDTO();
+        if(!fetchedContributions.isEmpty()) {
+            Optional<UserContribution> first = getContributionForUser(fetchedContributions.get(0).getUserActivities(), userId);
+            if(!first.isPresent()) {
+                return contributionDetailedDTO;
+            }
+            contributionDetailedDTO.setUserId(first.get().getUser().getUserId());
+            contributionDetailedDTO.setName(first.get().getUser().getName());
+            Long startStrength = first.get().getGymStrength();
+            Long startGymDefence = first.get().getGymDefence();
+            Long startDexterity = first.get().getGymDexterity();
+            Long startGymSpeed = first.get().getGymSpeed();
+            Long startGymTotal = sum(startDexterity, startGymDefence, startGymSpeed, startStrength);
+
+            for(ContributionHistory history : fetchedContributions) {
+                if(!history.getUserActivities().isEmpty()) {
+                    Optional<UserContribution> optionalUserContribution = getContributionForUser(history.getUserActivities(), userId);
+                    if(!optionalUserContribution.isPresent()) {
+                        continue;
+                    }
+                    UserContribution userContribution = optionalUserContribution.get();
+                    Long currentGymTotal = sum(userContribution.getGymDefence(), userContribution.getGymDexterity(), userContribution.getGymSpeed(), userContribution.getGymStrength());
+                    DataPointDTO strength = new DataPointDTO(toDate(history.getFetchedAt()), calculateDifference(userContribution.getGymStrength(), startStrength));
+                    DataPointDTO speed = new DataPointDTO(toDate(history.getFetchedAt()), calculateDifference(userContribution.getGymSpeed(), startGymSpeed));
+                    DataPointDTO defence = new DataPointDTO(toDate(history.getFetchedAt()), calculateDifference(userContribution.getGymDefence(), startGymDefence));
+                    DataPointDTO dexterity = new DataPointDTO(toDate(history.getFetchedAt()), calculateDifference(userContribution.getGymDexterity(), startDexterity));
+                    DataPointDTO total = new DataPointDTO(toDate(history.getFetchedAt()), calculateDifference(currentGymTotal, startGymTotal));
+
+                    contributionDetailedDTO.getGymStrength().add(strength);
+                    contributionDetailedDTO.getGymDexterity().add(dexterity);
+                    contributionDetailedDTO.getGymDefence().add(defence);
+                    contributionDetailedDTO.getGymSpeed().add(speed);
+                    contributionDetailedDTO.getGymTotal().add(total);
+                }
+            }
+        }
+
+        return contributionDetailedDTO;
+    }
+
+    public Optional<UserContribution> getContributionForUser(List<UserContribution> userContributions, Long userId) {
+        return userContributions.parallelStream().filter(userContribution -> userContribution.getUser().getUserId().equals(userId))
+                .findFirst();
     }
 
     public List<UserContributionSummaryDTO> getContributionSummary(Date start, Date end) {

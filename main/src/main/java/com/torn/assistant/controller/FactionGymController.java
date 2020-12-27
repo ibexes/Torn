@@ -2,6 +2,7 @@ package com.torn.assistant.controller;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.torn.assistant.model.dto.ContributionHistoryDTO;
+import com.torn.assistant.model.dto.UserContributionDetailedDTO;
 import com.torn.assistant.model.dto.UserContributionSummaryDTO;
 import com.torn.assistant.service.FactionStatsService;
 import org.slf4j.Logger;
@@ -45,6 +46,14 @@ public class FactionGymController {
                                                             @PathVariable @DateTimeFormat(pattern = "yyyy-MM-dd'T'HH:mm") Date end) {
         logger.info("Getting contribution data between {} and {}", start, end);
         return factionStatsService.getContributionHistory(start, end);
+    }
+
+    @GetMapping("/api/faction/contributions/user/{userId}/{start}/{end}")
+    public UserContributionDetailedDTO getContributionForUser(@PathVariable Long userId,
+                                                              @PathVariable @DateTimeFormat(pattern = "yyyy-MM-dd'T'HH:mm") Date start,
+                                                              @PathVariable @DateTimeFormat(pattern = "yyyy-MM-dd'T'HH:mm") Date end) {
+        logger.info("Getting contribution data for user {} between {} and {}", userId, start, end);
+        return factionStatsService.getUserContributionDetailedForUser(userId, start, end);
     }
 
     @GetMapping("/api/faction/contributions/poll")
