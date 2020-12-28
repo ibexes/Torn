@@ -1,6 +1,7 @@
 package com.torn.assistant.controller;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.torn.api.model.exceptions.IncorrectKeyException;
 import com.torn.assistant.model.dto.ContributionHistoryDTO;
 import com.torn.assistant.model.dto.UserContributionDetailedDTO;
 import com.torn.assistant.model.dto.UserContributionSummaryDTO;
@@ -25,7 +26,7 @@ public class FactionGymController {
     }
 
     @GetMapping("/api/faction/members/update")
-    public void updateMembers() throws JsonProcessingException {
+    public void updateMembers() throws JsonProcessingException, IncorrectKeyException {
         factionStatsService.updateMembers();
     }
 
@@ -57,7 +58,7 @@ public class FactionGymController {
     }
 
     @GetMapping("/api/faction/contributions/poll")
-    public void poll() throws JsonProcessingException {
+    public void poll() throws JsonProcessingException, IncorrectKeyException {
         logger.info("Manual poll invoked");
         factionStatsService.run();
     }

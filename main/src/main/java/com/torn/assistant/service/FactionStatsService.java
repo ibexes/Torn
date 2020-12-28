@@ -2,6 +2,7 @@ package com.torn.assistant.service;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.torn.api.client.FactionApiClient;
+import com.torn.api.model.exceptions.IncorrectKeyException;
 import com.torn.api.model.faction.Contribution;
 import com.torn.api.model.faction.Contributor;
 import com.torn.api.model.faction.Member;
@@ -213,7 +214,7 @@ public class FactionStatsService {
         return contributionHistoryDTOList;
     }
 
-    public void updateMembers() throws JsonProcessingException {
+    public void updateMembers() throws JsonProcessingException, IncorrectKeyException {
         List<Member> members = getMembers(apiKey);
         for (Member member : members) {
             User user = this.userDao.findByUserId(member.getUserId()).orElse(new User());
@@ -227,7 +228,7 @@ public class FactionStatsService {
 
     @Scheduled(cron = "${STATS_CRON:0 0 */1 * * ?}")
     @Transactional
-    public void run() throws JsonProcessingException {
+    public void run() throws JsonProcessingException, IncorrectKeyException {
         logger.info("I am running");
 
         ContributionHistory contributionHistory = new ContributionHistory();

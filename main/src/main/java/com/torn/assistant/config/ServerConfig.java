@@ -15,7 +15,7 @@ import org.springframework.context.annotation.Profile;
 @Profile("https")
 public class ServerConfig {
     @Bean
-    public ServletWebServerFactory servletContainer(@Value("${server.port}") int port) {
+    public ServletWebServerFactory servletContainer() {
         TomcatServletWebServerFactory tomcat = new TomcatServletWebServerFactory() {
             @Override
             protected void postProcessContext(Context context) {
@@ -27,17 +27,17 @@ public class ServerConfig {
                 context.addConstraint(securityConstraint);
             }
         };
-        tomcat.addAdditionalTomcatConnectors(redirectConnector(port));
+        tomcat.addAdditionalTomcatConnectors(redirectConnector());
         return tomcat;
     }
 
-    private Connector redirectConnector(int port) {
+    private Connector redirectConnector() {
         Connector connector = new Connector(
                 TomcatServletWebServerFactory.DEFAULT_PROTOCOL);
         connector.setScheme("http");
-        connector.setPort(port);
+        connector.setPort(80);
         connector.setSecure(false);
-        connector.setRedirectPort(8443);
+        connector.setRedirectPort(443);
         return connector;
     }
 }

@@ -7,6 +7,7 @@ public class Member {
     private Long userId;
     private String name;
     private Date lastAction;
+    private Long factionId = -1L; // set default so we can use for comparisons without NPE
 
     public Long getUserId() {
         return userId;
@@ -30,6 +31,14 @@ public class Member {
 
     public void setLastAction(Date lastAction) {
         this.lastAction = lastAction;
+    }
+
+    public Long getFactionId() {
+        return factionId;
+    }
+
+    public void setFactionId(Long factionId) {
+        this.factionId = factionId;
     }
 
     @Override

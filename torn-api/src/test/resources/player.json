@@ -1,0 +1,69 @@
+{
+  "rank": "Supreme Thief",
+  "level": 41,
+  "gender": "Male",
+  "property": "Private Island",
+  "signup": "2007-10-21 20:17:15",
+  "awards": 412,
+  "friends": 63,
+  "enemies": 36,
+  "forum_posts": 95,
+  "karma": 31,
+  "age": 4816,
+  "role": "Civilian",
+  "donator": 1,
+  "player_id": 574315,
+  "name": "Jia",
+  "property_id": 1825980,
+  "competition": null,
+  "life": {
+    "current": 2598,
+    "maximum": 2598,
+    "increment": 155,
+    "interval": 300,
+    "ticktime": 221,
+    "fulltime": 0
+  },
+  "status": {
+    "description": "Okay",
+    "details": "",
+    "state": "Okay",
+    "color": "green",
+    "until": 0
+  },
+  "job": {
+    "position": "Director",
+    "company_id": 67851,
+    "company_name": "[TAR] Tel&#039;aran&#039;rhiod",
+    "company_type": 26
+  },
+  "faction": {
+    "position": "Pimp",
+    "faction_id": 8151,
+    "days_in_faction": 886,
+    "faction_name": "LONDON"
+  },
+  "married": {
+    "spouse_id": 1960150,
+    "spouse_name": "BadCinderella",
+    "duration": 126
+  },
+  "basicicons": {
+    "icon6": "Male",
+    "icon4": "Subscriber",
+    "icon8": "Married - To BadCinderella",
+    "icon73": "Company - Director of [TAR] Tel&#039;aran&#039;rhiod (Gents Strip Club)",
+    "icon9": "Faction - Pimp of LONDON",
+    "icon35": "Bazaar - This person has items in their bazaar for sale",
+    "icon13": "Bounty - On this person's head for $100,000"
+  },
+  "states": {
+    "hospital_timestamp": 0,
+    "jail_timestamp": 0
+  },
+  "last_action": {
+    "status": "Offline",
+    "timestamp": 1609119023,
+    "relative": "5 minutes ago"
+  }
+}

@@ -2,7 +2,7 @@ package com.torn.api.client;
 
 import com.torn.api.model.exceptions.IncorrectKeyException;
 import com.torn.api.model.faction.Contribution;
-import com.torn.api.model.faction.Stat;
+import com.torn.api.model.faction.Member;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.junit.jupiter.MockitoExtension;
@@ -17,20 +17,20 @@ import static com.torn.api.utils.JsonConverter.convertToJson;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @ExtendWith(MockitoExtension.class)
-public class FactionApiClientTest {
+public class VerifyApiClientTest {
 
     @Test
-    public void convertsContribution() throws IOException, IncorrectKeyException {
+    public void verifyApiKey() throws IOException, IncorrectKeyException {
         ClassLoader classLoader = getClass().getClassLoader();
-        URL resource = classLoader.getResource("gymspeed.json");
+        URL resource = classLoader.getResource("player.json");
 
         assert resource != null;
         Path fileName = Path.of(resource.getPath());
         String response = Files.readString(fileName);
 
-        Contribution contribution = FactionApiClient.convertToContribution(SPEED, convertToJson(response));
+        Member member = VerifyApiClient.convertToMemberFromJson(convertToJson(response));
 
-        assertEquals(SPEED, contribution.getStat());
-        assertEquals(82, contribution.getContributors().size());
+        assertEquals(574315, member.getUserId());
+        assertEquals(8151, member.getFactionId());
     }
 }

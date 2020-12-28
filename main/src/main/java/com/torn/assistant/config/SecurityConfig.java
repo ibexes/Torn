@@ -1,5 +1,6 @@
 package com.torn.assistant.config;
 
+import com.torn.assistant.service.AuthenticationService;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -7,12 +8,15 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 
 @Configuration
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
+    private final AuthenticationService authenticationService;
+
+    public SecurityConfig(AuthenticationService authenticationService) {
+        this.authenticationService = authenticationService;
+    }
 
     @Override
-    protected void configure(final AuthenticationManagerBuilder auth) throws Exception {
-        auth.inMemoryAuthentication()
-                .withUser("admin").password("{noop}mrpops3ko").roles("USER", "ADMIN").and()
-                .withUser("user").password("{noop}user").roles("USER");
+    protected void configure(final AuthenticationManagerBuilder auth) {
+        auth.authenticationProvider(authenticationService);
     }
 
     @Override
