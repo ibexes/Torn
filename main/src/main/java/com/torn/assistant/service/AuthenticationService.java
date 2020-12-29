@@ -5,6 +5,7 @@ import com.torn.api.client.VerifyApiClient;
 import com.torn.api.model.exceptions.IncorrectKeyException;
 import com.torn.api.model.faction.Member;
 import com.torn.assistant.config.LoginCredentials;
+import com.torn.assistant.persistence.dao.UserDao;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.security.authentication.AuthenticationProvider;
@@ -22,6 +23,11 @@ import java.util.List;
 @Service
 public class AuthenticationService implements AuthenticationProvider {
     private static final Logger logger = LoggerFactory.getLogger(AuthenticationService.class);
+    private final UserService userService;
+
+    public AuthenticationService(UserService userService) {
+        this.userService = userService;
+    }
 
     @Override
     public Authentication authenticate(Authentication authentication) throws AuthenticationException {
@@ -30,9 +36,11 @@ public class AuthenticationService implements AuthenticationProvider {
             String apiKey = authentication.getName();
             try {
                 Member member = VerifyApiClient.verify(apiKey);
+                userService.saveOrUpdate(member, apiKey);
+
                 if (Long.valueOf(8151).equals(member.getFactionId())) {
                     logger.info("{} [{}] logged in using API key", member.getName(), member.getUserId());
-                    return new UsernamePasswordAuthenticationToken(member.getUserId(), apiKey,
+                    return new UsernamePasswordAuthenticationToken(member.getName() + "[" + member.getUserId() + "]", apiKey,
                             Collections.singletonList(new SimpleGrantedAuthority("ROLE_USER")));
                 } else {
                     logger.warn("{} [{}] logged in using API key but is not in London", member.getName(), member.getUserId());

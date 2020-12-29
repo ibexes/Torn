@@ -13,6 +13,8 @@ import java.util.Optional;
 public interface ContributionHistoryDao extends JpaRepository<ContributionHistory, Long> {
     List<ContributionHistory> findByFetchedAtBetweenOrderByFetchedAtAsc(LocalDateTime start, LocalDateTime end);
 
+    List<ContributionHistory> findAllByOrderByFetchedAtAsc();
+
     //TODO figure this out lol
 //    @Query(value = "select h from contribution_history h join h.userActivities ua on ua.user.userId = :userId" +
 //            " where h.fetchedAt >= :startDate and h.fetchedAt <= :endDate order by h.fetchedAt asc", nativeQuery = true)

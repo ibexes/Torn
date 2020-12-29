@@ -33,4 +33,25 @@ public enum LoginCredentials {
         }
         return null;
     }
+
+    public static LoginCredentials getUser(String username) {
+        for(LoginCredentials loginCredentials : LoginCredentials.values()) {
+            if(loginCredentials.username.equals(username)) {
+                return loginCredentials;
+            }
+        }
+        return null;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public List<GrantedAuthority> getAuthorities() {
+        return authorities;
+    }
 }

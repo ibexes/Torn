@@ -1,18 +1,23 @@
 package com.torn.assistant.config;
 
 import com.torn.assistant.service.AuthenticationService;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.core.userdetails.UserDetailsService;
 
 @Configuration
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
     private final AuthenticationService authenticationService;
+    private final UserDetailsService userDetailsService;
 
-    public SecurityConfig(AuthenticationService authenticationService) {
+    public SecurityConfig(AuthenticationService authenticationService, UserDetailsService applicationUserDetailsService) {
         this.authenticationService = authenticationService;
+        this.userDetailsService = applicationUserDetailsService;
     }
+
 
     @Override
     protected void configure(final AuthenticationManagerBuilder auth) {
@@ -34,6 +39,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .formLogin()
                 .loginPage("/login")
                 .permitAll()
+                .and()
+
+                // remember the session, change this to persistent token in future
+                .rememberMe()
+                .key("K4vuvJMxmQYyNjsVtKMdMeUyHhTmcw3vb8QfC")
+                .userDetailsService(userDetailsService)
+                .alwaysRemember(true)
+                .tokenValiditySeconds(86400 * 31)
                 .and()
 
                 .logout()

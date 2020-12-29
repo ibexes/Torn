@@ -53,7 +53,7 @@ public class FactionStatsService {
     }
 
     public List<Date> getAvailableTimes() {
-        return contributionHistoryDao.findAll()
+        return contributionHistoryDao.findAllByOrderByFetchedAtAsc()
                 .stream()
                 .map(contributionHistory -> Date.from(contributionHistory.getFetchedAt().atZone(ZoneId.systemDefault()).toInstant()))
                 .collect(Collectors.toList());

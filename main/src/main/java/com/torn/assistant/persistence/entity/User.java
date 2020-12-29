@@ -17,6 +17,9 @@ public class User {
 
     private String name;
 
+    @Column(unique=true)
+    private String apiKey;
+
     public User() {
     }
 
@@ -47,5 +50,13 @@ public class User {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getApiKey() {
+        return apiKey;
+    }
+
+    public void setApiKey(String apiKey) {
+        this.apiKey = apiKey;
     }
 }
