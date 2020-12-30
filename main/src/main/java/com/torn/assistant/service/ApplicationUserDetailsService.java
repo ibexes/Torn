@@ -2,25 +2,24 @@ package com.torn.assistant.service;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.torn.api.client.VerifyApiClient;
-import com.torn.api.model.exceptions.IncorrectKeyException;
+import com.torn.api.model.exceptions.TornApiAccessException;
 import com.torn.api.model.faction.Member;
 import com.torn.assistant.config.LoginCredentials;
-import com.torn.assistant.persistence.dao.UserDao;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
+import static com.torn.assistant.utils.UserUtils.getUserId;
 import static org.springframework.security.core.userdetails.User.withUsername;
 
 @Service
 public class ApplicationUserDetailsService implements UserDetailsService {
     private final UserService userService;
+    private final Logger logger = LoggerFactory.getLogger(ApplicationUserDetailsService.class);
 
     public ApplicationUserDetailsService(UserService userService) {
         this.userService = userService;
@@ -39,28 +38,18 @@ public class ApplicationUserDetailsService implements UserDetailsService {
             // try API key
             try {
                 com.torn.assistant.persistence.entity.User user = userService.findByUserId(getUserId(username)).orElseThrow(() -> new UsernameNotFoundException("User not found."));
+                logger.info("Verifying api key for {}", username);
                 Member member = VerifyApiClient.verify(user.getApiKey());
-                if (Long.valueOf(8151).equals(member.getFactionId())) {
-                    builder = withUsername(username);
-                    builder.password(user.getApiKey());
-                    builder.authorities("ROLE_USER");
-                } else {
-                    throw new UsernameNotFoundException("user is not in London");
-                }
-            } catch (JsonProcessingException | IncorrectKeyException e) {
+                user = userService.saveOrUpdate(member, user.getApiKey());
+
+                builder = withUsername(username);
+                builder.password(user.getApiKey());
+                builder.authorities("ROLE_USER");
+            } catch (JsonProcessingException | TornApiAccessException e) {
                 throw new UsernameNotFoundException("unable to login using api key");
             }
         }
 
         return builder.build();
-    }
-
-    public Long getUserId(String username) {
-        Pattern p = Pattern.compile("\\w+\\[(\\d+)]");
-        Matcher m = p.matcher(username);
-        if(m.find()) {
-            return Long.valueOf(m.group(1));
-        }
-        return null;
     }
 }

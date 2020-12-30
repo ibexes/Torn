@@ -2,9 +2,8 @@ package com.torn.api.client;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
-import com.torn.api.model.exceptions.IncorrectKeyException;
+import com.torn.api.model.exceptions.TornApiAccessException;
 import com.torn.api.model.faction.Contribution;
 import com.torn.api.model.faction.Contributor;
 import com.torn.api.model.faction.Member;
@@ -13,7 +12,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 
@@ -25,7 +23,7 @@ public class FactionApiClient {
 
     }
 
-    public static List<Member> getMembers(String key) throws JsonProcessingException, IncorrectKeyException {
+    public static List<Member> getMembers(String key) throws JsonProcessingException, TornApiAccessException {
         String url = "https://api.torn.com/faction/?selections=timestamp,basic&key=" + key;
         RestTemplate restTemplate = new RestTemplate();
 
@@ -34,8 +32,8 @@ public class FactionApiClient {
         return convertToMemberList(convertToJson(response.getBody()));
     }
 
-    public static Contribution getContribution(String key, Long factionId, Stat stat) throws JsonProcessingException, IncorrectKeyException {
-        String url = "https://api.torn.com/faction/"+factionId+"?selections=timestamp,basic,contributors&stat=" + stat.getValue() + "&key=" + key;
+    public static Contribution getContribution(String key, Long factionId, Stat stat) throws JsonProcessingException, TornApiAccessException {
+        String url = "https://api.torn.com/faction/" + factionId + "?selections=timestamp,basic,contributors&stat=" + stat.getValue() + "&key=" + key;
         RestTemplate restTemplate = new RestTemplate();
 
         ResponseEntity<String> response = restTemplate.getForEntity(url, String.class);
@@ -50,7 +48,7 @@ public class FactionApiClient {
             String userId = it.next();
             // reverse engineer the member node to include faction details
             JsonNode memberNode = members.get(userId);
-            ((ObjectNode)memberNode).putObject("faction").put("faction_id", jsonNode.get("ID").asLong());
+            ((ObjectNode) memberNode).putObject("faction").put("faction_id", jsonNode.get("ID").asLong());
             Member member = convertToMember(userId, members.get(userId));
             memberList.add(member);
         }
@@ -67,9 +65,9 @@ public class FactionApiClient {
         for (Iterator<String> it = statContributions.fieldNames(); it.hasNext(); ) {
             String userId = it.next();
 
-            if(statContributions.get(userId).get("in_faction").asInt() == 1) {
+            if (statContributions.get(userId).get("in_faction").asInt() == 1) {
                 JsonNode memberNode = members.get(userId);
-                ((ObjectNode)memberNode).putObject("faction").put("faction_id", jsonNode.get("ID").asLong());
+                ((ObjectNode) memberNode).putObject("faction").put("faction_id", jsonNode.get("ID").asLong());
 
                 Member member = convertToMember(userId, members.get(userId));
                 contribution.addContributor(new Contributor(member, statContributions.get(userId).get("contributed").asLong()));

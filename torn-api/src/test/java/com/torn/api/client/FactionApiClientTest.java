@@ -1,8 +1,7 @@
 package com.torn.api.client;
 
-import com.torn.api.model.exceptions.IncorrectKeyException;
+import com.torn.api.model.exceptions.TornApiAccessException;
 import com.torn.api.model.faction.Contribution;
-import com.torn.api.model.faction.Stat;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.junit.jupiter.MockitoExtension;
@@ -20,7 +19,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class FactionApiClientTest {
 
     @Test
-    public void convertsContribution() throws IOException, IncorrectKeyException {
+    public void convertsContribution() throws IOException, TornApiAccessException {
         ClassLoader classLoader = getClass().getClassLoader();
         URL resource = classLoader.getResource("gymspeed.json");
 

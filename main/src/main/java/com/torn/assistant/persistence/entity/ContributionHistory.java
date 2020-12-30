@@ -6,6 +6,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -17,8 +18,18 @@ public class ContributionHistory {
 
     private LocalDateTime fetchedAt;
 
+    @OneToOne
+    private Faction faction;
+
     @OneToMany(cascade = CascadeType.ALL)
     private List<UserContribution> userActivities;
+
+    public ContributionHistory() {
+    }
+
+    public ContributionHistory(Faction faction) {
+        this.faction = faction;
+    }
 
     public Long getId() {
         return id;
@@ -42,5 +53,13 @@ public class ContributionHistory {
 
     public void setUserActivities(List<UserContribution> userActivities) {
         this.userActivities = userActivities;
+    }
+
+    public Faction getFaction() {
+        return faction;
+    }
+
+    public void setFaction(Faction faction) {
+        this.faction = faction;
     }
 }

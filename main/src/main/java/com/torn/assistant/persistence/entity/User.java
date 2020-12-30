@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 @Entity
 public class User {
@@ -12,13 +13,16 @@ public class User {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @Column(unique=true)
+    @Column(unique = true)
     private Long userId;
 
     private String name;
 
-    @Column(unique=true)
+    @Column(unique = true)
     private String apiKey;
+
+    @OneToOne
+    private Faction faction;
 
     public User() {
     }
@@ -58,5 +62,13 @@ public class User {
 
     public void setApiKey(String apiKey) {
         this.apiKey = apiKey;
+    }
+
+    public Faction getFaction() {
+        return faction;
+    }
+
+    public void setFaction(Faction faction) {
+        this.faction = faction;
     }
 }

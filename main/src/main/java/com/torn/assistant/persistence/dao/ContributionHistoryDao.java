@@ -1,19 +1,18 @@
 package com.torn.assistant.persistence.dao;
 
 import com.torn.assistant.persistence.entity.ContributionHistory;
+import com.torn.assistant.persistence.entity.Faction;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.repository.query.Param;
 
 import java.time.LocalDateTime;
-import java.util.Date;
 import java.util.List;
-import java.util.Optional;
 
 public interface ContributionHistoryDao extends JpaRepository<ContributionHistory, Long> {
+    List<ContributionHistory> findByFactionEqualsAndFetchedAtBetweenOrderByFetchedAtAsc(Faction faction, LocalDateTime start, LocalDateTime end);
+
     List<ContributionHistory> findByFetchedAtBetweenOrderByFetchedAtAsc(LocalDateTime start, LocalDateTime end);
 
-    List<ContributionHistory> findAllByOrderByFetchedAtAsc();
+    List<ContributionHistory> findByFactionEqualsOrderByFetchedAtAsc(Faction faction);
 
     //TODO figure this out lol
 //    @Query(value = "select h from contribution_history h join h.userActivities ua on ua.user.userId = :userId" +

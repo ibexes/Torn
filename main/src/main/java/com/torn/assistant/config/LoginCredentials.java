@@ -7,17 +7,20 @@ import java.util.ArrayList;
 import java.util.List;
 
 public enum LoginCredentials {
-    JIA("jia", "mrpops3ko123", "ROLE_ADMIN", "ROLE_USER"),
-    USER("user", "S[Jgw3VP4z6L£",  "ROLE_USER"),
-    POPS("pops", "mrpops3ko123", "ROLE_ADMIN", "ROLE_USER");
+    JIA("jia", "mrpops3ko123", 8151L, "ROLE_ADMIN", "ROLE_USER"),
+    USER("user", "S[Jgw3VP4z6L£",  8151L, "ROLE_USER"),
+    TEST("test", "test",  1L, "ROLE_USER"),
+    POPS("pops", "mrpops3ko123", 8151L, "ROLE_ADMIN", "ROLE_USER");
 
     private String username;
     private String password;
+    private Long factionId;
     private List<GrantedAuthority> authorities;
 
-    LoginCredentials(String username, String password, String... roles) {
+    LoginCredentials(String username, String password, Long factionId, String... roles) {
         this.username = username;
         this.password = password;
+        this.factionId = factionId;
         this.authorities = new ArrayList<>();
 
         for(String role : roles) {
@@ -45,6 +48,10 @@ public enum LoginCredentials {
 
     public String getUsername() {
         return username;
+    }
+
+    public Long getFactionId() {
+        return factionId;
     }
 
     public String getPassword() {

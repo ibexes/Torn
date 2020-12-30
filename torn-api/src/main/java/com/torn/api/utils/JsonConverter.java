@@ -4,18 +4,23 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.torn.api.model.exceptions.IncorrectKeyException;
+import com.torn.api.model.exceptions.InvalidAccessException;
+import com.torn.api.model.exceptions.TornApiAccessException;
 import com.torn.api.model.faction.Member;
 
 import java.util.Date;
 
 public class JsonConverter {
-    public static JsonNode convertToJson(String string) throws JsonProcessingException, IncorrectKeyException {
+    public static JsonNode convertToJson(String string) throws JsonProcessingException, TornApiAccessException {
         ObjectMapper mapper = new ObjectMapper();
         JsonNode root = mapper.readTree(string);
 
         if (root.has("error")) {
-            if (root.get("error").asText().equals("Incorrect key")) {
+            if (root.get("code").asInt() == 2) {
                 throw new IncorrectKeyException();
+            }
+            if (root.get("code").asInt() == 7) {
+                throw new InvalidAccessException("'Incorrect ID-entity relation' : A requested selection is private");
             }
             throw new RuntimeException("Error in response " + root.get("error"));
         }

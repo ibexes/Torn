@@ -2,10 +2,9 @@ package com.torn.assistant.service;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.torn.api.client.VerifyApiClient;
-import com.torn.api.model.exceptions.IncorrectKeyException;
+import com.torn.api.model.exceptions.TornApiAccessException;
 import com.torn.api.model.faction.Member;
 import com.torn.assistant.config.LoginCredentials;
-import com.torn.assistant.persistence.dao.UserDao;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.security.authentication.AuthenticationProvider;
@@ -38,15 +37,10 @@ public class AuthenticationService implements AuthenticationProvider {
                 Member member = VerifyApiClient.verify(apiKey);
                 userService.saveOrUpdate(member, apiKey);
 
-                if (Long.valueOf(8151).equals(member.getFactionId())) {
-                    logger.info("{} [{}] logged in using API key", member.getName(), member.getUserId());
-                    return new UsernamePasswordAuthenticationToken(member.getName() + "[" + member.getUserId() + "]", apiKey,
-                            Collections.singletonList(new SimpleGrantedAuthority("ROLE_USER")));
-                } else {
-                    logger.warn("{} [{}] logged in using API key but is not in London", member.getName(), member.getUserId());
-                    throw new BadCredentialsException("user is not in London");
-                }
-            } catch (JsonProcessingException | IncorrectKeyException e) {
+                logger.info("{} [{}] logged in using API key", member.getName(), member.getUserId());
+                return new UsernamePasswordAuthenticationToken(member.getName() + "[" + member.getUserId() + "]", apiKey,
+                        Collections.singletonList(new SimpleGrantedAuthority("ROLE_USER")));
+            } catch (JsonProcessingException | TornApiAccessException e) {
                 throw new BadCredentialsException("unable to login using api key");
             }
         } else {

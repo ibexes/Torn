@@ -2,29 +2,27 @@ package com.torn.assistant.service;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.torn.api.client.FactionApiClient;
-import com.torn.api.model.exceptions.IncorrectKeyException;
+import com.torn.api.model.exceptions.TornApiAccessException;
 import com.torn.api.model.faction.Contribution;
 import com.torn.api.model.faction.Contributor;
 import com.torn.api.model.faction.Member;
 import com.torn.api.model.faction.Stat;
-import com.torn.assistant.model.dto.ContributionHistoryDTO;
 import com.torn.assistant.model.dto.DataPointDTO;
 import com.torn.assistant.model.dto.StatDTO;
-import com.torn.assistant.model.dto.UserContributionDTO;
 import com.torn.assistant.model.dto.UserContributionDetailedDTO;
 import com.torn.assistant.model.dto.UserContributionSummaryDTO;
 import com.torn.assistant.persistence.dao.ContributionHistoryDao;
+import com.torn.assistant.persistence.dao.FactionDao;
 import com.torn.assistant.persistence.dao.UserDao;
 import com.torn.assistant.persistence.entity.ContributionHistory;
+import com.torn.assistant.persistence.entity.Faction;
 import com.torn.assistant.persistence.entity.User;
 import com.torn.assistant.persistence.entity.UserContribution;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
-import javax.swing.text.html.Option;
 import javax.transaction.Transactional;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
@@ -34,39 +32,48 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 import static com.torn.api.client.FactionApiClient.getMembers;
+import static com.torn.assistant.utils.CollectionUtils.getRandomElement;
 import static com.torn.assistant.utils.DateUtils.toDate;
+import static com.torn.assistant.utils.MathUtils.calculateDifference;
+import static com.torn.assistant.utils.MathUtils.sum;
 
 @Service
 public class FactionStatsService {
     public static final Logger logger = LoggerFactory.getLogger(FactionStatsService.class);
     private final ContributionHistoryDao contributionHistoryDao;
+    private final FactionService factionService;
+    private final FactionDao factionDao;
     private final UserDao userDao;
-    private final String apiKey;
 
-    public FactionStatsService(ContributionHistoryDao contributionHistoryDao, UserDao userDao, @Value("${API_KEY}") String apiKey) {
+    public FactionStatsService(ContributionHistoryDao contributionHistoryDao, FactionService factionService,
+                               FactionDao factionDao, UserDao userDao) {
         this.contributionHistoryDao = contributionHistoryDao;
+        this.factionService = factionService;
+        this.factionDao = factionDao;
         this.userDao = userDao;
-        this.apiKey = apiKey;
     }
 
-    public List<Date> getAvailableTimes() {
-        return contributionHistoryDao.findAllByOrderByFetchedAtAsc()
+    public List<Date> getAvailableTimes(String username) {
+        return contributionHistoryDao.findByFactionEqualsOrderByFetchedAtAsc(factionService.getFaction(username))
                 .stream()
                 .map(contributionHistory -> Date.from(contributionHistory.getFetchedAt().atZone(ZoneId.systemDefault()).toInstant()))
                 .collect(Collectors.toList());
     }
 
-    public UserContributionDetailedDTO getUserContributionDetailedForUser(Long userId, Date start, Date end) {
-        List<ContributionHistory> fetchedContributions = contributionHistoryDao.findByFetchedAtBetweenOrderByFetchedAtAsc(LocalDateTime.ofInstant(start.toInstant(), ZoneId.systemDefault()),
-                LocalDateTime.ofInstant(end.toInstant(), ZoneId.systemDefault()));
+    public UserContributionDetailedDTO getUserContributionDetailedForUser(String username, Long userId, Date start, Date end) {
+        List<ContributionHistory> fetchedContributions = contributionHistoryDao
+                .findByFactionEqualsAndFetchedAtBetweenOrderByFetchedAtAsc(factionService.getFaction(username),
+                        LocalDateTime.ofInstant(start.toInstant(), ZoneId.systemDefault()),
+                        LocalDateTime.ofInstant(end.toInstant(), ZoneId.systemDefault()));
 
         UserContributionDetailedDTO contributionDetailedDTO = new UserContributionDetailedDTO();
-        if(!fetchedContributions.isEmpty()) {
+        if (!fetchedContributions.isEmpty()) {
             Optional<UserContribution> first = getContributionForUser(fetchedContributions.get(0).getUserActivities(), userId);
-            if(!first.isPresent()) {
+            if (!first.isPresent()) {
                 return contributionDetailedDTO;
             }
             contributionDetailedDTO.setUserId(first.get().getUser().getUserId());
@@ -77,10 +84,10 @@ public class FactionStatsService {
             Long startGymSpeed = first.get().getGymSpeed();
             Long startGymTotal = sum(startDexterity, startGymDefence, startGymSpeed, startStrength);
 
-            for(ContributionHistory history : fetchedContributions) {
-                if(!history.getUserActivities().isEmpty()) {
+            for (ContributionHistory history : fetchedContributions) {
+                if (!history.getUserActivities().isEmpty()) {
                     Optional<UserContribution> optionalUserContribution = getContributionForUser(history.getUserActivities(), userId);
-                    if(!optionalUserContribution.isPresent()) {
+                    if (!optionalUserContribution.isPresent()) {
                         continue;
                     }
                     UserContribution userContribution = optionalUserContribution.get();
@@ -108,9 +115,11 @@ public class FactionStatsService {
                 .findFirst();
     }
 
-    public List<UserContributionSummaryDTO> getContributionSummary(Date start, Date end) {
-        List<ContributionHistory> fetchedContributions = contributionHistoryDao.findByFetchedAtBetweenOrderByFetchedAtAsc(LocalDateTime.ofInstant(start.toInstant(), ZoneId.systemDefault()),
-                LocalDateTime.ofInstant(end.toInstant(), ZoneId.systemDefault()));
+    public List<UserContributionSummaryDTO> getContributionSummary(String username, Date start, Date end) {
+        List<ContributionHistory> fetchedContributions = contributionHistoryDao
+                .findByFactionEqualsAndFetchedAtBetweenOrderByFetchedAtAsc(factionService.getFaction(username),
+                        LocalDateTime.ofInstant(start.toInstant(), ZoneId.systemDefault()),
+                        LocalDateTime.ofInstant(end.toInstant(), ZoneId.systemDefault()));
         Map<Long, UserContributionSummaryDTO> userContributionSummaryDTOMap = new HashMap<>();
 
         if (!fetchedContributions.isEmpty()) {
@@ -167,118 +176,88 @@ public class FactionStatsService {
         return new ArrayList<>(userContributionSummaryDTOMap.values());
     }
 
-    private Long calculateDifference(Long end, Long start) {
-        if (start == null) {
-            if (end != null) {
-                return end;
-            }
-        }
-        if(end == null) {
-            return 0L;
-        }
-        return end - start;
-    }
+    public void updateMembers() throws JsonProcessingException, TornApiAccessException {
+        for (Faction faction : factionDao.findByTrackContributionsIsTrue()) {
+            List<Member> members = getMembers(getRandomElement(faction.getApiKey()));
 
-    private Long sum(Long... stats) {
-        long total = 0L;
-        for (Long stat : stats) {
-            if (stat != null) {
-                total += stat;
-            }
-        }
-        return total;
-    }
-
-    public List<ContributionHistoryDTO> getContributionHistory(Date start, Date end) {
-        List<ContributionHistory> fetchedContributions = contributionHistoryDao.findByFetchedAtBetweenOrderByFetchedAtAsc(LocalDateTime.ofInstant(start.toInstant(), ZoneId.systemDefault()),
-                LocalDateTime.ofInstant(end.toInstant(), ZoneId.systemDefault()));
-        List<ContributionHistoryDTO> contributionHistoryDTOList = new ArrayList<>();
-
-        for (ContributionHistory contributionHistory : fetchedContributions) {
-            ContributionHistoryDTO contributionHistoryDTO = new ContributionHistoryDTO(Date.from(contributionHistory.getFetchedAt().atZone(ZoneId.systemDefault()).toInstant()));
-            List<UserContributionDTO> userContributionDTOList = new ArrayList<>();
-
-            for (UserContribution userContribution : contributionHistory.getUserActivities()) {
-                UserContributionDTO userContributionDTO = new UserContributionDTO(userContribution.getUser().getUserId(),
-                        userContribution.getUser().getName());
-
-                userContributionDTO.setGymDefence(userContribution.getGymDefence());
-                userContributionDTO.setGymDexterity(userContribution.getGymDexterity());
-                userContributionDTO.setGymSpeed(userContribution.getGymSpeed());
-                userContributionDTO.setGymStrength(userContribution.getGymStrength());
-                userContributionDTOList.add(userContributionDTO);
-            }
-            contributionHistoryDTO.setUserContributions(userContributionDTOList);
-            contributionHistoryDTOList.add(contributionHistoryDTO);
-        }
-        return contributionHistoryDTOList;
-    }
-
-    public void updateMembers() throws JsonProcessingException, IncorrectKeyException {
-        List<Member> members = getMembers(apiKey);
-        for (Member member : members) {
-            User user = this.userDao.findByUserId(member.getUserId()).orElse(new User());
-            if (user.getName() == null || user.getUserId() == null) {
-                user.setName(member.getName());
-                user.setUserId(member.getUserId());
-                userDao.save(user);
+            for (Member member : members) {
+                User user = this.userDao.findByUserId(member.getUserId()).orElse(new User());
+                if (user.getName() == null || user.getUserId() == null || !faction.equals(user.getFaction())) {
+                    user.setName(member.getName());
+                    user.setUserId(member.getUserId());
+                    user.setFaction(faction);
+                    userDao.save(user);
+                }
             }
         }
     }
 
     @Scheduled(cron = "${STATS_CRON:0 0 */1 * * ?}")
     @Transactional
-    public void run() throws JsonProcessingException, IncorrectKeyException {
-        logger.info("I am running");
+    public void run() throws JsonProcessingException, TornApiAccessException {
+        for (Faction faction : factionDao.findByTrackContributionsIsTrue()) {
+            logger.info("Updating contribution stats for {}", faction.getName());
+            Set<String> apiKeys = faction.getApiKey();
 
-        ContributionHistory contributionHistory = new ContributionHistory();
-        LocalDateTime fetchedAt = LocalDateTime.now().withSecond(0).withNano(0);
+            if (apiKeys.isEmpty()) {
+                logger.warn("There are no api keys for {}", faction.getName());
+                continue;
+            }
 
-        Map<Long, UserContribution> userContributionMap = new HashMap<>();
+            ContributionHistory contributionHistory = new ContributionHistory(faction);
+            LocalDateTime fetchedAt = LocalDateTime.now().withSecond(0).withNano(0);
 
-        Contribution speedContribution = FactionApiClient.getContribution(apiKey, Stat.SPEED);
-        Contribution dexterityContribution = FactionApiClient.getContribution(apiKey, Stat.DEXTERITY);
-        Contribution strengthContribution = FactionApiClient.getContribution(apiKey, Stat.STRENGTH);
-        Contribution defenceContribution = FactionApiClient.getContribution(apiKey, Stat.DEFENCE);
+            Map<Long, UserContribution> userContributionMap = new HashMap<>();
 
-        speedContribution.getContributors().forEach(
-                contributor -> {
-                    UserContribution userContribution = getUserContribution(userContributionMap, contributor);
-                    userContribution.setGymSpeed(contributor.getContribution());
-                }
-        );
+            Contribution speedContribution = FactionApiClient.getContribution(getRandomElement(apiKeys), faction.getId(), Stat.SPEED);
+            Contribution dexterityContribution = FactionApiClient.getContribution(getRandomElement(apiKeys), faction.getId(), Stat.DEXTERITY);
+            Contribution strengthContribution = FactionApiClient.getContribution(getRandomElement(apiKeys), faction.getId(), Stat.STRENGTH);
+            Contribution defenceContribution = FactionApiClient.getContribution(getRandomElement(apiKeys), faction.getId(), Stat.DEFENCE);
 
-        dexterityContribution.getContributors().forEach(
-                contributor -> {
-                    UserContribution userContribution = getUserContribution(userContributionMap, contributor);
-                    userContribution.setGymDexterity(contributor.getContribution());
-                }
-        );
+            speedContribution.getContributors().forEach(
+                    contributor -> {
+                        UserContribution userContribution = getUserContribution(faction, userContributionMap, contributor);
+                        userContribution.setGymSpeed(contributor.getContribution());
+                    }
+            );
 
-        strengthContribution.getContributors().forEach(
-                contributor -> {
-                    UserContribution userContribution = getUserContribution(userContributionMap, contributor);
-                    userContribution.setGymStrength(contributor.getContribution());
-                }
-        );
+            dexterityContribution.getContributors().forEach(
+                    contributor -> {
+                        UserContribution userContribution = getUserContribution(faction, userContributionMap, contributor);
+                        userContribution.setGymDexterity(contributor.getContribution());
+                    }
+            );
 
-        defenceContribution.getContributors().forEach(
-                contributor -> {
-                    UserContribution userContribution = getUserContribution(userContributionMap, contributor);
-                    userContribution.setGymDefence(contributor.getContribution());
-                }
-        );
+            strengthContribution.getContributors().forEach(
+                    contributor -> {
+                        UserContribution userContribution = getUserContribution(faction, userContributionMap, contributor);
+                        userContribution.setGymStrength(contributor.getContribution());
+                    }
+            );
 
-        contributionHistory.setUserActivities(new ArrayList<>(userContributionMap.values()));
-        contributionHistory.setFetchedAt(fetchedAt);
+            defenceContribution.getContributors().forEach(
+                    contributor -> {
+                        UserContribution userContribution = getUserContribution(faction, userContributionMap, contributor);
+                        userContribution.setGymDefence(contributor.getContribution());
+                    }
+            );
 
-        contributionHistoryDao.save(contributionHistory);
+            contributionHistory.setUserActivities(new ArrayList<>(userContributionMap.values()));
+            contributionHistory.setFetchedAt(fetchedAt);
+
+            contributionHistoryDao.save(contributionHistory);
+        }
     }
 
-    private UserContribution getUserContribution(Map<Long, UserContribution> userContributionMap, Contributor contributor) {
+    private UserContribution getUserContribution(Faction faction, Map<Long, UserContribution> userContributionMap, Contributor contributor) {
         Long userId = contributor.getMember().getUserId();
+        User user = userDao.findByUserId(userId).orElse(new User(userId, contributor.getMember().getName()));
+        if (!faction.equals(user.getFaction())) {
+            user.setFaction(faction);
+        }
+
         UserContribution userContribution = userContributionMap.getOrDefault(userId,
-                new UserContribution(userDao.findByUserId(userId).orElse(new User(userId, contributor.getMember().getName()))));
+                new UserContribution(user));
 
         userContribution.setLastAction(contributor.getMember().getLastAction());
 
