@@ -124,13 +124,7 @@ public class FactionStatsService {
         Map<Long, UserContributionSummaryDTO> userContributionSummaryDTOMap = new HashMap<>();
 
         if (!fetchedContributions.isEmpty()) {
-            ContributionHistory earliest = fetchedContributions.get(0);
             ContributionHistory latest = fetchedContributions.get(fetchedContributions.size() - 1);
-
-            for (UserContribution userContribution : earliest.getUserActivities()) {
-                Long userId = userContribution.getUser().getUserId();
-                getUserContributionSummaryDTO(userContributionSummaryDTOMap, userId, userContribution);
-            }
 
             for (ContributionHistory contributionHistory : fetchedContributions) {
                 for (UserContribution userContribution : contributionHistory.getUserActivities()) {

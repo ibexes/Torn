@@ -4,7 +4,6 @@ import org.apache.catalina.Context;
 import org.apache.catalina.connector.Connector;
 import org.apache.tomcat.util.descriptor.web.SecurityCollection;
 import org.apache.tomcat.util.descriptor.web.SecurityConstraint;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory;
 import org.springframework.boot.web.servlet.server.ServletWebServerFactory;
 import org.springframework.context.annotation.Bean;
@@ -32,8 +31,7 @@ public class ServerConfig {
     }
 
     private Connector redirectConnector() {
-        Connector connector = new Connector(
-                TomcatServletWebServerFactory.DEFAULT_PROTOCOL);
+        Connector connector = new Connector(TomcatServletWebServerFactory.DEFAULT_PROTOCOL);
         connector.setScheme("http");
         connector.setPort(80);
         connector.setSecure(false);

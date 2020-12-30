@@ -1,8 +1,9 @@
 package com.torn.assistant.model.dto;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class DataPointDTO {
+public class DataPointDTO implements Serializable {
     private Date time;
     private Long difference;
 

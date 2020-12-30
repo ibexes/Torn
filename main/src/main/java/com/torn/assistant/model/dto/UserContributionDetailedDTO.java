@@ -1,9 +1,10 @@
 package com.torn.assistant.model.dto;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class UserContributionDetailedDTO {
+public class UserContributionDetailedDTO implements Serializable {
     private Long userId;
     private String name;
 
