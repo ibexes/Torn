@@ -37,6 +37,8 @@ public class FactionApiClient {
         RestTemplate restTemplate = new RestTemplate();
 
         ResponseEntity<String> response = restTemplate.getForEntity(url, String.class);
+        System.out.println(url);
+        System.out.println(response.getBody());
 
         return convertToContribution(stat, convertToJson(response.getBody()));
     }

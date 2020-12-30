@@ -16,13 +16,13 @@ public class JsonConverter {
         JsonNode root = mapper.readTree(string);
 
         if (root.has("error")) {
-            if (root.get("code").asInt() == 2) {
+            if (root.get("error").get("code").asInt() == 2) {
                 throw new IncorrectKeyException();
             }
-            if (root.get("code").asInt() == 7) {
+            if (root.get("code").get("code").asInt() == 7) {
                 throw new InvalidAccessException("'Incorrect ID-entity relation' : A requested selection is private");
             }
-            throw new RuntimeException("Error in response " + root.get("error"));
+            throw new TornApiAccessException("Error in response " + root.get("error"));
         }
 
         return root;

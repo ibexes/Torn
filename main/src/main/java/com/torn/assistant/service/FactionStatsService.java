@@ -1,7 +1,6 @@
 package com.torn.assistant.service;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.torn.api.client.FactionApiClient;
 import com.torn.api.model.exceptions.TornApiAccessException;
 import com.torn.api.model.faction.Contribution;
 import com.torn.api.model.faction.Contributor;
@@ -36,6 +35,7 @@ import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+import static com.torn.api.client.FactionApiClient.getContribution;
 import static com.torn.api.client.FactionApiClient.getMembers;
 import static com.torn.assistant.utils.CollectionUtils.getRandomElement;
 import static com.torn.assistant.utils.DateUtils.toDate;
@@ -129,52 +129,60 @@ public class FactionStatsService {
 
             for (UserContribution userContribution : earliest.getUserActivities()) {
                 Long userId = userContribution.getUser().getUserId();
-                UserContributionSummaryDTO userContributionSummaryDTO = userContributionSummaryDTOMap
-                        .getOrDefault(userId, new UserContributionSummaryDTO(userId, userContribution.getUser().getName()));
-
-                userContributionSummaryDTO.getGymDefence().setStart(userContribution.getGymDefence());
-                userContributionSummaryDTO.getGymDexterity().setStart(userContribution.getGymDexterity());
-                userContributionSummaryDTO.getGymSpeed().setStart(userContribution.getGymSpeed());
-                userContributionSummaryDTO.getGymStrength().setStart(userContribution.getGymStrength());
-                userContributionSummaryDTO.getGymTotal().setStart(sum(userContribution.getGymStrength(),
-                        userContribution.getGymDefence(), userContribution.getGymDexterity(), userContribution.getGymSpeed()));
-
-                if (!userContributionSummaryDTOMap.containsKey(userId)) {
-                    userContributionSummaryDTOMap.put(userId, userContributionSummaryDTO);
-                }
+                getUserContributionSummaryDTO(userContributionSummaryDTOMap, userId, userContribution);
             }
 
-            for (UserContribution userContribution : latest.getUserActivities()) {
-                Long userId = userContribution.getUser().getUserId();
-                UserContributionSummaryDTO userContributionSummaryDTO = userContributionSummaryDTOMap
-                        .getOrDefault(userId, new UserContributionSummaryDTO(userId, userContribution.getUser().getName()));
+            for (ContributionHistory contributionHistory : fetchedContributions) {
+                for (UserContribution userContribution : contributionHistory.getUserActivities()) {
+                    Long userId = userContribution.getUser().getUserId();
+                    UserContributionSummaryDTO userContributionSummaryDTO = getUserContributionSummaryDTO(userContributionSummaryDTOMap, userId, userContribution);
 
-                StatDTO defence = userContributionSummaryDTO.getGymDefence();
-                StatDTO strength = userContributionSummaryDTO.getGymStrength();
-                StatDTO speed = userContributionSummaryDTO.getGymSpeed();
-                StatDTO dexterity = userContributionSummaryDTO.getGymDexterity();
+                    StatDTO defence = userContributionSummaryDTO.getGymDefence();
+                    StatDTO strength = userContributionSummaryDTO.getGymStrength();
+                    StatDTO speed = userContributionSummaryDTO.getGymSpeed();
+                    StatDTO dexterity = userContributionSummaryDTO.getGymDexterity();
 
-                defence.setEnd(userContribution.getGymDefence());
-                dexterity.setEnd(userContribution.getGymDexterity());
-                speed.setEnd(userContribution.getGymSpeed());
-                strength.setEnd(userContribution.getGymStrength());
-                userContributionSummaryDTO.getGymTotal().setEnd(sum(userContribution.getGymStrength(),
-                        userContribution.getGymDefence(), userContribution.getGymDexterity(), userContribution.getGymSpeed()));
-                userContributionSummaryDTO.setLastAction(userContribution.getLastAction());
+                    defence.setEnd(userContribution.getGymDefence());
+                    dexterity.setEnd(userContribution.getGymDexterity());
+                    speed.setEnd(userContribution.getGymSpeed());
+                    strength.setEnd(userContribution.getGymStrength());
+                    userContributionSummaryDTO.getGymTotal().setEnd(sum(userContribution.getGymStrength(),
+                            userContribution.getGymDefence(), userContribution.getGymDexterity(), userContribution.getGymSpeed()));
+                    userContributionSummaryDTO.setLastAction(userContribution.getLastAction());
 
-                if (!userContributionSummaryDTOMap.containsKey(userId)) {
-                    userContributionSummaryDTOMap.put(userId, userContributionSummaryDTO);
-                } else {
                     defence.setDifference(calculateDifference(defence.getEnd(), defence.getStart()));
                     strength.setDifference(calculateDifference(strength.getEnd(), strength.getStart()));
                     speed.setDifference(calculateDifference(speed.getEnd(), speed.getStart()));
                     dexterity.setDifference(calculateDifference(dexterity.getEnd(), dexterity.getStart()));
-                    userContributionSummaryDTO.getGymTotal().setDifference(sum(defence.getDifference(), strength.getDifference(), speed.getDifference(), dexterity.getDifference()));
+                    userContributionSummaryDTO.getGymTotal().setDifference(sum(defence.getDifference(), strength.getDifference(),
+                            speed.getDifference(), dexterity.getDifference()));
+
+                    if(contributionHistory.equals(latest)) {
+                        userContributionSummaryDTO.setInFaction(true);
+                    }
                 }
             }
         }
 
         return new ArrayList<>(userContributionSummaryDTOMap.values());
+    }
+
+    private UserContributionSummaryDTO getUserContributionSummaryDTO(Map<Long, UserContributionSummaryDTO> userContributionSummaryDTOMap,
+                                                                     Long userId, UserContribution userContribution) {
+        UserContributionSummaryDTO userContributionSummaryDTO = userContributionSummaryDTOMap.get(userId);
+        if(userContributionSummaryDTO == null) {
+            userContributionSummaryDTO = new UserContributionSummaryDTO(userId, userContribution.getUser().getName());
+
+            userContributionSummaryDTO.getGymDefence().setStart(userContribution.getGymDefence());
+            userContributionSummaryDTO.getGymDexterity().setStart(userContribution.getGymDexterity());
+            userContributionSummaryDTO.getGymSpeed().setStart(userContribution.getGymSpeed());
+            userContributionSummaryDTO.getGymStrength().setStart(userContribution.getGymStrength());
+            userContributionSummaryDTO.getGymTotal().setStart(sum(userContribution.getGymStrength(),
+                    userContribution.getGymDefence(), userContribution.getGymDexterity(), userContribution.getGymSpeed()));
+
+            userContributionSummaryDTOMap.put(userId, userContributionSummaryDTO);
+        }
+        return userContributionSummaryDTO;
     }
 
     public void updateMembers() throws JsonProcessingException, TornApiAccessException {
@@ -210,10 +218,10 @@ public class FactionStatsService {
 
             Map<Long, UserContribution> userContributionMap = new HashMap<>();
 
-            Contribution speedContribution = FactionApiClient.getContribution(getRandomElement(apiKeys), faction.getId(), Stat.SPEED);
-            Contribution dexterityContribution = FactionApiClient.getContribution(getRandomElement(apiKeys), faction.getId(), Stat.DEXTERITY);
-            Contribution strengthContribution = FactionApiClient.getContribution(getRandomElement(apiKeys), faction.getId(), Stat.STRENGTH);
-            Contribution defenceContribution = FactionApiClient.getContribution(getRandomElement(apiKeys), faction.getId(), Stat.DEFENCE);
+            Contribution speedContribution = getContribution(getRandomElement(apiKeys), faction.getId(), Stat.SPEED);
+            Contribution dexterityContribution = getContribution(getRandomElement(apiKeys), faction.getId(), Stat.DEXTERITY);
+            Contribution strengthContribution = getContribution(getRandomElement(apiKeys), faction.getId(), Stat.STRENGTH);
+            Contribution defenceContribution = getContribution(getRandomElement(apiKeys), faction.getId(), Stat.DEFENCE);
 
             speedContribution.getContributors().forEach(
                     contributor -> {

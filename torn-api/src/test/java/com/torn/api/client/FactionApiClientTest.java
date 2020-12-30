@@ -7,10 +7,8 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.io.IOException;
-import java.net.URL;
-import java.nio.file.Files;
-import java.nio.file.Path;
 
+import static com.torn.api.FileReaderUtil.readFileAsString;
 import static com.torn.api.model.faction.Stat.SPEED;
 import static com.torn.api.utils.JsonConverter.convertToJson;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -20,12 +18,7 @@ public class FactionApiClientTest {
 
     @Test
     public void convertsContribution() throws IOException, TornApiAccessException {
-        ClassLoader classLoader = getClass().getClassLoader();
-        URL resource = classLoader.getResource("gymspeed.json");
-
-        assert resource != null;
-        Path fileName = Path.of(resource.getPath());
-        String response = Files.readString(fileName);
+        String response = readFileAsString(FactionApiClientTest.class, "gymspeed.json");
 
         Contribution contribution = FactionApiClient.convertToContribution(SPEED, convertToJson(response));
 

@@ -7,10 +7,8 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.io.IOException;
-import java.net.URL;
-import java.nio.file.Files;
-import java.nio.file.Path;
 
+import static com.torn.api.FileReaderUtil.readFileAsString;
 import static com.torn.api.utils.JsonConverter.convertToJson;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -19,12 +17,7 @@ public class VerifyApiClientTest {
 
     @Test
     public void verifyApiKey() throws IOException, TornApiAccessException {
-        ClassLoader classLoader = getClass().getClassLoader();
-        URL resource = classLoader.getResource("player.json");
-
-        assert resource != null;
-        Path fileName = Path.of(resource.getPath());
-        String response = Files.readString(fileName);
+        String response = readFileAsString(VerifyApiClientTest.class, "player.json");
 
         Member member = VerifyApiClient.convertToMemberFromJson(convertToJson(response));
 

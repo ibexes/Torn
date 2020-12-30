@@ -12,6 +12,7 @@ public class UserContributionSummaryDTO implements Serializable {
     private StatDTO gymStrength;
     private StatDTO gymTotal;
     private Date lastAction;
+    private Boolean inFaction = false;
 
     public UserContributionSummaryDTO(Long userId, String name) {
         this.userId = userId;
@@ -85,5 +86,13 @@ public class UserContributionSummaryDTO implements Serializable {
 
     public void setLastAction(Date lastAction) {
         this.lastAction = lastAction;
+    }
+
+    public Boolean getInFaction() {
+        return inFaction;
+    }
+
+    public void setInFaction(Boolean inFaction) {
+        this.inFaction = inFaction;
     }
 }

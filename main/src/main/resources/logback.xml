@@ -8,9 +8,9 @@
     </appender>
 
     <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>logs/flight.log</file>
+        <file>logs/assistant.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
-            <fileNamePattern>logs/flight.%d{yyyy-MM-dd}.%i.log.gz</fileNamePattern>
+            <fileNamePattern>logs/assistant.%d{yyyy-MM-dd}.%i.log.gz</fileNamePattern>
             <maxHistory>10</maxHistory>
             <maxFileSize>50MB</maxFileSize>
             <totalSizeCap>2GB</totalSizeCap>
