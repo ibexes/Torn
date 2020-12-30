@@ -1,4 +1,4 @@
-package com.torn.assistant.service;
+package com.torn.assistant.persistence.service;
 
 import com.torn.api.model.faction.Member;
 import com.torn.assistant.persistence.dao.FactionDao;

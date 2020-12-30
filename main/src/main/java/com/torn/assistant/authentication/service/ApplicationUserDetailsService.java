@@ -1,10 +1,11 @@
-package com.torn.assistant.service;
+package com.torn.assistant.authentication.service;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.torn.api.client.VerifyApiClient;
 import com.torn.api.model.exceptions.TornApiAccessException;
 import com.torn.api.model.faction.Member;
-import com.torn.assistant.config.LoginCredentials;
+import com.torn.assistant.authentication.LoginCredentials;
+import com.torn.assistant.persistence.service.UserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.security.core.userdetails.User;

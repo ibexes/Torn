@@ -1,6 +1,6 @@
 package com.torn.assistant.config;
 
-import com.torn.assistant.service.AuthenticationService;
+import com.torn.assistant.authentication.service.AuthenticationService;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;

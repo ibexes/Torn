@@ -1,6 +1,6 @@
-package com.torn.assistant.service;
+package com.torn.assistant.persistence.service;
 
-import com.torn.assistant.config.LoginCredentials;
+import com.torn.assistant.authentication.LoginCredentials;
 import com.torn.assistant.persistence.dao.FactionDao;
 import com.torn.assistant.persistence.dao.UserDao;
 import com.torn.assistant.persistence.entity.Faction;

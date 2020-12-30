@@ -1,4 +1,4 @@
-package com.torn.assistant.config;
+package com.torn.assistant.authentication;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

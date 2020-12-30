@@ -18,6 +18,7 @@ import com.torn.assistant.persistence.entity.ContributionHistory;
 import com.torn.assistant.persistence.entity.Faction;
 import com.torn.assistant.persistence.entity.User;
 import com.torn.assistant.persistence.entity.UserContribution;
+import com.torn.assistant.persistence.service.FactionService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.scheduling.annotation.Scheduled;
