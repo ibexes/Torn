@@ -34,8 +34,8 @@ public class FactionApiClient {
         return convertToMemberList(convertToJson(response.getBody()));
     }
 
-    public static Contribution getContribution(String key, Stat stat) throws JsonProcessingException, IncorrectKeyException {
-        String url = "https://api.torn.com/faction/?selections=timestamp,basic,contributors&stat=" + stat.getValue() + "&key=" + key;
+    public static Contribution getContribution(String key, Long factionId, Stat stat) throws JsonProcessingException, IncorrectKeyException {
+        String url = "https://api.torn.com/faction/"+factionId+"?selections=timestamp,basic,contributors&stat=" + stat.getValue() + "&key=" + key;
         RestTemplate restTemplate = new RestTemplate();
 
         ResponseEntity<String> response = restTemplate.getForEntity(url, String.class);
