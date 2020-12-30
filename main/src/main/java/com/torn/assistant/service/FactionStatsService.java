@@ -72,19 +72,14 @@ public class FactionStatsService {
                         LocalDateTime.ofInstant(end.toInstant(), ZoneId.systemDefault()));
 
         UserContributionDetailedDTO contributionDetailedDTO = new UserContributionDetailedDTO();
-        if (!fetchedContributions.isEmpty()) {
-            Optional<UserContribution> first = getContributionForUser(fetchedContributions.get(0).getUserActivities(), userId);
-            if (!first.isPresent()) {
-                return contributionDetailedDTO;
-            }
-            contributionDetailedDTO.setUserId(first.get().getUser().getUserId());
-            contributionDetailedDTO.setName(first.get().getUser().getName());
-            Long startStrength = first.get().getGymStrength();
-            Long startGymDefence = first.get().getGymDefence();
-            Long startDexterity = first.get().getGymDexterity();
-            Long startGymSpeed = first.get().getGymSpeed();
-            Long startGymTotal = sum(startDexterity, startGymDefence, startGymSpeed, startStrength);
 
+        Long startStrength = null;
+        Long startGymDefence = null;
+        Long startDexterity = null;
+        Long startGymSpeed = null;
+        Long startGymTotal = null;
+
+        if (!fetchedContributions.isEmpty()) {
             for (ContributionHistory history : fetchedContributions) {
                 if (!history.getUserActivities().isEmpty()) {
                     Optional<UserContribution> optionalUserContribution = getContributionForUser(history.getUserActivities(), userId);
@@ -92,6 +87,17 @@ public class FactionStatsService {
                         continue;
                     }
                     UserContribution userContribution = optionalUserContribution.get();
+
+                    contributionDetailedDTO.setUserId(userContribution.getUser().getUserId());
+                    contributionDetailedDTO.setName(userContribution.getUser().getName());
+                    if(startGymTotal == null) {
+                        startStrength = userContribution.getGymStrength();
+                        startGymDefence = userContribution.getGymDefence();
+                        startDexterity = userContribution.getGymDexterity();
+                        startGymSpeed = userContribution.getGymSpeed();
+                        startGymTotal = sum(startDexterity, startGymDefence, startGymSpeed, startStrength);
+                    }
+
                     Long currentGymTotal = sum(userContribution.getGymDefence(), userContribution.getGymDexterity(), userContribution.getGymSpeed(), userContribution.getGymStrength());
                     DataPointDTO strength = new DataPointDTO(toDate(history.getFetchedAt()), calculateDifference(userContribution.getGymStrength(), startStrength));
                     DataPointDTO speed = new DataPointDTO(toDate(history.getFetchedAt()), calculateDifference(userContribution.getGymSpeed(), startGymSpeed));
