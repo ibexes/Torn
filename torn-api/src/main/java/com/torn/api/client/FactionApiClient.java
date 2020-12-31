@@ -7,14 +7,20 @@ import com.torn.api.model.exceptions.TornApiAccessException;
 import com.torn.api.model.faction.Contribution;
 import com.torn.api.model.faction.Contributor;
 import com.torn.api.model.faction.Member;
+import com.torn.api.model.faction.OrganisedCrime;
 import com.torn.api.model.faction.Stat;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Set;
 
+import static com.torn.api.model.faction.OrganisedCrimeType.convertToOrganisedCrimeType;
+import static com.torn.api.utils.JsonConverter.convertJsonToList;
+import static com.torn.api.utils.JsonConverter.convertToDate;
 import static com.torn.api.utils.JsonConverter.convertToJson;
 import static com.torn.api.utils.JsonConverter.convertToMember;
 
@@ -38,6 +44,51 @@ public class FactionApiClient {
 
         ResponseEntity<String> response = restTemplate.getForEntity(url, String.class);
         return convertToContribution(stat, convertToJson(response.getBody()));
+    }
+
+    public static List<OrganisedCrime> getOrganisedCrimes(String key) throws TornApiAccessException, JsonProcessingException {
+        String url = "https://api.torn.com/faction/?selections=timestamp,crimes&key=" + key;
+        RestTemplate restTemplate = new RestTemplate();
+        ResponseEntity<String> response = restTemplate.getForEntity(url, String.class);
+
+        return convertToOrganisedCrimeList(convertToJson(response.getBody()));
+    }
+
+    static List<OrganisedCrime> convertToOrganisedCrimeList(JsonNode jsonNode) throws TornApiAccessException {
+        List<OrganisedCrime> organisedCrimes = new ArrayList<>();
+        JsonNode crimes = jsonNode.get("crimes");
+        if (crimes == null) {
+            throw new TornApiAccessException("Unable to get organised crimes");
+        }
+
+        for (Iterator<String> it = crimes.fieldNames(); it.hasNext(); ) {
+            String crimeId = it.next();
+            JsonNode crime = crimes.get(crimeId);
+
+            OrganisedCrime organisedCrime = new OrganisedCrime(Long.parseLong(crimeId));
+            organisedCrime.setCrimeType(convertToOrganisedCrimeType(crime.get("crime_id").asInt()));
+            organisedCrime.setMoneyGained(crime.get("money_gain").asLong());
+            organisedCrime.setRespectGained(crime.get("respect_gain").asLong());
+            organisedCrime.setInitiated(crime.get("initiated").asBoolean());
+            organisedCrime.setSuccess(crime.get("success").asBoolean());
+            organisedCrime.setInitiatedBy(crime.get("initiated_by").asLong());
+            organisedCrime.setPlannedBy(crime.get("planned_by").asLong());
+            organisedCrime.setPlannedAt(convertToDate(crime.get("time_started").asLong()));
+            organisedCrime.setReadyAt(convertToDate(crime.get("time_ready").asLong()));
+            organisedCrime.setInitiatedAt(convertToDate(crime.get("time_completed").asLong()));
+
+            Set<Long> participantSet = new HashSet<>();
+            List<JsonNode> participants = convertJsonToList(crime.get("participants"));
+            for (JsonNode participant : participants) {
+                for (Iterator<String> pit = participant.fieldNames(); pit.hasNext(); ) {
+                    String participantId = pit.next();
+                    participantSet.add(Long.parseLong(participantId));
+                }
+            }
+            organisedCrime.setParticipants(participantSet);
+            organisedCrimes.add(organisedCrime);
+        }
+        return organisedCrimes;
     }
 
     static List<Member> convertToMemberList(JsonNode jsonNode) {

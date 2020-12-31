@@ -1,14 +1,19 @@
 package com.torn.api.utils;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.ObjectReader;
 import com.torn.api.model.exceptions.IncorrectKeyException;
 import com.torn.api.model.exceptions.InvalidAccessException;
 import com.torn.api.model.exceptions.TornApiAccessException;
 import com.torn.api.model.faction.Member;
 
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class JsonConverter {
     public static JsonNode convertToJson(String string) throws JsonProcessingException, TornApiAccessException {
@@ -28,16 +33,30 @@ public class JsonConverter {
         return root;
     }
 
+    public static List<JsonNode> convertJsonToList(JsonNode jsonNode) {
+        ObjectMapper mapper = new ObjectMapper();
+        ObjectReader reader = mapper.readerFor(new TypeReference<List<JsonNode>>() {});
+        try {
+            return reader.readValue(jsonNode);
+        } catch (IOException e) {
+            return new ArrayList<>();
+        }
+    }
+
     public static Member convertToMember(String userId, JsonNode memberNode) {
         Member member = new Member();
         member.setUserId(Long.parseLong(userId));
         member.setName(memberNode.get("name").asText());
-        member.setLastAction(new Date(memberNode.get("last_action").get("timestamp").asLong() * 1000));
+        member.setLastAction(convertToDate(memberNode.get("last_action").get("timestamp").asLong()));
         try {
             member.setFactionId(memberNode.get("faction").get("faction_id").asLong());
         } catch (NullPointerException ignored) {
 
         }
         return member;
+    }
+
+    public static Date convertToDate(Long epoch) {
+        return new Date(epoch * 1000);
     }
 }

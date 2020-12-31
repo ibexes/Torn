@@ -1,8 +1,9 @@
 package com.torn.api.model.faction;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Contributor {
+public class Contributor implements Serializable {
     private Member member;
     private Long contribution;
 

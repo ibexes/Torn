@@ -1,9 +1,10 @@
 package com.torn.api.model.faction;
 
+import java.io.Serializable;
 import java.util.Date;
 import java.util.Objects;
 
-public class Member {
+public class Member implements Serializable {
     private Long userId;
     private String name;
     private Date lastAction;

@@ -1,0 +1,7307 @@
+{
+  "crimes": {
+    "8472689": {
+      "crime_id": 3,
+      "crime_name": "Bomb threat",
+      "participants": [
+        {
+          "2003679": {
+            "description": "Okay",
+            "details": "",
+            "state": "Okay",
+            "color": "green",
+            "until": 0
+          }
+        },
+        {
+          "2175576": {
+            "description": "Returning to Torn from Cayman Islands",
+            "details": "",
+            "state": "Traveling",
+            "color": "blue",
+            "until": 0
+          }
+        },
+        {
+          "2601735": {
+            "description": "Okay",
+            "details": "",
+            "state": "Okay",
+            "color": "green",
+            "until": 0
+          }
+        }
+      ],
+      "time_started": 1609372470,
+      "time_ready": 1609631670,
+      "time_left": 208310,
+      "time_completed": 0,
+      "initiated": 0,
+      "initiated_by": 0,
+      "planned_by": 2015200,
+      "success": 0,
+      "money_gain": 0,
+      "respect_gain": 0
+    },
+    "8471509": {
+      "crime_id": 7,
+      "crime_name": "Plane hijacking",
+      "participants": [
+        {
+          "125670": {
+            "description": "Okay",
+            "details": "",
+            "state": "Okay",
+            "color": "green",
+            "until": 0
+          }
+        },
+        {
+          "2092393": {
+            "description": "Okay",
+            "details": "",
+            "state": "Okay",
+            "color": "green",
+            "until": 0
+          }
+        },
+        {
+          "2112841": {
+            "description": "Okay",
+            "details": "",
+            "state": "Okay",
+            "color": "green",
+            "until": 0
+          }
+        },
+        {
+          "524028": {
+            "description": "Okay",
+            "details": "",
+            "state": "Okay",
+            "color": "green",
+            "until": 0
+          }
+        },
+        {
+          "1419046": {
+            "description": "Okay",
+            "details": "",
+            "state": "Okay",
+            "color": "green",
+            "until": 0
+          }
+        },
+        {
+          "2040347": {
+            "description": "Okay",
+            "details": "",
+            "state": "Okay",
+            "color": "green",
+            "until": 0
+          }
+        },
+        {
+          "2102595": {
+            "description": "Okay",
+            "details": "",
+            "state": "Okay",
+            "color": "green",
+            "until": 0
+          }
+        },
+        {
+          "1913341": {
+            "description": "Okay",
+            "details": "",
+            "state": "Okay",
+            "color": "green",
+            "until": 0
+          }
+        }
+      ],
+      "time_started": 1609348798,
+      "time_ready": 1609953598,
+      "time_left": 530238,
+      "time_completed": 0,
+      "initiated": 0,
+      "initiated_by": 0,
+      "planned_by": 235072,
+      "success": 0,
+      "money_gain": 0,
+      "respect_gain": 0
+    },
+    "8470453": {
+      "crime_id": 2,
+      "crime_name": "Kidnapping",
+      "participants": [
+        {
+          "2363342": {
+            "description": "Traveling to United Kingdom",
+            "details": "",
+            "state": "Traveling",
+            "color": "blue",
+            "until": 0
+          }
+        },
+        {
+          "2573890": {
+            "description": "Okay",
+            "details": "",
+            "state": "Okay",
+            "color": "green",
+            "until": 0
+          }
+        }
+      ],
+      "time_started": 1609320524,
+      "time_ready": 1609493324,
+      "time_left": 69964,
+      "time_completed": 0,
+      "initiated": 0,
+      "initiated_by": 0,
+      "planned_by": 2299907,
+      "success": 0,
+      "money_gain": 0,
+      "respect_gain": 0
+    },
+    "8469731": {
+      "crime_id": 3,
+      "crime_name": "Bomb threat",
+      "participants": [
+        {
+          "1467320": {
+            "description": "Returning to Torn from UAE",
+            "details": "",
+            "state": "Traveling",
+            "color": "blue",
+            "until": 0
+          }
+        },
+        {
+          "2005264": {
+            "description": "Okay",
+            "details": "",
+            "state": "Okay",
+            "color": "green",
+            "until": 0
+          }
+        },
+        {
+          "202437": {
+            "description": "Okay",
+            "details": "",
+            "state": "Okay",
+            "color": "green",
+            "until": 0
+          }
+        }
+      ],
+      "time_started": 1609299277,
+      "time_ready": 1609558477,
+      "time_left": 135117,
+      "time_completed": 0,
+      "initiated": 0,
+      "initiated_by": 0,
+      "planned_by": 1519188,
+      "success": 0,
+      "money_gain": 0,
+      "respect_gain": 0
+    },
+    "8468709": {
+      "crime_id": 4,
+      "crime_name": "Planned robbery",
+      "participants": [
+        {
+          "2392971": {
+            "description": "Okay",
+            "details": "",
+            "state": "Okay",
+            "color": "green",
+            "until": 0
+          }
+        },
+        {
+          "2513229": {
+            "description": "Okay",
+            "details": "",
+            "state": "Okay",
+            "color": "green",
+            "until": 0
+          }
+        },
+        {
+          "352097": {
+            "description": "Returning to Torn from South Africa",
+            "details": "",
+            "state": "Traveling",
+            "color": "blue",
+            "until": 0
+          }
+        },
+        {
+          "2518230": {
+            "description": "In South Africa",
+            "details": "",
+            "state": "Abroad",
+            "color": "blue",
+            "until": 0
+          }
+        },
+        {
+          "2385186": {
+            "description": "Okay",
+            "details": "",
+            "state": "Okay",
+            "color": "green",
+            "until": 0
+          }
+        }
+      ],
+      "time_started": 1609278156,
+      "time_ready": 1609623756,
+      "time_left": 200396,
+      "time_completed": 0,
+      "initiated": 0,
+      "initiated_by": 0,
+      "planned_by": 2518230,
+      "success": 0,
+      "money_gain": 0,
+      "respect_gain": 0
+    },
+    "8466716": {
+      "crime_id": 3,
+      "crime_name": "Bomb threat",
+      "participants": [
+        {
+          "2460056": {
+            "description": "Returning to Torn from Argentina",
+            "details": "",
+            "state": "Traveling",
+            "color": "blue",
+            "until": 0
+          }
+        },
+        {
+          "1818631": {
+            "description": "Returning to Torn from Hawaii",
+            "details": "",
+            "state": "Traveling",
+            "color": "blue",
+            "until": 0
+          }
+        },
+        {
+          "2594452": {
+            "description": "Okay",
+            "details": "",
+            "state": "Okay",
+            "color": "green",
+            "until": 0
+          }
+        }
+      ],
+      "time_started": 1609230436,
+      "time_ready": 1609489636,
+      "time_left": 66276,
+      "time_completed": 0,
+      "initiated": 0,
+      "initiated_by": 0,
+      "planned_by": 1519188,
+      "success": 0,
+      "money_gain": 0,
+      "respect_gain": 0
+    },
+    "8465378": {
+      "crime_id": 5,
+      "crime_name": "Robbing of a money train",
+      "participants": [
+        {
+          "717290": {
+            "description": "Okay",
+            "details": "",
+            "state": "Okay",
+            "color": "green",
+            "until": 0
+          }
+        },
+        {
+          "1700315": {
+            "description": "Okay",
+            "details": "",
+            "state": "Okay",
+            "color": "green",
+            "until": 0
+          }
+        },
+        {
+          "225011": {
+            "description": "Okay",
+            "details": "",
+            "state": "Okay",
+            "color": "green",
+            "until": 0
+          }
+        },
+        {
+          "2163841": {
+            "description": "Okay",
+            "details": "",
+            "state": "Okay",
+            "color": "green",
+            "until": 0
+          }
+        },
+        {
+          "2130567": {
+            "description": "In Argentina",
+            "details": "",
+            "state": "Abroad",
+            "color": "blue",
+            "until": 0
+          }
+        },
+        {
+          "465182": {
+            "description": "Okay",
+            "details": "",
+            "state": "Okay",
+            "color": "green",
+            "until": 0
+          }
+        }
+      ],
+      "time_started": 1609195728,
+      "time_ready": 1609627728,
+      "time_left": 204368,
+      "time_completed": 0,
+      "initiated": 0,
+      "initiated_by": 0,
+      "planned_by": 1519188,
+      "success": 0,
+      "money_gain": 0,
+      "respect_gain": 0
+    },
+    "8465376": {
+      "crime_id": 3,
+      "crime_name": "Bomb threat",
+      "participants": [
+        {
+          "2251090": {
+            "description": "Okay",
+            "details": "",
+            "state": "Okay",
+            "color": "green",
+            "until": 0
+          }
+        },
+        {
+          "2148971": {
+            "description": "Okay",
+            "details": "",
+            "state": "Okay",
+            "color": "green",
+            "until": 0
+          }
+        },
+        {
+          "2600123": {
+            "description": "Okay",
+            "details": "",
+            "state": "Okay",
+            "color": "green",
+            "until": 0
+          }
+        }
+      ],
+      "time_started": 1609195717,
+      "time_ready": 1609454917,
+      "time_left": 31557,
+      "time_completed": 0,
+      "initiated": 0,
+      "initiated_by": 0,
+      "planned_by": 1519188,
+      "success": 0,
+      "money_gain": 0,
+      "respect_gain": 0
+    },
+    "8463315": {
+      "crime_id": 2,
+      "crime_name": "Kidnapping",
+      "participants": [
+        {
+          "2363342": null
+        },
+        {
+          "2573890": null
+        }
+      ],
+      "time_started": 1609146528,
+      "time_ready": 1609319328,
+      "time_left": 0,
+      "time_completed": 1609320509,
+      "initiated": 1,
+      "initiated_by": 2299907,
+      "planned_by": 2172225,
+      "success": 1,
+      "money_gain": 15000,
+      "respect_gain": 5
+    },
+    "8463314": {
+      "crime_id": 4,
+      "crime_name": "Planned robbery",
+      "participants": [
+        {
+          "2211394": {
+            "description": "Okay",
+            "details": "",
+            "state": "Okay",
+            "color": "green",
+            "until": 0
+          }
+        },
+        {
+          "2299907": {
+            "description": "Okay",
+            "details": "",
+            "state": "Okay",
+            "color": "green",
+            "until": 0
+          }
+        },
+        {
+          "307626": {
+            "description": "Okay",
+            "details": "",
+            "state": "Okay",
+            "color": "green",
+            "until": 0
+          }
+        },
+        {
+          "1183116": {
+            "description": "Returning to Torn from South Africa",
+            "details": "",
+            "state": "Traveling",
+            "color": "blue",
+            "until": 0
+          }
+        },
+        {
+          "1870531": {
+            "description": "Okay",
+            "details": "",
+            "state": "Okay",
+            "color": "green",
+            "until": 0
+          }
+        }
+      ],
+      "time_started": 1609146510,
+      "time_ready": 1609492110,
+      "time_left": 68750,
+      "time_completed": 0,
+      "initiated": 0,
+      "initiated_by": 0,
+      "planned_by": 2172225,
+      "success": 0,
+      "money_gain": 0,
+      "respect_gain": 0
+    },
+    "8463309": {
+      "crime_id": 5,
+      "crime_name": "Robbing of a money train",
+      "participants": [
+        {
+          "527397": {
+            "description": "Returning to Torn from United Kingdom",
+            "details": "",
+            "state": "Traveling",
+            "color": "blue",
+            "until": 0
+          }
+        },
+        {
+          "80036": {
+            "description": "Okay",
+            "details": "",
+            "state": "Okay",
+            "color": "green",
+            "until": 0
+          }
+        },
+        {
+          "1519188": {
+            "description": "Okay",
+            "details": "",
+            "state": "Okay",
+            "color": "green",
+            "until": 0
+          }
+        },
+        {
+          "384108": {
+            "description": "Okay",
+            "details": "",
+            "state": "Okay",
+            "color": "green",
+            "until": 0
+          }
+        },
+        {
+          "528024": {
+            "description": "Okay",
+            "details": "",
+            "state": "Okay",
+            "color": "green",
+            "until": 0
+          }
+        },
+        {
+          "2346087": {
+            "description": "Okay",
+            "details": "",
+            "state": "Okay",
+            "color": "green",
+            "until": 0
+          }
+        }
+      ],
+      "time_started": 1609146461,
+      "time_ready": 1609578461,
+      "time_left": 155101,
+      "time_completed": 0,
+      "initiated": 0,
+      "initiated_by": 0,
+      "planned_by": 2172225,
+      "success": 0,
+      "money_gain": 0,
+      "respect_gain": 0
+    },
+    "8463307": {
+      "crime_id": 8,
+      "crime_name": "Political Assassination",
+      "participants": [
+        {
+          "1280063": {
+            "description": "In hospital for 2 hrs 40 mins ",
+            "details": "Burned in an arson attempt",
+            "state": "Hospital",
+            "color": "red",
+            "until": 1609432996
+          }
+        },
+        {
+          "1413127": {
+            "description": "Okay",
+            "details": "",
+            "state": "Okay",
+            "color": "green",
+            "until": 0
+          }
+        },
+        {
+          "79148": {
+            "description": "Okay",
+            "details": "",
+            "state": "Okay",
+            "color": "green",
+            "until": 0
+          }
+        },
+        {
+          "248367": {
+            "description": "Okay",
+            "details": "",
+            "state": "Okay",
+            "color": "green",
+            "until": 0
+          }
+        }
+      ],
+      "time_started": 1609146394,
+      "time_ready": 1609837594,
+      "time_left": 414234,
+      "time_completed": 0,
+      "initiated": 0,
+      "initiated_by": 0,
+      "planned_by": 2172225,
+      "success": 0,
+      "money_gain": 0,
+      "respect_gain": 0
+    },
+    "8461300": {
+      "crime_id": 3,
+      "crime_name": "Bomb threat",
+      "participants": [
+        {
+          "2003679": null
+        },
+        {
+          "2175576": null
+        },
+        {
+          "2601735": null
+        }
+      ],
+      "time_started": 1609095832,
+      "time_ready": 1609355032,
+      "time_left": 0,
+      "time_completed": 1609372464,
+      "initiated": 1,
+      "initiated_by": 2015200,
+      "planned_by": 574315,
+      "success": 1,
+      "money_gain": 150000,
+      "respect_gain": 10
+    },
+    "8461299": {
+      "crime_id": 4,
+      "crime_name": "Planned robbery",
+      "participants": [
+        {
+          "2346077": {
+            "description": "Okay",
+            "details": "",
+            "state": "Okay",
+            "color": "green",
+            "until": 0
+          }
+        },
+        {
+          "2488850": {
+            "description": "Okay",
+            "details": "",
+            "state": "Okay",
+            "color": "green",
+            "until": 0
+          }
+        },
+        {
+          "2233606": {
+            "description": "Returning to Torn from South Africa",
+            "details": "",
+            "state": "Traveling",
+            "color": "blue",
+            "until": 0
+          }
+        },
+        {
+          "512875": {
+            "description": "Okay",
+            "details": "",
+            "state": "Okay",
+            "color": "green",
+            "until": 0
+          }
+        },
+        {
+          "2569763": {
+            "description": "Okay",
+            "details": "",
+            "state": "Okay",
+            "color": "green",
+            "until": 0
+          }
+        }
+      ],
+      "time_started": 1609095827,
+      "time_ready": 1609441427,
+      "time_left": 18067,
+      "time_completed": 0,
+      "initiated": 0,
+      "initiated_by": 0,
+      "planned_by": 574315,
+      "success": 0,
+      "money_gain": 0,
+      "respect_gain": 0
+    },
+    "8460253": {
+      "crime_id": 5,
+      "crime_name": "Robbing of a money train",
+      "participants": [
+        {
+          "295233": {
+            "description": "Returning to Torn from South Africa",
+            "details": "",
+            "state": "Traveling",
+            "color": "blue",
+            "until": 0
+          }
+        },
+        {
+          "519291": {
+            "description": "Okay",
+            "details": "",
+            "state": "Okay",
+            "color": "green",
+            "until": 0
+          }
+        },
+        {
+          "2098045": {
+            "description": "Okay",
+            "details": "",
+            "state": "Okay",
+            "color": "green",
+            "until": 0
+          }
+        },
+        {
+          "2354229": {
+            "description": "Okay",
+            "details": "",
+            "state": "Okay",
+            "color": "green",
+            "until": 0
+          }
+        },
+        {
+          "1959482": {
+            "description": "Okay",
+            "details": "",
+            "state": "Okay",
+            "color": "green",
+            "until": 0
+          }
+        },
+        {
+          "2274512": {
+            "description": "Okay",
+            "details": "",
+            "state": "Okay",
+            "color": "green",
+            "until": 0
+          }
+        }
+      ],
+      "time_started": 1609073365,
+      "time_ready": 1609505365,
+      "time_left": 82005,
+      "time_completed": 0,
+      "initiated": 0,
+      "initiated_by": 0,
+      "planned_by": 574315,
+      "success": 0,
+      "money_gain": 0,
+      "respect_gain": 0
+    },
+    "8460251": {
+      "crime_id": 7,
+      "crime_name": "Plane hijacking",
+      "participants": [
+        {
+          "1563257": {
+            "description": "Okay",
+            "details": "",
+            "state": "Okay",
+            "color": "green",
+            "until": 0
+          }
+        },
+        {
+          "2172225": {
+            "description": "Okay",
+            "details": "",
+            "state": "Okay",
+            "color": "green",
+            "until": 0
+          }
+        },
+        {
+          "544391": {
+            "description": "In Switzerland",
+            "details": "",
+            "state": "Abroad",
+            "color": "blue",
+            "until": 0
+          }
+        },
+        {
+          "1961768": {
+            "description": "In Mexico",
+            "details": "",
+            "state": "Abroad",
+            "color": "blue",
+            "until": 0
+          }
+        },
+        {
+          "1286893": {
+            "description": "Okay",
+            "details": "",
+            "state": "Okay",
+            "color": "green",
+            "until": 0
+          }
+        },
+        {
+          "2162919": {
+            "description": "Okay",
+            "details": "",
+            "state": "Okay",
+            "color": "green",
+            "until": 0
+          }
+        },
+        {
+          "867156": {
+            "description": "Okay",
+            "details": "",
+            "state": "Okay",
+            "color": "green",
+            "until": 0
+          }
+        },
+        {
+          "2058049": {
+            "description": "Okay",
+            "details": "",
+            "state": "Okay",
+            "color": "green",
+            "until": 0
+          }
+        }
+      ],
+      "time_started": 1609073342,
+      "time_ready": 1609678142,
+      "time_left": 254782,
+      "time_completed": 0,
+      "initiated": 0,
+      "initiated_by": 0,
+      "planned_by": 574315,
+      "success": 0,
+      "money_gain": 0,
+      "respect_gain": 0
+    },
+    "8458980": {
+      "crime_id": 3,
+      "crime_name": "Bomb threat",
+      "participants": [
+        {
+          "1467320": null
+        },
+        {
+          "2005264": null
+        },
+        {
+          "202437": null
+        }
+      ],
+      "time_started": 1609037629,
+      "time_ready": 1609296829,
+      "time_left": 0,
+      "time_completed": 1609299261,
+      "initiated": 1,
+      "initiated_by": 1519188,
+      "planned_by": 2104114,
+      "success": 0,
+      "money_gain": 0,
+      "respect_gain": 0
+    },
+    "8458979": {
+      "crime_id": 5,
+      "crime_name": "Robbing of a money train",
+      "participants": [
+        {
+          "1994452": {
+            "description": "Okay",
+            "details": "",
+            "state": "Okay",
+            "color": "green",
+            "until": 0
+          }
+        },
+        {
+          "2104114": {
+            "description": "Okay",
+            "details": "",
+            "state": "Okay",
+            "color": "green",
+            "until": 0
+          }
+        },
+        {
+          "2338543": {
+            "description": "Okay",
+            "details": "",
+            "state": "Okay",
+            "color": "green",
+            "until": 0
+          }
+        },
+        {
+          "2160167": {
+            "description": "Okay",
+            "details": "",
+            "state": "Okay",
+            "color": "green",
+            "until": 0
+          }
+        },
+        {
+          "2322873": {
+            "description": "Returning to Torn from China",
+            "details": "",
+            "state": "Traveling",
+            "color": "blue",
+            "until": 0
+          }
+        },
+        {
+          "2438428": {
+            "description": "Okay",
+            "details": "",
+            "state": "Okay",
+            "color": "green",
+            "until": 0
+          }
+        }
+      ],
+      "time_started": 1609037622,
+      "time_ready": 1609469622,
+      "time_left": 46262,
+      "time_completed": 0,
+      "initiated": 0,
+      "initiated_by": 0,
+      "planned_by": 2104114,
+      "success": 0,
+      "money_gain": 0,
+      "respect_gain": 0
+    },
+    "8456204": {
+      "crime_id": 3,
+      "crime_name": "Bomb threat",
+      "participants": [
+        {
+          "2460056": null
+        },
+        {
+          "1818631": null
+        },
+        {
+          "2594452": null
+        }
+      ],
+      "time_started": 1608970981,
+      "time_ready": 1609230181,
+      "time_left": 0,
+      "time_completed": 1609230429,
+      "initiated": 1,
+      "initiated_by": 1519188,
+      "planned_by": 1519188,
+      "success": 0,
+      "money_gain": 0,
+      "respect_gain": 0
+    },
+    "8454050": {
+      "crime_id": 2,
+      "crime_name": "Kidnapping",
+      "participants": [
+        {
+          "2488850": null
+        },
+        {
+          "2601735": null
+        }
+      ],
+      "time_started": 1608919818,
+      "time_ready": 1609092618,
+      "time_left": 0,
+      "time_completed": 1609095778,
+      "initiated": 1,
+      "initiated_by": 574315,
+      "planned_by": 2172225,
+      "success": 1,
+      "money_gain": 35000,
+      "respect_gain": 3
+    },
+    "8454033": {
+      "crime_id": 8,
+      "crime_name": "Political Assassination",
+      "participants": [
+        {
+          "887003": {
+            "description": "Okay",
+            "details": "",
+            "state": "Okay",
+            "color": "green",
+            "until": 0
+          }
+        },
+        {
+          "2015200": {
+            "description": "Okay",
+            "details": "",
+            "state": "Okay",
+            "color": "green",
+            "until": 0
+          }
+        },
+        {
+          "372369": {
+            "description": "Okay",
+            "details": "",
+            "state": "Okay",
+            "color": "green",
+            "until": 0
+          }
+        },
+        {
+          "574315": {
+            "description": "Okay",
+            "details": "",
+            "state": "Okay",
+            "color": "green",
+            "until": 0
+          }
+        }
+      ],
+      "time_started": 1608919490,
+      "time_ready": 1609610690,
+      "time_left": 187330,
+      "time_completed": 0,
+      "initiated": 0,
+      "initiated_by": 0,
+      "planned_by": 2172225,
+      "success": 0,
+      "money_gain": 0,
+      "respect_gain": 0
+    },
+    "8454018": {
+      "crime_id": 3,
+      "crime_name": "Bomb threat",
+      "participants": [
+        {
+          "2251090": null
+        },
+        {
+          "2148971": null
+        },
+        {
+          "2600123": null
+        }
+      ],
+      "time_started": 1608919185,
+      "time_ready": 1609178385,
+      "time_left": 0,
+      "time_completed": 1609195713,
+      "initiated": 1,
+      "initiated_by": 1519188,
+      "planned_by": 574315,
+      "success": 1,
+      "money_gain": 100000,
+      "respect_gain": 7
+    },
+    "8452328": {
+      "crime_id": 4,
+      "crime_name": "Planned robbery",
+      "participants": [
+        {
+          "2392971": null
+        },
+        {
+          "352097": null
+        },
+        {
+          "2513229": null
+        },
+        {
+          "2518230": null
+        },
+        {
+          "2385186": null
+        }
+      ],
+      "time_started": 1608873150,
+      "time_ready": 1609218750,
+      "time_left": 0,
+      "time_completed": 1609278152,
+      "initiated": 1,
+      "initiated_by": 2518230,
+      "planned_by": 1519188,
+      "success": 1,
+      "money_gain": 450000,
+      "respect_gain": 18
+    },
+    "8449821": {
+      "crime_id": 3,
+      "crime_name": "Bomb threat",
+      "participants": [
+        {
+          "2569763": null
+        },
+        {
+          "2003679": null
+        },
+        {
+          "2175576": null
+        }
+      ],
+      "time_started": 1608810802,
+      "time_ready": 1609070002,
+      "time_left": 0,
+      "time_completed": 1609089127,
+      "initiated": 1,
+      "initiated_by": 2338543,
+      "planned_by": 1183116,
+      "success": 0,
+      "money_gain": 0,
+      "respect_gain": 0
+    },
+    "8446133": {
+      "crime_id": 3,
+      "crime_name": "Bomb threat",
+      "participants": [
+        {
+          "1467320": null
+        },
+        {
+          "2005264": null
+        },
+        {
+          "202437": null
+        }
+      ],
+      "time_started": 1608722397,
+      "time_ready": 1608981597,
+      "time_left": 0,
+      "time_completed": 1609037625,
+      "initiated": 1,
+      "initiated_by": 2104114,
+      "planned_by": 2322873,
+      "success": 1,
+      "money_gain": 100000,
+      "respect_gain": 9
+    },
+    "8445736": {
+      "crime_id": 3,
+      "crime_name": "Bomb threat",
+      "participants": [
+        {
+          "2460056": null
+        },
+        {
+          "1818631": null
+        },
+        {
+          "2594452": null
+        }
+      ],
+      "time_started": 1608710256,
+      "time_ready": 1608969456,
+      "time_left": 0,
+      "time_completed": 1608970976,
+      "initiated": 1,
+      "initiated_by": 1519188,
+      "planned_by": 1818631,
+      "success": 1,
+      "money_gain": 50000,
+      "respect_gain": 10
+    },
+    "8443991": {
+      "crime_id": 5,
+      "crime_name": "Robbing of a money train",
+      "participants": [
+        {
+          "717290": null
+        },
+        {
+          "225011": null
+        },
+        {
+          "2163841": null
+        },
+        {
+          "1700315": null
+        },
+        {
+          "2130567": null
+        },
+        {
+          "465182": null
+        }
+      ],
+      "time_started": 1608668329,
+      "time_ready": 1609100329,
+      "time_left": 0,
+      "time_completed": 1609195723,
+      "initiated": 1,
+      "initiated_by": 1519188,
+      "planned_by": 1519188,
+      "success": 1,
+      "money_gain": 4250000,
+      "respect_gain": 26
+    },
+    "8440505": {
+      "crime_id": 4,
+      "crime_name": "Planned robbery",
+      "participants": [
+        {
+          "2162919": null
+        },
+        {
+          "2274512": null
+        },
+        {
+          "2233606": null
+        },
+        {
+          "2525435": null
+        },
+        {
+          "512875": null
+        }
+      ],
+      "time_started": 1608583383,
+      "time_ready": 1608928983,
+      "time_left": 0,
+      "time_completed": 1609015193,
+      "initiated": 1,
+      "initiated_by": 2233606,
+      "planned_by": 2172225,
+      "success": 1,
+      "money_gain": 550000,
+      "respect_gain": 21
+    },
+    "8438465": {
+      "crime_id": 5,
+      "crime_name": "Robbing of a money train",
+      "participants": [
+        {
+          "1994452": null
+        },
+        {
+          "2104114": null
+        },
+        {
+          "2338543": null
+        },
+        {
+          "2160167": null
+        },
+        {
+          "2322873": null
+        },
+        {
+          "2438428": null
+        }
+      ],
+      "time_started": 1608535706,
+      "time_ready": 1608967706,
+      "time_left": 0,
+      "time_completed": 1609037618,
+      "initiated": 1,
+      "initiated_by": 2104114,
+      "planned_by": 2322873,
+      "success": 1,
+      "money_gain": 4250000,
+      "respect_gain": 28
+    },
+    "8437719": {
+      "crime_id": 4,
+      "crime_name": "Planned robbery",
+      "participants": [
+        {
+          "352097": null
+        },
+        {
+          "2513229": null
+        },
+        {
+          "1446944": null
+        },
+        {
+          "2518230": null
+        },
+        {
+          "2385186": null
+        }
+      ],
+      "time_started": 1608515862,
+      "time_ready": 1608861462,
+      "time_left": 0,
+      "time_completed": 1608873087,
+      "initiated": 1,
+      "initiated_by": 1519188,
+      "planned_by": 2518230,
+      "success": 1,
+      "money_gain": 400000,
+      "respect_gain": 23
+    },
+    "8434997": {
+      "crime_id": 4,
+      "crime_name": "Planned robbery",
+      "participants": [
+        {
+          "931420": null
+        },
+        {
+          "1183116": null
+        },
+        {
+          "1870531": null
+        },
+        {
+          "2363342": null
+        },
+        {
+          "2573890": null
+        }
+      ],
+      "time_started": 1608450856,
+      "time_ready": 1608796456,
+      "time_left": 0,
+      "time_completed": 1608842064,
+      "initiated": 1,
+      "initiated_by": 1870531,
+      "planned_by": 2573890,
+      "success": 1,
+      "money_gain": 600000,
+      "respect_gain": 18
+    },
+    "8434922": {
+      "crime_id": 3,
+      "crime_name": "Bomb threat",
+      "participants": [
+        {
+          "2460056": null
+        },
+        {
+          "1818631": null
+        },
+        {
+          "2594452": null
+        }
+      ],
+      "time_started": 1608447578,
+      "time_ready": 1608706778,
+      "time_left": 0,
+      "time_completed": 1608710252,
+      "initiated": 1,
+      "initiated_by": 1818631,
+      "planned_by": 1183116,
+      "success": 1,
+      "money_gain": 150000,
+      "respect_gain": 8
+    },
+    "8434605": {
+      "crime_id": 4,
+      "crime_name": "Planned robbery",
+      "participants": [
+        {
+          "2346087": null
+        },
+        {
+          "2340663": null
+        },
+        {
+          "2299907": null
+        },
+        {
+          "2211394": null
+        },
+        {
+          "307626": null
+        }
+      ],
+      "time_started": 1608438677,
+      "time_ready": 1608784277,
+      "time_left": 0,
+      "time_completed": 1608801302,
+      "initiated": 1,
+      "initiated_by": 1961768,
+      "planned_by": 2104114,
+      "success": 1,
+      "money_gain": 550000,
+      "respect_gain": 24
+    },
+    "8432899": {
+      "crime_id": 3,
+      "crime_name": "Bomb threat",
+      "participants": [
+        {
+          "1467320": null
+        },
+        {
+          "2005264": null
+        },
+        {
+          "202437": null
+        }
+      ],
+      "time_started": 1608399896,
+      "time_ready": 1608659096,
+      "time_left": 0,
+      "time_completed": 1608722391,
+      "initiated": 1,
+      "initiated_by": 2322873,
+      "planned_by": 2015200,
+      "success": 1,
+      "money_gain": 125000,
+      "respect_gain": 7
+    },
+    "8430660": {
+      "crime_id": 5,
+      "crime_name": "Robbing of a money train",
+      "participants": [
+        {
+          "524028": null
+        },
+        {
+          "2058049": null
+        },
+        {
+          "519291": null
+        },
+        {
+          "2098045": null
+        },
+        {
+          "2354229": null
+        },
+        {
+          "1959482": null
+        }
+      ],
+      "time_started": 1608339519,
+      "time_ready": 1608771519,
+      "time_left": 0,
+      "time_completed": 1608772434,
+      "initiated": 1,
+      "initiated_by": 235072,
+      "planned_by": 1446944,
+      "success": 1,
+      "money_gain": 3250000,
+      "respect_gain": 26
+    },
+    "8430654": {
+      "crime_id": 3,
+      "crime_name": "Bomb threat",
+      "participants": [
+        {
+          "2569763": null
+        },
+        {
+          "2003679": null
+        },
+        {
+          "2175576": null
+        }
+      ],
+      "time_started": 1608339455,
+      "time_ready": 1608598655,
+      "time_left": 0,
+      "time_completed": 1608810767,
+      "initiated": 1,
+      "initiated_by": 1183116,
+      "planned_by": 1446944,
+      "success": 1,
+      "money_gain": 150000,
+      "respect_gain": 7
+    },
+    "8426252": {
+      "crime_id": 4,
+      "crime_name": "Planned robbery",
+      "participants": [
+        {
+          "2162919": null
+        },
+        {
+          "2274512": null
+        },
+        {
+          "2233606": null
+        },
+        {
+          "2525435": null
+        },
+        {
+          "512875": null
+        }
+      ],
+      "time_started": 1608234976,
+      "time_ready": 1608580576,
+      "time_left": 0,
+      "time_completed": 1608583375,
+      "initiated": 1,
+      "initiated_by": 2172225,
+      "planned_by": 2222285,
+      "success": 1,
+      "money_gain": 550000,
+      "respect_gain": 24
+    },
+    "8426225": {
+      "crime_id": 5,
+      "crime_name": "Robbing of a money train",
+      "participants": [
+        {
+          "717290": null
+        },
+        {
+          "2163841": null
+        },
+        {
+          "225011": null
+        },
+        {
+          "1700315": null
+        },
+        {
+          "2130567": null
+        },
+        {
+          "465182": null
+        }
+      ],
+      "time_started": 1608234276,
+      "time_ready": 1608666276,
+      "time_left": 0,
+      "time_completed": 1608668323,
+      "initiated": 1,
+      "initiated_by": 1519188,
+      "planned_by": 2015200,
+      "success": 1,
+      "money_gain": 4000000,
+      "respect_gain": 31
+    },
+    "8423942": {
+      "crime_id": 3,
+      "crime_name": "Bomb threat",
+      "participants": [
+        {
+          "2460056": null
+        },
+        {
+          "1818631": null
+        },
+        {
+          "2594452": null
+        }
+      ],
+      "time_started": 1608177837,
+      "time_ready": 1608437037,
+      "time_left": 0,
+      "time_completed": 1608447574,
+      "initiated": 1,
+      "initiated_by": 1183116,
+      "planned_by": 2460056,
+      "success": 1,
+      "money_gain": 150000,
+      "respect_gain": 10
+    },
+    "8422044": {
+      "crime_id": 3,
+      "crime_name": "Bomb threat",
+      "participants": [
+        {
+          "1467320": null
+        },
+        {
+          "2005264": null
+        },
+        {
+          "202437": null
+        }
+      ],
+      "time_started": 1608137543,
+      "time_ready": 1608396743,
+      "time_left": 0,
+      "time_completed": 1608399890,
+      "initiated": 1,
+      "initiated_by": 2015200,
+      "planned_by": 2015200,
+      "success": 1,
+      "money_gain": 125000,
+      "respect_gain": 7
+    },
+    "8420681": {
+      "crime_id": 4,
+      "crime_name": "Planned robbery",
+      "participants": [
+        {
+          "352097": null
+        },
+        {
+          "2513229": null
+        },
+        {
+          "1446944": null
+        },
+        {
+          "2518230": null
+        },
+        {
+          "2385186": null
+        }
+      ],
+      "time_started": 1608101702,
+      "time_ready": 1608447302,
+      "time_left": 0,
+      "time_completed": 1608515857,
+      "initiated": 1,
+      "initiated_by": 2518230,
+      "planned_by": 2172225,
+      "success": 1,
+      "money_gain": 400000,
+      "respect_gain": 21
+    },
+    "8420680": {
+      "crime_id": 4,
+      "crime_name": "Planned robbery",
+      "participants": [
+        {
+          "931420": null
+        },
+        {
+          "1183116": null
+        },
+        {
+          "1870531": null
+        },
+        {
+          "2363342": null
+        },
+        {
+          "2573890": null
+        }
+      ],
+      "time_started": 1608101692,
+      "time_ready": 1608447292,
+      "time_left": 0,
+      "time_completed": 1608447558,
+      "initiated": 1,
+      "initiated_by": 1183116,
+      "planned_by": 2172225,
+      "success": 0,
+      "money_gain": 0,
+      "respect_gain": 0
+    },
+    "8420678": {
+      "crime_id": 5,
+      "crime_name": "Robbing of a money train",
+      "participants": [
+        {
+          "1994452": null
+        },
+        {
+          "2104114": null
+        },
+        {
+          "2338543": null
+        },
+        {
+          "2160167": null
+        },
+        {
+          "2322873": null
+        },
+        {
+          "2438428": null
+        }
+      ],
+      "time_started": 1608101682,
+      "time_ready": 1608533682,
+      "time_left": 0,
+      "time_completed": 1608535623,
+      "initiated": 1,
+      "initiated_by": 2322873,
+      "planned_by": 2172225,
+      "success": 1,
+      "money_gain": 3750000,
+      "respect_gain": 35
+    },
+    "8420675": {
+      "crime_id": 7,
+      "crime_name": "Plane hijacking",
+      "participants": [
+        {
+          "1563257": null
+        },
+        {
+          "1944535": null
+        },
+        {
+          "2112841": null
+        },
+        {
+          "606826": null
+        },
+        {
+          "1832621": null
+        },
+        {
+          "1286893": null
+        },
+        {
+          "867156": null
+        },
+        {
+          "1519188": null
+        }
+      ],
+      "time_started": 1608101660,
+      "time_ready": 1608706460,
+      "time_left": 0,
+      "time_completed": 1608712313,
+      "initiated": 1,
+      "initiated_by": 2015200,
+      "planned_by": 2172225,
+      "success": 1,
+      "money_gain": 20000000,
+      "respect_gain": 86
+    },
+    "8420672": {
+      "crime_id": 7,
+      "crime_name": "Plane hijacking",
+      "participants": [
+        {
+          "2092393": null
+        },
+        {
+          "2038706": null
+        },
+        {
+          "2172225": null
+        },
+        {
+          "544391": null
+        },
+        {
+          "384108": null
+        },
+        {
+          "295233": null
+        },
+        {
+          "1746371": null
+        },
+        {
+          "528024": null
+        }
+      ],
+      "time_started": 1608101642,
+      "time_ready": 1608706442,
+      "time_left": 0,
+      "time_completed": 1608712301,
+      "initiated": 1,
+      "initiated_by": 2015200,
+      "planned_by": 2172225,
+      "success": 0,
+      "money_gain": 0,
+      "respect_gain": 0
+    },
+    "8420522": {
+      "crime_id": 8,
+      "crime_name": "Political Assassination",
+      "participants": [
+        {
+          "1280063": null
+        },
+        {
+          "235072": null
+        },
+        {
+          "79148": null
+        },
+        {
+          "248367": null
+        }
+      ],
+      "time_started": 1608097485,
+      "time_ready": 1608788685,
+      "time_left": 0,
+      "time_completed": 1608795805,
+      "initiated": 1,
+      "initiated_by": 1280063,
+      "planned_by": 235072,
+      "success": 0,
+      "money_gain": 0,
+      "respect_gain": 0
+    },
+    "8420521": {
+      "crime_id": 8,
+      "crime_name": "Political Assassination",
+      "participants": [
+        {
+          "887003": null
+        },
+        {
+          "1413127": null
+        },
+        {
+          "2015200": null
+        },
+        {
+          "372369": null
+        }
+      ],
+      "time_started": 1608097456,
+      "time_ready": 1608788656,
+      "time_left": 0,
+      "time_completed": 1608795691,
+      "initiated": 1,
+      "initiated_by": 1280063,
+      "planned_by": 235072,
+      "success": 1,
+      "money_gain": 200000000,
+      "respect_gain": 203
+    },
+    "8418645": {
+      "crime_id": 1,
+      "crime_name": "Blackmailing",
+      "participants": [
+        {
+          "2600123": null
+        },
+        {
+          "2601735": null
+        }
+      ],
+      "time_started": 1608055898,
+      "time_ready": 1608142298,
+      "time_left": 0,
+      "time_completed": 1608146040,
+      "initiated": 1,
+      "initiated_by": 524028,
+      "planned_by": 307626,
+      "success": 1,
+      "money_gain": 8000,
+      "respect_gain": 2
+    },
+    "8418644": {
+      "crime_id": 4,
+      "crime_name": "Planned robbery",
+      "participants": [
+        {
+          "2346087": null
+        },
+        {
+          "2340663": null
+        },
+        {
+          "2299907": null
+        },
+        {
+          "2211394": null
+        },
+        {
+          "307626": null
+        }
+      ],
+      "time_started": 1608055878,
+      "time_ready": 1608401478,
+      "time_left": 0,
+      "time_completed": 1608438673,
+      "initiated": 1,
+      "initiated_by": 2104114,
+      "planned_by": 307626,
+      "success": 1,
+      "money_gain": 550000,
+      "respect_gain": 19
+    },
+    "8417256": {
+      "crime_id": 3,
+      "crime_name": "Bomb threat",
+      "participants": [
+        {
+          "2569763": null
+        },
+        {
+          "2003679": null
+        },
+        {
+          "2175576": null
+        }
+      ],
+      "time_started": 1608019787,
+      "time_ready": 1608278987,
+      "time_left": 0,
+      "time_completed": 1608339444,
+      "initiated": 1,
+      "initiated_by": 1446944,
+      "planned_by": 2573890,
+      "success": 0,
+      "money_gain": 0,
+      "respect_gain": 0
+    },
+    "8413969": {
+      "crime_id": 1,
+      "crime_name": "Blackmailing",
+      "participants": [
+        {
+          "2600123": null
+        },
+        {
+          "2601735": null
+        }
+      ],
+      "time_started": 1607946346,
+      "time_ready": 1608032746,
+      "time_left": 0,
+      "time_completed": 1608055891,
+      "initiated": 1,
+      "initiated_by": 307626,
+      "planned_by": 1183116,
+      "success": 1,
+      "money_gain": 8000,
+      "respect_gain": 2
+    },
+    "8413799": {
+      "crime_id": 7,
+      "crime_name": "Plane hijacking",
+      "participants": [
+        {
+          "125670": null
+        },
+        {
+          "1419046": null
+        },
+        {
+          "1913341": null
+        },
+        {
+          "1961768": null
+        },
+        {
+          "2058787": null
+        },
+        {
+          "2222285": null
+        },
+        {
+          "527397": null
+        },
+        {
+          "80036": null
+        }
+      ],
+      "time_started": 1607941519,
+      "time_ready": 1608546319,
+      "time_left": 0,
+      "time_completed": 1608551677,
+      "initiated": 1,
+      "initiated_by": 527397,
+      "planned_by": 2222285,
+      "success": 0,
+      "money_gain": 0,
+      "respect_gain": 0
+    },
+    "8412478": {
+      "crime_id": 3,
+      "crime_name": "Bomb threat",
+      "participants": [
+        {
+          "2460056": null
+        },
+        {
+          "1818631": null
+        },
+        {
+          "2594452": null
+        }
+      ],
+      "time_started": 1607905114,
+      "time_ready": 1608164314,
+      "time_left": 0,
+      "time_completed": 1608177833,
+      "initiated": 1,
+      "initiated_by": 2460056,
+      "planned_by": 2460056,
+      "success": 1,
+      "money_gain": 150000,
+      "respect_gain": 7
+    },
+    "8411104": {
+      "crime_id": 3,
+      "crime_name": "Bomb threat",
+      "participants": [
+        {
+          "1467320": null
+        },
+        {
+          "2005264": null
+        },
+        {
+          "202437": null
+        }
+      ],
+      "time_started": 1607876674,
+      "time_ready": 1608135874,
+      "time_left": 0,
+      "time_completed": 1608137535,
+      "initiated": 1,
+      "initiated_by": 2015200,
+      "planned_by": 2338543,
+      "success": 1,
+      "money_gain": 100000,
+      "respect_gain": 8
+    },
+    "8407326": {
+      "crime_id": 4,
+      "crime_name": "Planned robbery",
+      "participants": [
+        {
+          "2162919": null
+        },
+        {
+          "2274512": null
+        },
+        {
+          "2233606": null
+        },
+        {
+          "2525435": null
+        },
+        {
+          "512875": null
+        }
+      ],
+      "time_started": 1607782459,
+      "time_ready": 1608128059,
+      "time_left": 0,
+      "time_completed": 1608234970,
+      "initiated": 1,
+      "initiated_by": 2222285,
+      "planned_by": 2172225,
+      "success": 1,
+      "money_gain": 550000,
+      "respect_gain": 23
+    },
+    "8407238": {
+      "crime_id": 1,
+      "crime_name": "Blackmailing",
+      "participants": [
+        {
+          "2600123": null
+        },
+        {
+          "2601735": null
+        }
+      ],
+      "time_started": 1607779491,
+      "time_ready": 1607865891,
+      "time_left": 0,
+      "time_completed": 1607946341,
+      "initiated": 1,
+      "initiated_by": 1183116,
+      "planned_by": 2600123,
+      "success": 1,
+      "money_gain": 8000,
+      "respect_gain": 2
+    },
+    "8406806": {
+      "crime_id": 5,
+      "crime_name": "Robbing of a money train",
+      "participants": [
+        {
+          "717290": null
+        },
+        {
+          "2163841": null
+        },
+        {
+          "225011": null
+        },
+        {
+          "1700315": null
+        },
+        {
+          "2130567": null
+        },
+        {
+          "465182": null
+        }
+      ],
+      "time_started": 1607767517,
+      "time_ready": 1608199517,
+      "time_left": 0,
+      "time_completed": 1608234271,
+      "initiated": 1,
+      "initiated_by": 2015200,
+      "planned_by": 2160167,
+      "success": 1,
+      "money_gain": 3500000,
+      "respect_gain": 29
+    },
+    "8405765": {
+      "crime_id": 3,
+      "crime_name": "Bomb threat",
+      "participants": [
+        {
+          "2569763": null
+        },
+        {
+          "2003679": null
+        },
+        {
+          "2175576": null
+        }
+      ],
+      "time_started": 1607737288,
+      "time_ready": 1607996488,
+      "time_left": 0,
+      "time_completed": 1608019778,
+      "initiated": 1,
+      "initiated_by": 2573890,
+      "planned_by": 2569763,
+      "success": 1,
+      "money_gain": 50000,
+      "respect_gain": 10
+    },
+    "8404484": {
+      "crime_id": 3,
+      "crime_name": "Bomb threat",
+      "participants": [
+        {
+          "2518230": null
+        },
+        {
+          "2385186": null
+        },
+        {
+          "2573890": null
+        }
+      ],
+      "time_started": 1607708937,
+      "time_ready": 1607968137,
+      "time_left": 0,
+      "time_completed": 1608063320,
+      "initiated": 1,
+      "initiated_by": 2518230,
+      "planned_by": 2573890,
+      "success": 1,
+      "money_gain": 50000,
+      "respect_gain": 9
+    },
+    "8403616": {
+      "crime_id": 4,
+      "crime_name": "Planned robbery",
+      "participants": [
+        {
+          "1994452": null
+        },
+        {
+          "2104114": null
+        },
+        {
+          "2338543": null
+        },
+        {
+          "2160167": null
+        },
+        {
+          "931420": null
+        }
+      ],
+      "time_started": 1607688095,
+      "time_ready": 1608033695,
+      "time_left": 0,
+      "time_completed": 1608093560,
+      "initiated": 1,
+      "initiated_by": 2104114,
+      "planned_by": 2104114,
+      "success": 1,
+      "money_gain": 400000,
+      "respect_gain": 23
+    },
+    "8403614": {
+      "crime_id": 4,
+      "crime_name": "Planned robbery",
+      "participants": [
+        {
+          "2346087": null
+        },
+        {
+          "2340663": null
+        },
+        {
+          "2299907": null
+        },
+        {
+          "2211394": null
+        },
+        {
+          "307626": null
+        }
+      ],
+      "time_started": 1607688086,
+      "time_ready": 1608033686,
+      "time_left": 0,
+      "time_completed": 1608034910,
+      "initiated": 1,
+      "initiated_by": 2015200,
+      "planned_by": 2104114,
+      "success": 1,
+      "money_gain": 550000,
+      "respect_gain": 21
+    },
+    "8401926": {
+      "crime_id": 3,
+      "crime_name": "Bomb threat",
+      "participants": [
+        {
+          "2460056": null
+        },
+        {
+          "1818631": null
+        },
+        {
+          "2594452": null
+        }
+      ],
+      "time_started": 1607642092,
+      "time_ready": 1607901292,
+      "time_left": 0,
+      "time_completed": 1607905111,
+      "initiated": 1,
+      "initiated_by": 2460056,
+      "planned_by": 2460056,
+      "success": 1,
+      "money_gain": 150000,
+      "respect_gain": 10
+    },
+    "8401519": {
+      "crime_id": 1,
+      "crime_name": "Blackmailing",
+      "participants": [
+        {
+          "2600123": null
+        },
+        {
+          "2601735": null
+        }
+      ],
+      "time_started": 1607632351,
+      "time_ready": 1607718751,
+      "time_left": 0,
+      "time_completed": 1607779487,
+      "initiated": 1,
+      "initiated_by": 2600123,
+      "planned_by": 2601735,
+      "success": 1,
+      "money_gain": 8000,
+      "respect_gain": 1
+    },
+    "8399812": {
+      "crime_id": 3,
+      "crime_name": "Bomb threat",
+      "participants": [
+        {
+          "1467320": null
+        },
+        {
+          "2005264": null
+        },
+        {
+          "202437": null
+        }
+      ],
+      "time_started": 1607596058,
+      "time_ready": 1607855258,
+      "time_left": 0,
+      "time_completed": 1607876665,
+      "initiated": 1,
+      "initiated_by": 2338543,
+      "planned_by": 2015200,
+      "success": 1,
+      "money_gain": 50000,
+      "respect_gain": 9
+    },
+    "8397757": {
+      "crime_id": 1,
+      "crime_name": "Blackmailing",
+      "participants": [
+        {
+          "2600123": null
+        },
+        {
+          "2601735": null
+        }
+      ],
+      "time_started": 1607544198,
+      "time_ready": 1607630598,
+      "time_left": 0,
+      "time_completed": 1607632343,
+      "initiated": 1,
+      "initiated_by": 2601735,
+      "planned_by": 235072,
+      "success": 1,
+      "money_gain": 9000,
+      "respect_gain": 2
+    },
+    "8396156": {
+      "crime_id": 5,
+      "crime_name": "Robbing of a money train",
+      "participants": [
+        {
+          "1903715": null
+        },
+        {
+          "519291": null
+        },
+        {
+          "2098045": null
+        },
+        {
+          "2354229": null
+        },
+        {
+          "1959482": null
+        },
+        {
+          "2346077": null
+        }
+      ],
+      "time_started": 1607507221,
+      "time_ready": 1607939221,
+      "time_left": 0,
+      "time_completed": 1607941879,
+      "initiated": 1,
+      "initiated_by": 1961768,
+      "planned_by": 2346077,
+      "success": 0,
+      "money_gain": 0,
+      "respect_gain": 0
+    },
+    "8393628": {
+      "crime_id": 1,
+      "crime_name": "Blackmailing",
+      "participants": [
+        {
+          "2600123": null
+        },
+        {
+          "2601735": null
+        }
+      ],
+      "time_started": 1607450097,
+      "time_ready": 1607536497,
+      "time_left": 0,
+      "time_completed": 1607544172,
+      "initiated": 1,
+      "initiated_by": 235072,
+      "planned_by": 307626,
+      "success": 1,
+      "money_gain": 8000,
+      "respect_gain": 2
+    },
+    "8392906": {
+      "crime_id": 2,
+      "crime_name": "Kidnapping",
+      "participants": [
+        {
+          "1183116": null
+        },
+        {
+          "2621571": null
+        }
+      ],
+      "time_started": 1607434194,
+      "time_ready": 1607606994,
+      "time_left": 0,
+      "time_completed": 1607650262,
+      "initiated": 1,
+      "initiated_by": 2322873,
+      "planned_by": 2172225,
+      "success": 1,
+      "money_gain": 35000,
+      "respect_gain": 4
+    },
+    "8392905": {
+      "crime_id": 4,
+      "crime_name": "Planned robbery",
+      "participants": [
+        {
+          "2162919": null
+        },
+        {
+          "2274512": null
+        },
+        {
+          "2233606": null
+        },
+        {
+          "2525435": null
+        },
+        {
+          "512875": null
+        }
+      ],
+      "time_started": 1607434181,
+      "time_ready": 1607779781,
+      "time_left": 0,
+      "time_completed": 1607782447,
+      "initiated": 1,
+      "initiated_by": 2172225,
+      "planned_by": 2172225,
+      "success": 1,
+      "money_gain": 500000,
+      "respect_gain": 18
+    },
+    "8392344": {
+      "crime_id": 3,
+      "crime_name": "Bomb threat",
+      "participants": [
+        {
+          "2518230": null
+        },
+        {
+          "2385186": null
+        },
+        {
+          "2573890": null
+        }
+      ],
+      "time_started": 1607417882,
+      "time_ready": 1607677082,
+      "time_left": 0,
+      "time_completed": 1607708931,
+      "initiated": 1,
+      "initiated_by": 2573890,
+      "planned_by": 2573890,
+      "success": 1,
+      "money_gain": 125000,
+      "respect_gain": 7
+    },
+    "8391714": {
+      "crime_id": 8,
+      "crime_name": "Political Assassination",
+      "participants": [
+        {
+          "1280063": null
+        },
+        {
+          "2015200": null
+        },
+        {
+          "79148": null
+        },
+        {
+          "248367": null
+        }
+      ],
+      "time_started": 1607398305,
+      "time_ready": 1608089505,
+      "time_left": 0,
+      "time_completed": 1608091344,
+      "initiated": 1,
+      "initiated_by": 235072,
+      "planned_by": 2104114,
+      "success": 0,
+      "money_gain": 0,
+      "respect_gain": 0
+    },
+    "8390734": {
+      "crime_id": 3,
+      "crime_name": "Bomb threat",
+      "participants": [
+        {
+          "2460056": null
+        },
+        {
+          "1818631": null
+        },
+        {
+          "2594452": null
+        }
+      ],
+      "time_started": 1607376997,
+      "time_ready": 1607636197,
+      "time_left": 0,
+      "time_completed": 1607642087,
+      "initiated": 1,
+      "initiated_by": 2460056,
+      "planned_by": 2460056,
+      "success": 0,
+      "money_gain": 0,
+      "respect_gain": 0
+    },
+    "8390330": {
+      "crime_id": 7,
+      "crime_name": "Plane hijacking",
+      "participants": [
+        {
+          "2038706": null
+        },
+        {
+          "1563257": null
+        },
+        {
+          "1944535": null
+        },
+        {
+          "2172225": null
+        },
+        {
+          "2112841": null
+        },
+        {
+          "606826": null
+        },
+        {
+          "1832621": null
+        },
+        {
+          "1286893": null
+        }
+      ],
+      "time_started": 1607368982,
+      "time_ready": 1607973782,
+      "time_left": 0,
+      "time_completed": 1607974044,
+      "initiated": 1,
+      "initiated_by": 606826,
+      "planned_by": 606826,
+      "success": 0,
+      "money_gain": 0,
+      "respect_gain": 0
+    },
+    "8389354": {
+      "crime_id": 1,
+      "crime_name": "Blackmailing",
+      "participants": [
+        {
+          "2600123": null
+        },
+        {
+          "2601735": null
+        }
+      ],
+      "time_started": 1607347545,
+      "time_ready": 1607433945,
+      "time_left": 0,
+      "time_completed": 1607450093,
+      "initiated": 1,
+      "initiated_by": 307626,
+      "planned_by": 2600123,
+      "success": 1,
+      "money_gain": 9000,
+      "respect_gain": 2
+    },
+    "8389155": {
+      "crime_id": 3,
+      "crime_name": "Bomb threat",
+      "participants": [
+        {
+          "2148971": null
+        },
+        {
+          "1870531": null
+        },
+        {
+          "2363342": null
+        }
+      ],
+      "time_started": 1607342128,
+      "time_ready": 1607601328,
+      "time_left": 0,
+      "time_completed": 1607640545,
+      "initiated": 1,
+      "initiated_by": 1870531,
+      "planned_by": 2363342,
+      "success": 1,
+      "money_gain": 75000,
+      "respect_gain": 7
+    },
+    "8388891": {
+      "crime_id": 5,
+      "crime_name": "Robbing of a money train",
+      "participants": [
+        {
+          "717290": null
+        },
+        {
+          "2163841": null
+        },
+        {
+          "225011": null
+        },
+        {
+          "1700315": null
+        },
+        {
+          "2130567": null
+        },
+        {
+          "465182": null
+        }
+      ],
+      "time_started": 1607334947,
+      "time_ready": 1607766947,
+      "time_left": 0,
+      "time_completed": 1607767511,
+      "initiated": 1,
+      "initiated_by": 2160167,
+      "planned_by": 1913341,
+      "success": 1,
+      "money_gain": 3750000,
+      "respect_gain": 25
+    },
+    "8388890": {
+      "crime_id": 7,
+      "crime_name": "Plane hijacking",
+      "participants": [
+        {
+          "544391": null
+        },
+        {
+          "867156": null
+        },
+        {
+          "2058049": null
+        },
+        {
+          "1519188": null
+        },
+        {
+          "384108": null
+        },
+        {
+          "295233": null
+        },
+        {
+          "1746371": null
+        },
+        {
+          "528024": null
+        }
+      ],
+      "time_started": 1607334920,
+      "time_ready": 1607939720,
+      "time_left": 0,
+      "time_completed": 1607946353,
+      "initiated": 1,
+      "initiated_by": 1183116,
+      "planned_by": 1913341,
+      "success": 0,
+      "money_gain": 0,
+      "respect_gain": 0
+    },
+    "8388882": {
+      "crime_id": 3,
+      "crime_name": "Bomb threat",
+      "participants": [
+        {
+          "1467320": null
+        },
+        {
+          "2005264": null
+        },
+        {
+          "202437": null
+        }
+      ],
+      "time_started": 1607334804,
+      "time_ready": 1607594004,
+      "time_left": 0,
+      "time_completed": 1607596049,
+      "initiated": 1,
+      "initiated_by": 2015200,
+      "planned_by": 1913341,
+      "success": 1,
+      "money_gain": 100000,
+      "respect_gain": 9
+    },
+    "8388877": {
+      "crime_id": 1,
+      "crime_name": "Blackmailing",
+      "participants": [
+        {
+          "1419093": null
+        },
+        {
+          "2621571": null
+        }
+      ],
+      "time_started": 1607334781,
+      "time_ready": 1607421181,
+      "time_left": 0,
+      "time_completed": 1607430405,
+      "initiated": 1,
+      "initiated_by": 2172225,
+      "planned_by": 1913341,
+      "success": 1,
+      "money_gain": 7000,
+      "respect_gain": 1
+    },
+    "8388875": {
+      "crime_id": 7,
+      "crime_name": "Plane hijacking",
+      "participants": [
+        {
+          "125670": null
+        },
+        {
+          "1419046": null
+        },
+        {
+          "1913341": null
+        },
+        {
+          "1961768": null
+        },
+        {
+          "2058787": null
+        },
+        {
+          "527397": null
+        },
+        {
+          "2222285": null
+        },
+        {
+          "80036": null
+        }
+      ],
+      "time_started": 1607334751,
+      "time_ready": 1607939551,
+      "time_left": 0,
+      "time_completed": 1607941510,
+      "initiated": 1,
+      "initiated_by": 2222285,
+      "planned_by": 1913341,
+      "success": 0,
+      "money_gain": 0,
+      "respect_gain": 0
+    },
+    "8388866": {
+      "crime_id": 4,
+      "crime_name": "Planned robbery",
+      "participants": [
+        {
+          "1994452": null
+        },
+        {
+          "2104114": null
+        },
+        {
+          "2338543": null
+        },
+        {
+          "2160167": null
+        },
+        {
+          "931420": null
+        }
+      ],
+      "time_started": 1607334528,
+      "time_ready": 1607680128,
+      "time_left": 0,
+      "time_completed": 1607688091,
+      "initiated": 1,
+      "initiated_by": 2104114,
+      "planned_by": 1913341,
+      "success": 1,
+      "money_gain": 400000,
+      "respect_gain": 19
+    },
+    "8388861": {
+      "crime_id": 4,
+      "crime_name": "Planned robbery",
+      "participants": [
+        {
+          "2346087": null
+        },
+        {
+          "2340663": null
+        },
+        {
+          "2299907": null
+        },
+        {
+          "2211394": null
+        },
+        {
+          "307626": null
+        }
+      ],
+      "time_started": 1607334432,
+      "time_ready": 1607680032,
+      "time_left": 0,
+      "time_completed": 1607688083,
+      "initiated": 1,
+      "initiated_by": 2104114,
+      "planned_by": 1913341,
+      "success": 1,
+      "money_gain": 500000,
+      "respect_gain": 22
+    },
+    "8388854": {
+      "crime_id": 3,
+      "crime_name": "Bomb threat",
+      "participants": [
+        {
+          "352097": null
+        },
+        {
+          "2513229": null
+        },
+        {
+          "1446944": null
+        }
+      ],
+      "time_started": 1607334320,
+      "time_ready": 1607593520,
+      "time_left": 0,
+      "time_completed": 1607594201,
+      "initiated": 1,
+      "initiated_by": 2513229,
+      "planned_by": 1913341,
+      "success": 1,
+      "money_gain": 100000,
+      "respect_gain": 7
+    },
+    "8388853": {
+      "crime_id": 3,
+      "crime_name": "Bomb threat",
+      "participants": [
+        {
+          "2569763": null
+        },
+        {
+          "2003679": null
+        },
+        {
+          "2175576": null
+        }
+      ],
+      "time_started": 1607334310,
+      "time_ready": 1607593510,
+      "time_left": 0,
+      "time_completed": 1607737284,
+      "initiated": 1,
+      "initiated_by": 2569763,
+      "planned_by": 1913341,
+      "success": 1,
+      "money_gain": 50000,
+      "respect_gain": 9
+    },
+    "8386068": {
+      "crime_id": 8,
+      "crime_name": "Political Assassination",
+      "participants": [
+        {
+          "887003": null
+        },
+        {
+          "1413127": null
+        },
+        {
+          "372369": null
+        },
+        {
+          "2092393": null
+        }
+      ],
+      "time_started": 1607267899,
+      "time_ready": 1607959099,
+      "time_left": 0,
+      "time_completed": 1607967768,
+      "initiated": 1,
+      "initiated_by": 2172225,
+      "planned_by": 1519188,
+      "success": 0,
+      "money_gain": 0,
+      "respect_gain": 0
+    },
+    "8385016": {
+      "crime_id": 1,
+      "crime_name": "Blackmailing",
+      "participants": [
+        {
+          "2600123": null
+        },
+        {
+          "2601735": null
+        }
+      ],
+      "time_started": 1607238463,
+      "time_ready": 1607324863,
+      "time_left": 0,
+      "time_completed": 1607347540,
+      "initiated": 1,
+      "initiated_by": 2600123,
+      "planned_by": 1519188,
+      "success": 1,
+      "money_gain": 10000,
+      "respect_gain": 1
+    },
+    "8381683": {
+      "crime_id": 3,
+      "crime_name": "Bomb threat",
+      "participants": [
+        {
+          "2518230": null
+        },
+        {
+          "2385186": null
+        },
+        {
+          "2573890": null
+        }
+      ],
+      "time_started": 1607156958,
+      "time_ready": 1607416158,
+      "time_left": 0,
+      "time_completed": 1607417877,
+      "initiated": 1,
+      "initiated_by": 2573890,
+      "planned_by": 2573890,
+      "success": 1,
+      "money_gain": 100000,
+      "respect_gain": 10
+    },
+    "8379744": {
+      "crime_id": 2,
+      "crime_name": "Kidnapping",
+      "participants": [
+        {
+          "2570992": null
+        },
+        {
+          "1419093": null
+        }
+      ],
+      "time_started": 1607107970,
+      "time_ready": 1607280770,
+      "time_left": 0,
+      "time_completed": 1607289554,
+      "initiated": 1,
+      "initiated_by": 307626,
+      "planned_by": 2160167,
+      "success": 1,
+      "money_gain": 30000,
+      "respect_gain": 5
+    },
+    "8378973": {
+      "crime_id": 1,
+      "crime_name": "Blackmailing",
+      "participants": [
+        {
+          "2600123": null
+        },
+        {
+          "2601735": null
+        }
+      ],
+      "time_started": 1607090731,
+      "time_ready": 1607177131,
+      "time_left": 0,
+      "time_completed": 1607238460,
+      "initiated": 1,
+      "initiated_by": 1519188,
+      "planned_by": 1961768,
+      "success": 1,
+      "money_gain": 9000,
+      "respect_gain": 1
+    },
+    "8377930": {
+      "crime_id": 3,
+      "crime_name": "Bomb threat",
+      "participants": [
+        {
+          "1818631": null
+        },
+        {
+          "2460056": null
+        },
+        {
+          "2594452": null
+        }
+      ],
+      "time_started": 1607063119,
+      "time_ready": 1607322319,
+      "time_left": 0,
+      "time_completed": 1607376990,
+      "initiated": 1,
+      "initiated_by": 2460056,
+      "planned_by": 2160167,
+      "success": 1,
+      "money_gain": 100000,
+      "respect_gain": 8
+    },
+    "8377337": {
+      "crime_id": 2,
+      "crime_name": "Kidnapping",
+      "participants": [
+        {
+          "512875": null
+        },
+        {
+          "2466295": null
+        }
+      ],
+      "time_started": 1607048048,
+      "time_ready": 1607220848,
+      "time_left": 0,
+      "time_completed": 1607265633,
+      "initiated": 1,
+      "initiated_by": 2466295,
+      "planned_by": 1446944,
+      "success": 1,
+      "money_gain": 25000,
+      "respect_gain": 5
+    },
+    "8377336": {
+      "crime_id": 2,
+      "crime_name": "Kidnapping",
+      "participants": [
+        {
+          "1183116": null
+        },
+        {
+          "1991347": null
+        }
+      ],
+      "time_started": 1607048041,
+      "time_ready": 1607220841,
+      "time_left": 0,
+      "time_completed": 1607238428,
+      "initiated": 1,
+      "initiated_by": 1519188,
+      "planned_by": 1446944,
+      "success": 1,
+      "money_gain": 25000,
+      "respect_gain": 4
+    },
+    "8377331": {
+      "crime_id": 3,
+      "crime_name": "Bomb threat",
+      "participants": [
+        {
+          "352097": null
+        },
+        {
+          "2513229": null
+        },
+        {
+          "1446944": null
+        }
+      ],
+      "time_started": 1607048008,
+      "time_ready": 1607307208,
+      "time_left": 0,
+      "time_completed": 1607327147,
+      "initiated": 1,
+      "initiated_by": 2513229,
+      "planned_by": 1446944,
+      "success": 1,
+      "money_gain": 125000,
+      "respect_gain": 7
+    },
+    "8377330": {
+      "crime_id": 3,
+      "crime_name": "Bomb threat",
+      "participants": [
+        {
+          "2148971": null
+        },
+        {
+          "1870531": null
+        },
+        {
+          "2363342": null
+        }
+      ],
+      "time_started": 1607048001,
+      "time_ready": 1607307201,
+      "time_left": 0,
+      "time_completed": 1607342124,
+      "initiated": 1,
+      "initiated_by": 2363342,
+      "planned_by": 1446944,
+      "success": 1,
+      "money_gain": 100000,
+      "respect_gain": 10
+    },
+    "8377329": {
+      "crime_id": 5,
+      "crime_name": "Robbing of a money train",
+      "participants": [
+        {
+          "1903715": null
+        },
+        {
+          "519291": null
+        },
+        {
+          "2098045": null
+        },
+        {
+          "2354229": null
+        },
+        {
+          "1959482": null
+        },
+        {
+          "2346077": null
+        }
+      ],
+      "time_started": 1607047964,
+      "time_ready": 1607479964,
+      "time_left": 0,
+      "time_completed": 1607507213,
+      "initiated": 1,
+      "initiated_by": 2346077,
+      "planned_by": 1446944,
+      "success": 1,
+      "money_gain": 4250000,
+      "respect_gain": 31
+    },
+    "8376270": {
+      "crime_id": 2,
+      "crime_name": "Kidnapping",
+      "participants": [
+        {
+          "2003679": null
+        },
+        {
+          "2621571": null
+        }
+      ],
+      "time_started": 1607024220,
+      "time_ready": 1607197020,
+      "time_left": 0,
+      "time_completed": 1607216309,
+      "initiated": 1,
+      "initiated_by": 295233,
+      "planned_by": 1746371,
+      "success": 1,
+      "money_gain": 30000,
+      "respect_gain": 4
+    },
+    "8374938": {
+      "crime_id": 1,
+      "crime_name": "Blackmailing",
+      "participants": [
+        {
+          "2600123": null
+        },
+        {
+          "2601735": null
+        }
+      ],
+      "time_started": 1606991330,
+      "time_ready": 1607077730,
+      "time_left": 0,
+      "time_completed": 1607090726,
+      "initiated": 1,
+      "initiated_by": 1961768,
+      "planned_by": 2600123,
+      "success": 1,
+      "money_gain": 6000,
+      "respect_gain": 1
+    },
+    "8373763": {
+      "crime_id": 2,
+      "crime_name": "Kidnapping",
+      "participants": [
+        {
+          "524028": null
+        },
+        {
+          "221006": null
+        }
+      ],
+      "time_started": 1606958854,
+      "time_ready": 1607131654,
+      "time_left": 0,
+      "time_completed": 1607149971,
+      "initiated": 1,
+      "initiated_by": 384108,
+      "planned_by": 2222285,
+      "success": 1,
+      "money_gain": 15000,
+      "respect_gain": 5
+    },
+    "8373609": {
+      "crime_id": 3,
+      "crime_name": "Bomb threat",
+      "participants": [
+        {
+          "656797": null
+        },
+        {
+          "2569763": null
+        },
+        {
+          "2175576": null
+        }
+      ],
+      "time_started": 1606955158,
+      "time_ready": 1607214358,
+      "time_left": 0,
+      "time_completed": 1607257143,
+      "initiated": 1,
+      "initiated_by": 2525435,
+      "planned_by": 2104114,
+      "success": 1,
+      "money_gain": 125000,
+      "respect_gain": 9
+    },
+    "8372500": {
+      "crime_id": 2,
+      "crime_name": "Kidnapping",
+      "participants": [
+        {
+          "2570992": null
+        },
+        {
+          "1419093": null
+        }
+      ],
+      "time_started": 1606932327,
+      "time_ready": 1607105127,
+      "time_left": 0,
+      "time_completed": 1607107965,
+      "initiated": 1,
+      "initiated_by": 2160167,
+      "planned_by": 1519188,
+      "success": 1,
+      "money_gain": 35000,
+      "respect_gain": 5
+    },
+    "8371267": {
+      "crime_id": 3,
+      "crime_name": "Bomb threat",
+      "participants": [
+        {
+          "307626": null
+        },
+        {
+          "2438428": null
+        },
+        {
+          "2005264": null
+        }
+      ],
+      "time_started": 1606899607,
+      "time_ready": 1607158807,
+      "time_left": 0,
+      "time_completed": 1607195984,
+      "initiated": 1,
+      "initiated_by": 307626,
+      "planned_by": 307626,
+      "success": 1,
+      "money_gain": 75000,
+      "respect_gain": 7
+    },
+    "8371090": {
+      "crime_id": 3,
+      "crime_name": "Bomb threat",
+      "participants": [
+        {
+          "2518230": null
+        },
+        {
+          "2385186": null
+        },
+        {
+          "2573890": null
+        }
+      ],
+      "time_started": 1606894592,
+      "time_ready": 1607153792,
+      "time_left": 0,
+      "time_completed": 1607156955,
+      "initiated": 1,
+      "initiated_by": 2573890,
+      "planned_by": 2573890,
+      "success": 1,
+      "money_gain": 75000,
+      "respect_gain": 9
+    },
+    "8371049": {
+      "crime_id": 1,
+      "crime_name": "Blackmailing",
+      "participants": [
+        {
+          "2600123": null
+        },
+        {
+          "2601735": null
+        }
+      ],
+      "time_started": 1606893902,
+      "time_ready": 1606980302,
+      "time_left": 0,
+      "time_completed": 1606991327,
+      "initiated": 1,
+      "initiated_by": 2600123,
+      "planned_by": 2600123,
+      "success": 1,
+      "money_gain": 9000,
+      "respect_gain": 2
+    },
+    "8367462": {
+      "crime_id": 2,
+      "crime_name": "Kidnapping",
+      "participants": [
+        {
+          "2003679": null
+        },
+        {
+          "2621571": null
+        }
+      ],
+      "time_started": 1606804579,
+      "time_ready": 1606977379,
+      "time_left": 0,
+      "time_completed": 1607024212,
+      "initiated": 1,
+      "initiated_by": 1746371,
+      "planned_by": 1994452,
+      "success": 1,
+      "money_gain": 35000,
+      "respect_gain": 5
+    },
+    "8367460": {
+      "crime_id": 4,
+      "crime_name": "Planned robbery",
+      "participants": [
+        {
+          "1994452": null
+        },
+        {
+          "2233606": null
+        },
+        {
+          "1467320": null
+        },
+        {
+          "931420": null
+        },
+        {
+          "2525435": null
+        }
+      ],
+      "time_started": 1606804561,
+      "time_ready": 1607150161,
+      "time_left": 0,
+      "time_completed": 1607267861,
+      "initiated": 1,
+      "initiated_by": 1519188,
+      "planned_by": 1994452,
+      "success": 1,
+      "money_gain": 500000,
+      "respect_gain": 22
+    },
+    "8366794": {
+      "crime_id": 3,
+      "crime_name": "Bomb threat",
+      "participants": [
+        {
+          "1818631": null
+        },
+        {
+          "2460056": null
+        },
+        {
+          "2594452": null
+        }
+      ],
+      "time_started": 1606788058,
+      "time_ready": 1607047258,
+      "time_left": 0,
+      "time_completed": 1607063114,
+      "initiated": 1,
+      "initiated_by": 2160167,
+      "planned_by": 2460056,
+      "success": 1,
+      "money_gain": 75000,
+      "respect_gain": 10
+    },
+    "8366721": {
+      "crime_id": 1,
+      "crime_name": "Blackmailing",
+      "participants": [
+        {
+          "2600123": null
+        },
+        {
+          "2601735": null
+        }
+      ],
+      "time_started": 1606786066,
+      "time_ready": 1606872466,
+      "time_left": 0,
+      "time_completed": 1606893898,
+      "initiated": 1,
+      "initiated_by": 2600123,
+      "planned_by": 2600123,
+      "success": 1,
+      "money_gain": 8000,
+      "respect_gain": 2
+    },
+    "8365608": {
+      "crime_id": 5,
+      "crime_name": "Robbing of a money train",
+      "participants": [
+        {
+          "125670": null
+        },
+        {
+          "544391": null
+        },
+        {
+          "2162919": null
+        },
+        {
+          "867156": null
+        },
+        {
+          "225011": null
+        },
+        {
+          "1043922": null
+        }
+      ],
+      "time_started": 1606764520,
+      "time_ready": 1607196520,
+      "time_left": 0,
+      "time_completed": 1607238449,
+      "initiated": 1,
+      "initiated_by": 1519188,
+      "planned_by": 2172225,
+      "success": 1,
+      "money_gain": 3250000,
+      "respect_gain": 33
+    },
+    "8365572": {
+      "crime_id": 7,
+      "crime_name": "Plane hijacking",
+      "participants": [
+        {
+          "2038706": null
+        },
+        {
+          "1563257": null
+        },
+        {
+          "1944535": null
+        },
+        {
+          "2172225": null
+        },
+        {
+          "2112841": null
+        },
+        {
+          "606826": null
+        },
+        {
+          "1832621": null
+        },
+        {
+          "1286893": null
+        }
+      ],
+      "time_started": 1606763920,
+      "time_ready": 1607368720,
+      "time_left": 0,
+      "time_completed": 1607368959,
+      "initiated": 1,
+      "initiated_by": 606826,
+      "planned_by": 606826,
+      "success": 0,
+      "money_gain": 0,
+      "respect_gain": 0
+    },
+    "8365545": {
+      "crime_id": 2,
+      "crime_name": "Kidnapping",
+      "participants": [
+        {
+          "524028": null
+        },
+        {
+          "221006": null
+        }
+      ],
+      "time_started": 1606763260,
+      "time_ready": 1606936060,
+      "time_left": 0,
+      "time_completed": 1606958848,
+      "initiated": 1,
+      "initiated_by": 2222285,
+      "planned_by": 2338543,
+      "success": 1,
+      "money_gain": 25000,
+      "respect_gain": 3
+    },
+    "8365151": {
+      "crime_id": 5,
+      "crime_name": "Robbing of a money train",
+      "participants": [
+        {
+          "2058049": null
+        },
+        {
+          "384108": null
+        },
+        {
+          "295233": null
+        },
+        {
+          "717290": null
+        },
+        {
+          "528024": null
+        },
+        {
+          "465182": null
+        }
+      ],
+      "time_started": 1606755727,
+      "time_ready": 1607187727,
+      "time_left": 0,
+      "time_completed": 1607267870,
+      "initiated": 1,
+      "initiated_by": 1519188,
+      "planned_by": 384108,
+      "success": 1,
+      "money_gain": 3500000,
+      "respect_gain": 26
+    },
+    "8364992": {
+      "crime_id": 2,
+      "crime_name": "Kidnapping",
+      "participants": [
+        {
+          "2570992": null
+        },
+        {
+          "1419093": null
+        }
+      ],
+      "time_started": 1606751910,
+      "time_ready": 1606924710,
+      "time_left": 0,
+      "time_completed": 1606932323,
+      "initiated": 1,
+      "initiated_by": 1519188,
+      "planned_by": 384108,
+      "success": 1,
+      "money_gain": 30000,
+      "respect_gain": 4
+    },
+    "8362904": {
+      "crime_id": 3,
+      "crime_name": "Bomb threat",
+      "participants": [
+        {
+          "656797": null
+        },
+        {
+          "2569763": null
+        },
+        {
+          "2175576": null
+        }
+      ],
+      "time_started": 1606694668,
+      "time_ready": 1606953868,
+      "time_left": 0,
+      "time_completed": 1606955154,
+      "initiated": 1,
+      "initiated_by": 2104114,
+      "planned_by": 2172225,
+      "success": 1,
+      "money_gain": 75000,
+      "respect_gain": 9
+    },
+    "8362818": {
+      "crime_id": 8,
+      "crime_name": "Political Assassination",
+      "participants": [
+        {
+          "1280063": null
+        },
+        {
+          "2015200": null
+        },
+        {
+          "79148": null
+        },
+        {
+          "248367": null
+        }
+      ],
+      "time_started": 1606692933,
+      "time_ready": 1607384133,
+      "time_left": 0,
+      "time_completed": 1607398301,
+      "initiated": 1,
+      "initiated_by": 2104114,
+      "planned_by": 2172225,
+      "success": 0,
+      "money_gain": 0,
+      "respect_gain": 0
+    },
+    "8362190": {
+      "crime_id": 1,
+      "crime_name": "Blackmailing",
+      "participants": [
+        {
+          "2600123": null
+        },
+        {
+          "2601735": null
+        }
+      ],
+      "time_started": 1606678058,
+      "time_ready": 1606764458,
+      "time_left": 0,
+      "time_completed": 1606786063,
+      "initiated": 1,
+      "initiated_by": 2600123,
+      "planned_by": 2015200,
+      "success": 1,
+      "money_gain": 6000,
+      "respect_gain": 2
+    },
+    "8359834": {
+      "crime_id": 3,
+      "crime_name": "Bomb threat",
+      "participants": [
+        {
+          "2518230": null
+        },
+        {
+          "2385186": null
+        },
+        {
+          "2573890": null
+        }
+      ],
+      "time_started": 1606618289,
+      "time_ready": 1606877489,
+      "time_left": 0,
+      "time_completed": 1606894069,
+      "initiated": 1,
+      "initiated_by": 524028,
+      "planned_by": 1519188,
+      "success": 1,
+      "money_gain": 100000,
+      "respect_gain": 10
+    },
+    "8359542": {
+      "crime_id": 3,
+      "crime_name": "Bomb threat",
+      "participants": [
+        {
+          "307626": null
+        },
+        {
+          "2438428": null
+        },
+        {
+          "2005264": null
+        }
+      ],
+      "time_started": 1606610228,
+      "time_ready": 1606869428,
+      "time_left": 0,
+      "time_completed": 1606898589,
+      "initiated": 1,
+      "initiated_by": 2005264,
+      "planned_by": 1519188,
+      "success": 1,
+      "money_gain": 100000,
+      "respect_gain": 8
+    },
+    "8358809": {
+      "crime_id": 3,
+      "crime_name": "Bomb threat",
+      "participants": [
+        {
+          "1183116": null
+        },
+        {
+          "2513229": null
+        },
+        {
+          "2363342": null
+        }
+      ],
+      "time_started": 1606594078,
+      "time_ready": 1606853278,
+      "time_left": 0,
+      "time_completed": 1606901378,
+      "initiated": 1,
+      "initiated_by": 524028,
+      "planned_by": 1961768,
+      "success": 0,
+      "money_gain": 0,
+      "respect_gain": 0
+    },
+    "8358416": {
+      "crime_id": 2,
+      "crime_name": "Kidnapping",
+      "participants": [
+        {
+          "524028": null
+        },
+        {
+          "221006": null
+        }
+      ],
+      "time_started": 1606585972,
+      "time_ready": 1606758772,
+      "time_left": 0,
+      "time_completed": 1606763246,
+      "initiated": 1,
+      "initiated_by": 2338543,
+      "planned_by": 1446944,
+      "success": 1,
+      "money_gain": 35000,
+      "respect_gain": 3
+    },
+    "8358359": {
+      "crime_id": 2,
+      "crime_name": "Kidnapping",
+      "participants": [
+        {
+          "2148971": null
+        },
+        {
+          "2621571": null
+        }
+      ],
+      "time_started": 1606584418,
+      "time_ready": 1606757218,
+      "time_left": 0,
+      "time_completed": 1606804568,
+      "initiated": 1,
+      "initiated_by": 1994452,
+      "planned_by": 2338543,
+      "success": 1,
+      "money_gain": 35000,
+      "respect_gain": 3
+    },
+    "8358358": {
+      "crime_id": 4,
+      "crime_name": "Planned robbery",
+      "participants": [
+        {
+          "2043996": null
+        },
+        {
+          "2104114": null
+        },
+        {
+          "2338543": null
+        },
+        {
+          "2160167": null
+        },
+        {
+          "2211394": null
+        }
+      ],
+      "time_started": 1606584411,
+      "time_ready": 1606930011,
+      "time_left": 0,
+      "time_completed": 1607256893,
+      "initiated": 1,
+      "initiated_by": 2525435,
+      "planned_by": 2338543,
+      "success": 1,
+      "money_gain": 400000,
+      "respect_gain": 24
+    },
+    "8358264": {
+      "crime_id": 4,
+      "crime_name": "Planned robbery",
+      "participants": [
+        {
+          "2346077": null
+        },
+        {
+          "2349315": null
+        },
+        {
+          "512875": null
+        },
+        {
+          "1991347": null
+        },
+        {
+          "1446944": null
+        }
+      ],
+      "time_started": 1606582002,
+      "time_ready": 1606927602,
+      "time_left": 0,
+      "time_completed": 1606993031,
+      "initiated": 1,
+      "initiated_by": 2346077,
+      "planned_by": 1446944,
+      "success": 1,
+      "money_gain": 500000,
+      "respect_gain": 20
+    },
+    "8357989": {
+      "crime_id": 8,
+      "crime_name": "Political Assassination",
+      "participants": [
+        {
+          "887003": null
+        },
+        {
+          "1413127": null
+        },
+        {
+          "372369": null
+        },
+        {
+          "2092393": null
+        }
+      ],
+      "time_started": 1606576375,
+      "time_ready": 1607267575,
+      "time_left": 0,
+      "time_completed": 1607267885,
+      "initiated": 1,
+      "initiated_by": 1519188,
+      "planned_by": 2092393,
+      "success": 1,
+      "money_gain": 150000000,
+      "respect_gain": 206
+    },
+    "8357986": {
+      "crime_id": 2,
+      "crime_name": "Kidnapping",
+      "participants": [
+        {
+          "2570992": null
+        },
+        {
+          "1419093": null
+        }
+      ],
+      "time_started": 1606576360,
+      "time_ready": 1606749160,
+      "time_left": 0,
+      "time_completed": 1606751904,
+      "initiated": 1,
+      "initiated_by": 384108,
+      "planned_by": 2092393,
+      "success": 0,
+      "money_gain": 0,
+      "respect_gain": 0
+    },
+    "8356677": {
+      "crime_id": 1,
+      "crime_name": "Blackmailing",
+      "participants": [
+        {
+          "2600123": null
+        },
+        {
+          "2601735": null
+        }
+      ],
+      "time_started": 1606539190,
+      "time_ready": 1606625590,
+      "time_left": 0,
+      "time_completed": 1606678053,
+      "initiated": 1,
+      "initiated_by": 2015200,
+      "planned_by": 2600123,
+      "success": 1,
+      "money_gain": 9000,
+      "respect_gain": 2
+    },
+    "8356055": {
+      "crime_id": 3,
+      "crime_name": "Bomb threat",
+      "participants": [
+        {
+          "1818631": null
+        },
+        {
+          "2460056": null
+        },
+        {
+          "2594452": null
+        }
+      ],
+      "time_started": 1606523006,
+      "time_ready": 1606782206,
+      "time_left": 0,
+      "time_completed": 1606788055,
+      "initiated": 1,
+      "initiated_by": 2460056,
+      "planned_by": 2460056,
+      "success": 1,
+      "money_gain": 50000,
+      "respect_gain": 10
+    },
+    "8352483": {
+      "crime_id": 1,
+      "crime_name": "Blackmailing",
+      "participants": [
+        {
+          "2600123": null
+        },
+        {
+          "2601735": null
+        }
+      ],
+      "time_started": 1606432610,
+      "time_ready": 1606519010,
+      "time_left": 0,
+      "time_completed": 1606539186,
+      "initiated": 1,
+      "initiated_by": 2600123,
+      "planned_by": 2600123,
+      "success": 1,
+      "money_gain": 10000,
+      "respect_gain": 2
+    },
+    "8352447": {
+      "crime_id": 4,
+      "crime_name": "Planned robbery",
+      "participants": [
+        {
+          "1592260": null
+        },
+        {
+          "2433583": null
+        },
+        {
+          "2346087": null
+        },
+        {
+          "2340663": null
+        },
+        {
+          "2299907": null
+        }
+      ],
+      "time_started": 1606431975,
+      "time_ready": 1606777575,
+      "time_left": 0,
+      "time_completed": 1606782705,
+      "initiated": 1,
+      "initiated_by": 2104114,
+      "planned_by": 1519188,
+      "success": 1,
+      "money_gain": 450000,
+      "respect_gain": 19
+    },
+    "8350901": {
+      "crime_id": 5,
+      "crime_name": "Robbing of a money train",
+      "participants": [
+        {
+          "1903715": null
+        },
+        {
+          "519291": null
+        },
+        {
+          "2098045": null
+        },
+        {
+          "2354229": null
+        },
+        {
+          "1959482": null
+        },
+        {
+          "1870531": null
+        }
+      ],
+      "time_started": 1606400803,
+      "time_ready": 1606832803,
+      "time_left": 0,
+      "time_completed": 1606835072,
+      "initiated": 1,
+      "initiated_by": 2098045,
+      "planned_by": 2354229,
+      "success": 1,
+      "money_gain": 3750000,
+      "respect_gain": 35
+    },
+    "8350829": {
+      "crime_id": 4,
+      "crime_name": "Planned robbery",
+      "participants": [
+        {
+          "1994452": null
+        },
+        {
+          "2233606": null
+        },
+        {
+          "1467320": null
+        },
+        {
+          "931420": null
+        },
+        {
+          "2525435": null
+        }
+      ],
+      "time_started": 1606399021,
+      "time_ready": 1606744621,
+      "time_left": 0,
+      "time_completed": 1606804551,
+      "initiated": 1,
+      "initiated_by": 1994452,
+      "planned_by": 1467320,
+      "success": 1,
+      "money_gain": 550000,
+      "respect_gain": 18
+    },
+    "8349064": {
+      "crime_id": 3,
+      "crime_name": "Bomb threat",
+      "participants": [
+        {
+          "2385186": null
+        },
+        {
+          "2518230": null
+        },
+        {
+          "2573890": null
+        }
+      ],
+      "time_started": 1606351635,
+      "time_ready": 1606610835,
+      "time_left": 0,
+      "time_completed": 1606618285,
+      "initiated": 1,
+      "initiated_by": 1519188,
+      "planned_by": 2104114,
+      "success": 1,
+      "money_gain": 50000,
+      "respect_gain": 10
+    },
+    "8348837": {
+      "crime_id": 1,
+      "crime_name": "Blackmailing",
+      "participants": [
+        {
+          "2600123": null
+        },
+        {
+          "2601735": null
+        }
+      ],
+      "time_started": 1606346110,
+      "time_ready": 1606432510,
+      "time_left": 0,
+      "time_completed": 1606432606,
+      "initiated": 1,
+      "initiated_by": 2600123,
+      "planned_by": 2600123,
+      "success": 1,
+      "money_gain": 10000,
+      "respect_gain": 1
+    },
+    "8348556": {
+      "crime_id": 3,
+      "crime_name": "Bomb threat",
+      "participants": [
+        {
+          "307626": null
+        },
+        {
+          "2438428": null
+        },
+        {
+          "2005264": null
+        }
+      ],
+      "time_started": 1606341365,
+      "time_ready": 1606600565,
+      "time_left": 0,
+      "time_completed": 1606610223,
+      "initiated": 1,
+      "initiated_by": 1519188,
+      "planned_by": 307626,
+      "success": 1,
+      "money_gain": 100000,
+      "respect_gain": 10
+    },
+    "8348075": {
+      "crime_id": 3,
+      "crime_name": "Bomb threat",
+      "participants": [
+        {
+          "1183116": null
+        },
+        {
+          "2513229": null
+        },
+        {
+          "2363342": null
+        }
+      ],
+      "time_started": 1606331041,
+      "time_ready": 1606590241,
+      "time_left": 0,
+      "time_completed": 1606594074,
+      "initiated": 1,
+      "initiated_by": 1961768,
+      "planned_by": 2363342,
+      "success": 1,
+      "money_gain": 100000,
+      "respect_gain": 9
+    },
+    "8347703": {
+      "crime_id": 5,
+      "crime_name": "Robbing of a money train",
+      "participants": [
+        {
+          "2058049": null
+        },
+        {
+          "384108": null
+        },
+        {
+          "295233": null
+        },
+        {
+          "717290": null
+        },
+        {
+          "528024": null
+        },
+        {
+          "465182": null
+        }
+      ],
+      "time_started": 1606323092,
+      "time_ready": 1606755092,
+      "time_left": 0,
+      "time_completed": 1606755724,
+      "initiated": 1,
+      "initiated_by": 384108,
+      "planned_by": 2015200,
+      "success": 1,
+      "money_gain": 3500000,
+      "respect_gain": 31
+    },
+    "8345190": {
+      "crime_id": 2,
+      "crime_name": "Kidnapping",
+      "participants": [
+        {
+          "2570992": null
+        },
+        {
+          "1419093": null
+        }
+      ],
+      "time_started": 1606260615,
+      "time_ready": 1606433415,
+      "time_left": 0,
+      "time_completed": 1606576356,
+      "initiated": 1,
+      "initiated_by": 2092393,
+      "planned_by": 1446944,
+      "success": 1,
+      "money_gain": 20000,
+      "respect_gain": 3
+    },
+    "8345189": {
+      "crime_id": 3,
+      "crime_name": "Bomb threat",
+      "participants": [
+        {
+          "1818631": null
+        },
+        {
+          "2460056": null
+        },
+        {
+          "2594452": null
+        }
+      ],
+      "time_started": 1606260608,
+      "time_ready": 1606519808,
+      "time_left": 0,
+      "time_completed": 1606523002,
+      "initiated": 1,
+      "initiated_by": 2460056,
+      "planned_by": 1446944,
+      "success": 1,
+      "money_gain": 100000,
+      "respect_gain": 8
+    },
+    "8345188": {
+      "crime_id": 3,
+      "crime_name": "Bomb threat",
+      "participants": [
+        {
+          "2569763": null
+        },
+        {
+          "2003679": null
+        },
+        {
+          "2175576": null
+        }
+      ],
+      "time_started": 1606260597,
+      "time_ready": 1606519797,
+      "time_left": 0,
+      "time_completed": 1606678039,
+      "initiated": 1,
+      "initiated_by": 2015200,
+      "planned_by": 1446944,
+      "success": 0,
+      "money_gain": 0,
+      "respect_gain": 0
+    },
+    "8345186": {
+      "crime_id": 5,
+      "crime_name": "Robbing of a money train",
+      "participants": [
+        {
+          "125670": null
+        },
+        {
+          "544391": null
+        },
+        {
+          "2162919": null
+        },
+        {
+          "1044045": null
+        },
+        {
+          "867156": null
+        },
+        {
+          "656797": null
+        }
+      ],
+      "time_started": 1606260549,
+      "time_ready": 1606692549,
+      "time_left": 0,
+      "time_completed": 1606692851,
+      "initiated": 1,
+      "initiated_by": 2172225,
+      "planned_by": 1446944,
+      "success": 1,
+      "money_gain": 3500000,
+      "respect_gain": 27
+    },
+    "8344325": {
+      "crime_id": 7,
+      "crime_name": "Plane hijacking",
+      "participants": [
+        {
+          "1419046": null
+        },
+        {
+          "1961768": null
+        },
+        {
+          "1913341": null
+        },
+        {
+          "2058787": null
+        },
+        {
+          "527397": null
+        },
+        {
+          "2222285": null
+        },
+        {
+          "80036": null
+        },
+        {
+          "202437": null
+        }
+      ],
+      "time_started": 1606242400,
+      "time_ready": 1606847200,
+      "time_left": 0,
+      "time_completed": 1607090710,
+      "initiated": 1,
+      "initiated_by": 1961768,
+      "planned_by": 1961768,
+      "success": 1,
+      "money_gain": 50000000,
+      "respect_gain": 88
+    },
+    "8344078": {
+      "crime_id": 1,
+      "crime_name": "Blackmailing",
+      "participants": [
+        {
+          "2600123": null
+        },
+        {
+          "2601735": null
+        }
+      ],
+      "time_started": 1606237148,
+      "time_ready": 1606323548,
+      "time_left": 0,
+      "time_completed": 1606346107,
+      "initiated": 1,
+      "initiated_by": 2600123,
+      "planned_by": 1519188,
+      "success": 1,
+      "money_gain": 8000,
+      "respect_gain": 1
+    },
+    "8340939": {
+      "crime_id": 7,
+      "crime_name": "Plane hijacking",
+      "participants": [
+        {
+          "2038706": null
+        },
+        {
+          "1563257": null
+        },
+        {
+          "1944535": null
+        },
+        {
+          "2172225": null
+        },
+        {
+          "2112841": null
+        },
+        {
+          "606826": null
+        },
+        {
+          "1832621": null
+        },
+        {
+          "1286893": null
+        }
+      ],
+      "time_started": 1606158983,
+      "time_ready": 1606763783,
+      "time_left": 0,
+      "time_completed": 1606763912,
+      "initiated": 1,
+      "initiated_by": 606826,
+      "planned_by": 2172225,
+      "success": 1,
+      "money_gain": 30000000,
+      "respect_gain": 99
+    },
+    "8338553": {
+      "crime_id": 1,
+      "crime_name": "Blackmailing",
+      "participants": [
+        {
+          "2600123": null
+        },
+        {
+          "2601735": null
+        }
+      ],
+      "time_started": 1606100039,
+      "time_ready": 1606186439,
+      "time_left": 0,
+      "time_completed": 1606237144,
+      "initiated": 1,
+      "initiated_by": 1519188,
+      "planned_by": 2600123,
+      "success": 1,
+      "money_gain": 9000,
+      "respect_gain": 1
+    },
+    "8338333": {
+      "crime_id": 4,
+      "crime_name": "Planned robbery",
+      "participants": [
+        {
+          "2104114": null
+        },
+        {
+          "2338543": null
+        },
+        {
+          "2160167": null
+        },
+        {
+          "2346077": null
+        },
+        {
+          "1991347": null
+        }
+      ],
+      "time_started": 1606094335,
+      "time_ready": 1606439935,
+      "time_left": 0,
+      "time_completed": 1606441825,
+      "initiated": 1,
+      "initiated_by": 2104114,
+      "planned_by": 2104114,
+      "success": 0,
+      "money_gain": 0,
+      "respect_gain": 0
+    },
+    "8337847": {
+      "crime_id": 3,
+      "crime_name": "Bomb threat",
+      "participants": [
+        {
+          "2385186": null
+        },
+        {
+          "2518230": null
+        },
+        {
+          "2573890": null
+        }
+      ],
+      "time_started": 1606084929,
+      "time_ready": 1606344129,
+      "time_left": 0,
+      "time_completed": 1606351632,
+      "initiated": 1,
+      "initiated_by": 2104114,
+      "planned_by": 1519188,
+      "success": 1,
+      "money_gain": 75000,
+      "respect_gain": 9
+    },
+    "8337805": {
+      "crime_id": 4,
+      "crime_name": "Planned robbery",
+      "participants": [
+        {
+          "1592260": null
+        },
+        {
+          "2433583": null
+        },
+        {
+          "2346087": null
+        },
+        {
+          "2340663": null
+        },
+        {
+          "2299907": null
+        }
+      ],
+      "time_started": 1606084028,
+      "time_ready": 1606429628,
+      "time_left": 0,
+      "time_completed": 1606431969,
+      "initiated": 1,
+      "initiated_by": 1519188,
+      "planned_by": 2346087,
+      "success": 1,
+      "money_gain": 500000,
+      "respect_gain": 20
+    },
+    "8337356": {
+      "crime_id": 3,
+      "crime_name": "Bomb threat",
+      "participants": [
+        {
+          "307626": null
+        },
+        {
+          "2438428": null
+        },
+        {
+          "2005264": null
+        }
+      ],
+      "time_started": 1606075265,
+      "time_ready": 1606334465,
+      "time_left": 0,
+      "time_completed": 1606341217,
+      "initiated": 1,
+      "initiated_by": 2005264,
+      "planned_by": 307626,
+      "success": 1,
+      "money_gain": 150000,
+      "respect_gain": 8
+    },
+    "8337085": {
+      "crime_id": 3,
+      "crime_name": "Bomb threat",
+      "participants": [
+        {
+          "1183116": null
+        },
+        {
+          "2513229": null
+        },
+        {
+          "2363342": null
+        }
+      ],
+      "time_started": 1606068794,
+      "time_ready": 1606327994,
+      "time_left": 0,
+      "time_completed": 1606331037,
+      "initiated": 1,
+      "initiated_by": 2363342,
+      "planned_by": 1446944,
+      "success": 1,
+      "money_gain": 150000,
+      "respect_gain": 8
+    },
+    "8337083": {
+      "crime_id": 4,
+      "crime_name": "Planned robbery",
+      "participants": [
+        {
+          "2211394": null
+        },
+        {
+          "2349315": null
+        },
+        {
+          "512875": null
+        },
+        {
+          "221006": null
+        },
+        {
+          "1446944": null
+        }
+      ],
+      "time_started": 1606068780,
+      "time_ready": 1606414380,
+      "time_left": 0,
+      "time_completed": 1606423022,
+      "initiated": 1,
+      "initiated_by": 2160167,
+      "planned_by": 1446944,
+      "success": 1,
+      "money_gain": 600000,
+      "respect_gain": 19
+    },
+    "8337077": {
+      "crime_id": 5,
+      "crime_name": "Robbing of a money train",
+      "participants": [
+        {
+          "1519188": null
+        },
+        {
+          "2163841": null
+        },
+        {
+          "1700315": null
+        },
+        {
+          "538653": null
+        },
+        {
+          "1746371": null
+        },
+        {
+          "2130567": null
+        }
+      ],
+      "time_started": 1606068732,
+      "time_ready": 1606500732,
+      "time_left": 0,
+      "time_completed": 1606512582,
+      "initiated": 1,
+      "initiated_by": 125670,
+      "planned_by": 1446944,
+      "success": 1,
+      "money_gain": 4250000,
+      "respect_gain": 26
+    },
+    "8335945": {
+      "crime_id": 3,
+      "crime_name": "Bomb threat",
+      "participants": [
+        {
+          "931420": null
+        },
+        {
+          "1043922": null
+        },
+        {
+          "1870531": null
+        }
+      ],
+      "time_started": 1606041295,
+      "time_ready": 1606300495,
+      "time_left": 0,
+      "time_completed": 1606324449,
+      "initiated": 1,
+      "initiated_by": 2015200,
+      "planned_by": 1519188,
+      "success": 1,
+      "money_gain": 50000,
+      "respect_gain": 10
+    },
+    "8334428": {
+      "crime_id": 8,
+      "crime_name": "Political Assassination",
+      "participants": [
+        {
+          "1280063": null
+        },
+        {
+          "2015200": null
+        },
+        {
+          "79148": null
+        },
+        {
+          "248367": null
+        }
+      ],
+      "time_started": 1606000076,
+      "time_ready": 1606691276,
+      "time_left": 0,
+      "time_completed": 1606691538,
+      "initiated": 1,
+      "initiated_by": 1519188,
+      "planned_by": 1944535,
+      "success": 0,
+      "money_gain": 0,
+      "respect_gain": 0
+    },
+    "8334270": {
+      "crime_id": 1,
+      "crime_name": "Blackmailing",
+      "participants": [
+        {
+          "2600123": null
+        },
+        {
+          "2601735": null
+        }
+      ],
+      "time_started": 1605996764,
+      "time_ready": 1606083164,
+      "time_left": 0,
+      "time_completed": 1606100036,
+      "initiated": 1,
+      "initiated_by": 2600123,
+      "planned_by": 2338543,
+      "success": 1,
+      "money_gain": 10000,
+      "respect_gain": 2
+    },
+    "8333322": {
+      "crime_id": 4,
+      "crime_name": "Planned robbery",
+      "participants": [
+        {
+          "1994452": null
+        },
+        {
+          "2233606": null
+        },
+        {
+          "1467320": null
+        },
+        {
+          "2525435": null
+        },
+        {
+          "2148971": null
+        }
+      ],
+      "time_started": 1605975065,
+      "time_ready": 1606320665,
+      "time_left": 0,
+      "time_completed": 1606398988,
+      "initiated": 1,
+      "initiated_by": 1467320,
+      "planned_by": 2525435,
+      "success": 1,
+      "money_gain": 400000,
+      "respect_gain": 19
+    },
+    "8332193": {
+      "crime_id": 2,
+      "crime_name": "Kidnapping",
+      "participants": [
+        {
+          "2594452": null
+        },
+        {
+          "2570992": null
+        }
+      ],
+      "time_started": 1605943725,
+      "time_ready": 1606116525,
+      "time_left": 0,
+      "time_completed": 1606122453,
+      "initiated": 1,
+      "initiated_by": 1519188,
+      "planned_by": 2098045,
+      "success": 1,
+      "money_gain": 15000,
+      "respect_gain": 3
+    },
+    "8331670": {
+      "crime_id": 5,
+      "crime_name": "Robbing of a money train",
+      "participants": [
+        {
+          "1903715": null
+        },
+        {
+          "519291": null
+        },
+        {
+          "2098045": null
+        },
+        {
+          "2354229": null
+        },
+        {
+          "2043996": null
+        },
+        {
+          "1959482": null
+        }
+      ],
+      "time_started": 1605929038,
+      "time_ready": 1606361038,
+      "time_left": 0,
+      "time_completed": 1606399207,
+      "initiated": 1,
+      "initiated_by": 2525435,
+      "planned_by": 2098045,
+      "success": 1,
+      "money_gain": 3250000,
+      "respect_gain": 28
+    },
+    "8329906": {
+      "crime_id": 5,
+      "crime_name": "Robbing of a money train",
+      "participants": [
+        {
+          "2058049": null
+        },
+        {
+          "384108": null
+        },
+        {
+          "295233": null
+        },
+        {
+          "717290": null
+        },
+        {
+          "528024": null
+        },
+        {
+          "465182": null
+        }
+      ],
+      "time_started": 1605890339,
+      "time_ready": 1606322339,
+      "time_left": 0,
+      "time_completed": 1606323089,
+      "initiated": 1,
+      "initiated_by": 2015200,
+      "planned_by": 2098045,
+      "success": 0,
+      "money_gain": 0,
+      "respect_gain": 0
+    },
+    "8329903": {
+      "crime_id": 1,
+      "crime_name": "Blackmailing",
+      "participants": [
+        {
+          "2600123": null
+        },
+        {
+          "2601735": null
+        }
+      ],
+      "time_started": 1605890303,
+      "time_ready": 1605976703,
+      "time_left": 0,
+      "time_completed": 1605996759,
+      "initiated": 1,
+      "initiated_by": 2338543,
+      "planned_by": 2098045,
+      "success": 1,
+      "money_gain": 6000,
+      "respect_gain": 1
+    },
+    "8329508": {
+      "crime_id": 8,
+      "crime_name": "Political Assassination",
+      "participants": [
+        {
+          "887003": null
+        },
+        {
+          "1413127": null
+        },
+        {
+          "372369": null
+        },
+        {
+          "2092393": null
+        }
+      ],
+      "time_started": 1605881376,
+      "time_ready": 1606572576,
+      "time_left": 0,
+      "time_completed": 1606576366,
+      "initiated": 1,
+      "initiated_by": 2092393,
+      "planned_by": 384108,
+      "success": 1,
+      "money_gain": 150000000,
+      "respect_gain": 255
+    },
+    "8327557": {
+      "crime_id": 3,
+      "crime_name": "Bomb threat",
+      "participants": [
+        {
+          "1818631": null
+        },
+        {
+          "2003679": null
+        },
+        {
+          "2569763": null
+        }
+      ],
+      "time_started": 1605831034,
+      "time_ready": 1606090234,
+      "time_left": 0,
+      "time_completed": 1606094307,
+      "initiated": 1,
+      "initiated_by": 2104114,
+      "planned_by": 2104114,
+      "success": 0,
+      "money_gain": 0,
+      "respect_gain": 0
+    },
+    "8326707": {
+      "crime_id": 3,
+      "crime_name": "Bomb threat",
+      "participants": [
+        {
+          "2385186": null
+        },
+        {
+          "2518230": null
+        },
+        {
+          "2573890": null
+        }
+      ],
+      "time_started": 1605813711,
+      "time_ready": 1606072911,
+      "time_left": 0,
+      "time_completed": 1606084925,
+      "initiated": 1,
+      "initiated_by": 1519188,
+      "planned_by": 307626,
+      "success": 1,
+      "money_gain": 75000,
+      "respect_gain": 10
+    },
+    "8326705": {
+      "crime_id": 3,
+      "crime_name": "Bomb threat",
+      "participants": [
+        {
+          "307626": null
+        },
+        {
+          "2438428": null
+        },
+        {
+          "2005264": null
+        }
+      ],
+      "time_started": 1605813701,
+      "time_ready": 1606072901,
+      "time_left": 0,
+      "time_completed": 1606075260,
+      "initiated": 1,
+      "initiated_by": 307626,
+      "planned_by": 307626,
+      "success": 1,
+      "money_gain": 100000,
+      "respect_gain": 8
+    },
+    "8326507": {
+      "crime_id": 3,
+      "crime_name": "Bomb threat",
+      "participants": [
+        {
+          "512875": null
+        },
+        {
+          "221006": null
+        },
+        {
+          "2513229": null
+        }
+      ],
+      "time_started": 1605809484,
+      "time_ready": 1606068684,
+      "time_left": 0,
+      "time_completed": 1606068703,
+      "initiated": 1,
+      "initiated_by": 1446944,
+      "planned_by": 2338543,
+      "success": 1,
+      "money_gain": 50000,
+      "respect_gain": 10
+    },
+    "8326193": {
+      "crime_id": 1,
+      "crime_name": "Blackmailing",
+      "participants": [
+        {
+          "2600123": null
+        },
+        {
+          "2601735": null
+        }
+      ],
+      "time_started": 1605802018,
+      "time_ready": 1605888418,
+      "time_left": 0,
+      "time_completed": 1605890300,
+      "initiated": 1,
+      "initiated_by": 2098045,
+      "planned_by": 2601735,
+      "success": 1,
+      "money_gain": 7000,
+      "respect_gain": 2
+    },
+    "8326103": {
+      "crime_id": 3,
+      "crime_name": "Bomb threat",
+      "participants": [
+        {
+          "2460056": null
+        },
+        {
+          "2175576": null
+        },
+        {
+          "1419093": null
+        }
+      ],
+      "time_started": 1605799742,
+      "time_ready": 1606058942,
+      "time_left": 0,
+      "time_completed": 1606143648,
+      "initiated": 1,
+      "initiated_by": 1419093,
+      "planned_by": 1519188,
+      "success": 0,
+      "money_gain": 0,
+      "respect_gain": 0
+    },
+    "8325019": {
+      "crime_id": 5,
+      "crime_name": "Robbing of a money train",
+      "participants": [
+        {
+          "544391": null
+        },
+        {
+          "2162919": null
+        },
+        {
+          "1044045": null
+        },
+        {
+          "80036": null
+        },
+        {
+          "867156": null
+        },
+        {
+          "656797": null
+        }
+      ],
+      "time_started": 1605770537,
+      "time_ready": 1606202537,
+      "time_left": 0,
+      "time_completed": 1606209967,
+      "initiated": 1,
+      "initiated_by": 80036,
+      "planned_by": 1913341,
+      "success": 1,
+      "money_gain": 3750000,
+      "respect_gain": 33
+    },
+    "8325017": {
+      "crime_id": 2,
+      "crime_name": "Kidnapping",
+      "participants": [
+        {
+          "2594452": null
+        },
+        {
+          "2570992": null
+        }
+      ],
+      "time_started": 1605770409,
+      "time_ready": 1605943209,
+      "time_left": 0,
+      "time_completed": 1605943720,
+      "initiated": 1,
+      "initiated_by": 2098045,
+      "planned_by": 1913341,
+      "success": 1,
+      "money_gain": 15000,
+      "respect_gain": 3
+    },
+    "8325013": {
+      "crime_id": 3,
+      "crime_name": "Bomb threat",
+      "participants": [
+        {
+          "931420": null
+        },
+        {
+          "1043922": null
+        },
+        {
+          "1870531": null
+        }
+      ],
+      "time_started": 1605770344,
+      "time_ready": 1606029544,
+      "time_left": 0,
+      "time_completed": 1606041291,
+      "initiated": 1,
+      "initiated_by": 1519188,
+      "planned_by": 1913341,
+      "success": 1,
+      "money_gain": 150000,
+      "respect_gain": 10
+    },
+    "8323014": {
+      "crime_id": 4,
+      "crime_name": "Planned robbery",
+      "participants": [
+        {
+          "1592260": null
+        },
+        {
+          "2433583": null
+        },
+        {
+          "2340663": null
+        },
+        {
+          "2346087": null
+        },
+        {
+          "2299907": null
+        }
+      ],
+      "time_started": 1605725103,
+      "time_ready": 1606070703,
+      "time_left": 0,
+      "time_completed": 1606084025,
+      "initiated": 1,
+      "initiated_by": 2346087,
+      "planned_by": 2015200,
+      "success": 1,
+      "money_gain": 500000,
+      "respect_gain": 23
+    },
+    "8322802": {
+      "crime_id": 4,
+      "crime_name": "Planned robbery",
+      "participants": [
+        {
+          "2104114": null
+        },
+        {
+          "2338543": null
+        },
+        {
+          "2160167": null
+        },
+        {
+          "2346077": null
+        },
+        {
+          "1991347": null
+        }
+      ],
+      "time_started": 1605721238,
+      "time_ready": 1606066838,
+      "time_left": 0,
+      "time_completed": 1606094331,
+      "initiated": 1,
+      "initiated_by": 2104114,
+      "planned_by": 2346077,
+      "success": 1,
+      "money_gain": 450000,
+      "respect_gain": 23
+    },
+    "8322308": {
+      "crime_id": 1,
+      "crime_name": "Blackmailing",
+      "participants": [
+        {
+          "2600123": null
+        },
+        {
+          "2601735": null
+        }
+      ],
+      "time_started": 1605710320,
+      "time_ready": 1605796720,
+      "time_left": 0,
+      "time_completed": 1605802012,
+      "initiated": 1,
+      "initiated_by": 2601735,
+      "planned_by": 2600123,
+      "success": 1,
+      "money_gain": 9000,
+      "respect_gain": 1
+    },
+    "8321204": {
+      "crime_id": 1,
+      "crime_name": "Blackmailing",
+      "participants": [
+        {
+          "2594452": null
+        },
+        {
+          "2570992": null
+        }
+      ],
+      "time_started": 1605681694,
+      "time_ready": 1605768094,
+      "time_left": 0,
+      "time_completed": 1605770293,
+      "initiated": 1,
+      "initiated_by": 1913341,
+      "planned_by": 384108,
+      "success": 1,
+      "money_gain": 9000,
+      "respect_gain": 1
+    },
+    "8318866": {
+      "crime_id": 7,
+      "crime_name": "Plane hijacking",
+      "participants": [
+        {
+          "524028": null
+        },
+        {
+          "1419046": null
+        },
+        {
+          "1961768": null
+        },
+        {
+          "1913341": null
+        },
+        {
+          "2058787": null
+        },
+        {
+          "527397": null
+        },
+        {
+          "2222285": null
+        },
+        {
+          "202437": null
+        }
+      ],
+      "time_started": 1605627241,
+      "time_ready": 1606232041,
+      "time_left": 0,
+      "time_completed": 1606242197,
+      "initiated": 1,
+      "initiated_by": 1961768,
+      "planned_by": 1961768,
+      "success": 1,
+      "money_gain": 30000000,
+      "respect_gain": 88
+    },
+    "8318420": {
+      "crime_id": 1,
+      "crime_name": "Blackmailing",
+      "participants": [
+        {
+          "2600123": null
+        },
+        {
+          "2601735": null
+        }
+      ],
+      "time_started": 1605617105,
+      "time_ready": 1605703505,
+      "time_left": 0,
+      "time_completed": 1605710315,
+      "initiated": 1,
+      "initiated_by": 2600123,
+      "planned_by": 2600123,
+      "success": 1,
+      "money_gain": 7000,
+      "respect_gain": 2
+    },
+    "8316721": {
+      "crime_id": 4,
+      "crime_name": "Planned robbery",
+      "participants": [
+        {
+          "1994452": null
+        },
+        {
+          "2233606": null
+        },
+        {
+          "1467320": null
+        },
+        {
+          "2525435": null
+        },
+        {
+          "2148971": null
+        }
+      ],
+      "time_started": 1605570393,
+      "time_ready": 1605915993,
+      "time_left": 0,
+      "time_completed": 1605975061,
+      "initiated": 1,
+      "initiated_by": 2525435,
+      "planned_by": 524028,
+      "success": 1,
+      "money_gain": 500000,
+      "respect_gain": 24
+    },
+    "8316428": {
+      "crime_id": 3,
+      "crime_name": "Bomb threat",
+      "participants": [
+        {
+          "1818631": null
+        },
+        {
+          "2003679": null
+        },
+        {
+          "2569763": null
+        }
+      ],
+      "time_started": 1605563824,
+      "time_ready": 1605823024,
+      "time_left": 0,
+      "time_completed": 1605831030,
+      "initiated": 1,
+      "initiated_by": 2104114,
+      "planned_by": 2525435,
+      "success": 1,
+      "money_gain": 100000,
+      "respect_gain": 7
+    },
+    "8316427": {
+      "crime_id": 3,
+      "crime_name": "Bomb threat",
+      "participants": [
+        {
+          "2211394": null
+        },
+        {
+          "1183116": null
+        },
+        {
+          "1446944": null
+        }
+      ],
+      "time_started": 1605563816,
+      "time_ready": 1605823016,
+      "time_left": 0,
+      "time_completed": 1605831554,
+      "initiated": 1,
+      "initiated_by": 524028,
+      "planned_by": 2525435,
+      "success": 1,
+      "money_gain": 100000,
+      "respect_gain": 8
+    },
+    "8316424": {
+      "crime_id": 1,
+      "crime_name": "Blackmailing",
+      "participants": [
+        {
+          "2594452": null
+        },
+        {
+          "2570992": null
+        }
+      ],
+      "time_started": 1605563802,
+      "time_ready": 1605650202,
+      "time_left": 0,
+      "time_completed": 1605681690,
+      "initiated": 1,
+      "initiated_by": 384108,
+      "planned_by": 2525435,
+      "success": 1,
+      "money_gain": 10000,
+      "respect_gain": 1
+    },
+    "8315747": {
+      "crime_id": 5,
+      "crime_name": "Robbing of a money train",
+      "participants": [
+        {
+          "1519188": null
+        },
+        {
+          "2163841": null
+        },
+        {
+          "1700315": null
+        },
+        {
+          "538653": null
+        },
+        {
+          "1746371": null
+        },
+        {
+          "2130567": null
+        }
+      ],
+      "time_started": 1605550283,
+      "time_ready": 1605982283,
+      "time_left": 0,
+      "time_completed": 1605985397,
+      "initiated": 1,
+      "initiated_by": 2346087,
+      "planned_by": 307626,
+      "success": 0,
+      "money_gain": 0,
+      "respect_gain": 0
+    },
+    "8315743": {
+      "crime_id": 3,
+      "crime_name": "Bomb threat",
+      "participants": [
+        {
+          "512875": null
+        },
+        {
+          "221006": null
+        },
+        {
+          "2513229": null
+        }
+      ],
+      "time_started": 1605550264,
+      "time_ready": 1605809464,
+      "time_left": 0,
+      "time_completed": 1605809480,
+      "initiated": 1,
+      "initiated_by": 2338543,
+      "planned_by": 307626,
+      "success": 1,
+      "money_gain": 150000,
+      "respect_gain": 7
+    },
+    "8315737": {
+      "crime_id": 3,
+      "crime_name": "Bomb threat",
+      "participants": [
+        {
+          "307626": null
+        },
+        {
+          "2438428": null
+        },
+        {
+          "2005264": null
+        }
+      ],
+      "time_started": 1605550236,
+      "time_ready": 1605809436,
+      "time_left": 0,
+      "time_completed": 1605813693,
+      "initiated": 1,
+      "initiated_by": 307626,
+      "planned_by": 307626,
+      "success": 0,
+      "money_gain": 0,
+      "respect_gain": 0
+    },
+    "8315521": {
+      "crime_id": 7,
+      "crime_name": "Plane hijacking",
+      "participants": [
+        {
+          "2038706": null
+        },
+        {
+          "1563257": null
+        },
+        {
+          "1944535": null
+        },
+        {
+          "2172225": null
+        },
+        {
+          "2112841": null
+        },
+        {
+          "606826": null
+        },
+        {
+          "1832621": null
+        },
+        {
+          "1286893": null
+        }
+      ],
+      "time_started": 1605546340,
+      "time_ready": 1606151140,
+      "time_left": 0,
+      "time_completed": 1606158972,
+      "initiated": 1,
+      "initiated_by": 2172225,
+      "planned_by": 606826,
+      "success": 1,
+      "money_gain": 45000000,
+      "respect_gain": 86
+    },
+    "8315287": {
+      "crime_id": 3,
+      "crime_name": "Bomb threat",
+      "participants": [
+        {
+          "2385186": null
+        },
+        {
+          "2518230": null
+        },
+        {
+          "2573890": null
+        }
+      ],
+      "time_started": 1605541085,
+      "time_ready": 1605800285,
+      "time_left": 0,
+      "time_completed": 1605813706,
+      "initiated": 1,
+      "initiated_by": 307626,
+      "planned_by": 2518230,
+      "success": 1,
+      "money_gain": 125000,
+      "respect_gain": 8
+    },
+    "8314143": {
+      "crime_id": 1,
+      "crime_name": "Blackmailing",
+      "participants": [
+        {
+          "2600123": null
+        },
+        {
+          "2601735": null
+        }
+      ],
+      "time_started": 1605512059,
+      "time_ready": 1605598459,
+      "time_left": 0,
+      "time_completed": 1605617100,
+      "initiated": 1,
+      "initiated_by": 2600123,
+      "planned_by": 2600123,
+      "success": 1,
+      "money_gain": 6000,
+      "respect_gain": 1
+    },
+    "8313824": {
+      "crime_id": 3,
+      "crime_name": "Bomb threat",
+      "participants": [
+        {
+          "2460056": null
+        },
+        {
+          "2175576": null
+        },
+        {
+          "1419093": null
+        }
+      ],
+      "time_started": 1605502615,
+      "time_ready": 1605761815,
+      "time_left": 0,
+      "time_completed": 1605799738,
+      "initiated": 1,
+      "initiated_by": 1519188,
+      "planned_by": 1519188,
+      "success": 1,
+      "money_gain": 125000,
+      "respect_gain": 8
+    },
+    "8312723": {
+      "crime_id": 1,
+      "crime_name": "Blackmailing",
+      "participants": [
+        {
+          "2594452": null
+        },
+        {
+          "2570992": null
+        }
+      ],
+      "time_started": 1605476306,
+      "time_ready": 1605562706,
+      "time_left": 0,
+      "time_completed": 1605563798,
+      "initiated": 1,
+      "initiated_by": 2525435,
+      "planned_by": 1446944,
+      "success": 1,
+      "money_gain": 10000,
+      "respect_gain": 1
+    },
+    "8311673": {
+      "crime_id": 5,
+      "crime_name": "Robbing of a money train",
+      "participants": [
+        {
+          "1903715": null
+        },
+        {
+          "519291": null
+        },
+        {
+          "2098045": null
+        },
+        {
+          "2354229": null
+        },
+        {
+          "2043996": null
+        },
+        {
+          "1959482": null
+        }
+      ],
+      "time_started": 1605456152,
+      "time_ready": 1605888152,
+      "time_left": 0,
+      "time_completed": 1605929035,
+      "initiated": 1,
+      "initiated_by": 2098045,
+      "planned_by": 2098045,
+      "success": 1,
+      "money_gain": 4000000,
+      "respect_gain": 29
+    },
+    "8311644": {
+      "crime_id": 5,
+      "crime_name": "Robbing of a money train",
+      "participants": [
+        {
+          "2058049": null
+        },
+        {
+          "384108": null
+        },
+        {
+          "295233": null
+        },
+        {
+          "717290": null
+        },
+        {
+          "528024": null
+        },
+        {
+          "465182": null
+        }
+      ],
+      "time_started": 1605455431,
+      "time_ready": 1605887431,
+      "time_left": 0,
+      "time_completed": 1605890336,
+      "initiated": 1,
+      "initiated_by": 2098045,
+      "planned_by": 2098045,
+      "success": 1,
+      "money_gain": 3250000,
+      "respect_gain": 33
+    },
+    "8310469": {
+      "crime_id": 1,
+      "crime_name": "Blackmailing",
+      "participants": [
+        {
+          "2600123": null
+        },
+        {
+          "2601735": null
+        }
+      ],
+      "time_started": 1605421422,
+      "time_ready": 1605507822,
+      "time_left": 0,
+      "time_completed": 1605512053,
+      "initiated": 1,
+      "initiated_by": 2600123,
+      "planned_by": 2600123,
+      "success": 1,
+      "money_gain": 9000,
+      "respect_gain": 1
+    },
+    "8308655": {
+      "crime_id": 1,
+      "crime_name": "Blackmailing",
+      "participants": [
+        {
+          "2594452": null
+        },
+        {
+          "2570992": null
+        }
+      ],
+      "time_started": 1605378681,
+      "time_ready": 1605465081,
+      "time_left": 0,
+      "time_completed": 1605473487,
+      "initiated": 1,
+      "initiated_by": 1446944,
+      "planned_by": 1519188,
+      "success": 1,
+      "money_gain": 7000,
+      "respect_gain": 2
+    },
+    "8308021": {
+      "crime_id": 4,
+      "crime_name": "Planned robbery",
+      "participants": [
+        {
+          "1592260": null
+        },
+        {
+          "2433583": null
+        },
+        {
+          "2340663": null
+        },
+        {
+          "2346087": null
+        },
+        {
+          "2299907": null
+        }
+      ],
+      "time_started": 1605365405,
+      "time_ready": 1605711005,
+      "time_left": 0,
+      "time_completed": 1605725099,
+      "initiated": 1,
+      "initiated_by": 2015200,
+      "planned_by": 2338543,
+      "success": 1,
+      "money_gain": 550000,
+      "respect_gain": 23
+    },
+    "8308020": {
+      "crime_id": 4,
+      "crime_name": "Planned robbery",
+      "participants": [
+        {
+          "2104114": null
+        },
+        {
+          "2338543": null
+        },
+        {
+          "2160167": null
+        },
+        {
+          "2346077": null
+        },
+        {
+          "1991347": null
+        }
+      ],
+      "time_started": 1605365397,
+      "time_ready": 1605710997,
+      "time_left": 0,
+      "time_completed": 1605721231,
+      "initiated": 1,
+      "initiated_by": 2346077,
+      "planned_by": 2338543,
+      "success": 1,
+      "money_gain": 600000,
+      "respect_gain": 22
+    },
+    "8306044": {
+      "crime_id": 1,
+      "crime_name": "Blackmailing",
+      "participants": [
+        {
+          "2600123": null
+        },
+        {
+          "2601735": null
+        }
+      ],
+      "time_started": 1605311374,
+      "time_ready": 1605397774,
+      "time_left": 0,
+      "time_completed": 1605421415,
+      "initiated": 1,
+      "initiated_by": 2600123,
+      "planned_by": 2015200,
+      "success": 1,
+      "money_gain": 9000,
+      "respect_gain": 1
+    },
+    "8305791": {
+      "crime_id": 8,
+      "crime_name": "Political Assassination",
+      "participants": [
+        {
+          "1280063": null
+        },
+        {
+          "2015200": null
+        },
+        {
+          "79148": null
+        },
+        {
+          "248367": null
+        }
+      ],
+      "time_started": 1605306190,
+      "time_ready": 1605997390,
+      "time_left": 0,
+      "time_completed": 1606000046,
+      "initiated": 1,
+      "initiated_by": 1944535,
+      "planned_by": 2525435,
+      "success": 1,
+      "money_gain": 300000000,
+      "respect_gain": 204
+    },
+    "8305790": {
+      "crime_id": 3,
+      "crime_name": "Bomb threat",
+      "participants": [
+        {
+          "2233606": null
+        },
+        {
+          "1467320": null
+        },
+        {
+          "2525435": null
+        }
+      ],
+      "time_started": 1605306177,
+      "time_ready": 1605565377,
+      "time_left": 0,
+      "time_completed": 1605570353,
+      "initiated": 1,
+      "initiated_by": 524028,
+      "planned_by": 2525435,
+      "success": 1,
+      "money_gain": 100000,
+      "respect_gain": 8
+    },
+    "8305577": {
+      "crime_id": 3,
+      "crime_name": "Bomb threat",
+      "participants": [
+        {
+          "2211394": null
+        },
+        {
+          "1183116": null
+        },
+        {
+          "1446944": null
+        }
+      ],
+      "time_started": 1605301641,
+      "time_ready": 1605560841,
+      "time_left": 0,
+      "time_completed": 1605563811,
+      "initiated": 1,
+      "initiated_by": 2525435,
+      "planned_by": 2525435,
+      "success": 1,
+      "money_gain": 125000,
+      "respect_gain": 10
+    },
+    "8304909": {
+      "crime_id": 1,
+      "crime_name": "Blackmailing",
+      "participants": [
+        {
+          "2594452": null
+        },
+        {
+          "2570992": null
+        }
+      ],
+      "time_started": 1605287346,
+      "time_ready": 1605373746,
+      "time_left": 0,
+      "time_completed": 1605378677,
+      "initiated": 1,
+      "initiated_by": 1519188,
+      "planned_by": 2573890,
+      "success": 1,
+      "money_gain": 6000,
+      "respect_gain": 2
+    },
+    "8304633": {
+      "crime_id": 3,
+      "crime_name": "Bomb threat",
+      "participants": [
+        {
+          "2385186": null
+        },
+        {
+          "2518230": null
+        },
+        {
+          "2573890": null
+        }
+      ],
+      "time_started": 1605280406,
+      "time_ready": 1605539606,
+      "time_left": 0,
+      "time_completed": 1605541080,
+      "initiated": 1,
+      "initiated_by": 2518230,
+      "planned_by": 2518230,
+      "success": 1,
+      "money_gain": 125000,
+      "respect_gain": 8
+    },
+    "8304543": {
+      "crime_id": 2,
+      "crime_name": "Kidnapping",
+      "participants": [
+        {
+          "2460056": null
+        },
+        {
+          "2175576": null
+        }
+      ],
+      "time_started": 1605278669,
+      "time_ready": 1605451469,
+      "time_left": 0,
+      "time_completed": 1605502590,
+      "initiated": 1,
+      "initiated_by": 1519188,
+      "planned_by": 1913341,
+      "success": 1,
+      "money_gain": 25000,
+      "respect_gain": 5
+    },
+    "8304528": {
+      "crime_id": 3,
+      "crime_name": "Bomb threat",
+      "participants": [
+        {
+          "512875": null
+        },
+        {
+          "221006": null
+        },
+        {
+          "2513229": null
+        }
+      ],
+      "time_started": 1605278407,
+      "time_ready": 1605537607,
+      "time_left": 0,
+      "time_completed": 1605550258,
+      "initiated": 1,
+      "initiated_by": 307626,
+      "planned_by": 1913341,
+      "success": 1,
+      "money_gain": 50000,
+      "respect_gain": 9
+    },
+    "8304527": {
+      "crime_id": 3,
+      "crime_name": "Bomb threat",
+      "participants": [
+        {
+          "1994452": null
+        },
+        {
+          "2148971": null
+        },
+        {
+          "2363342": null
+        }
+      ],
+      "time_started": 1605278392,
+      "time_ready": 1605537592,
+      "time_left": 0,
+      "time_completed": 1605550243,
+      "initiated": 1,
+      "initiated_by": 307626,
+      "planned_by": 1913341,
+      "success": 1,
+      "money_gain": 125000,
+      "respect_gain": 7
+    },
+    "8304525": {
+      "crime_id": 3,
+      "crime_name": "Bomb threat",
+      "participants": [
+        {
+          "1818631": null
+        },
+        {
+          "2003679": null
+        },
+        {
+          "2569763": null
+        }
+      ],
+      "time_started": 1605278369,
+      "time_ready": 1605537569,
+      "time_left": 0,
+      "time_completed": 1605563820,
+      "initiated": 1,
+      "initiated_by": 2525435,
+      "planned_by": 1913341,
+      "success": 1,
+      "money_gain": 125000,
+      "respect_gain": 9
+    },
+    "8304523": {
+      "crime_id": 3,
+      "crime_name": "Bomb threat",
+      "participants": [
+        {
+          "307626": null
+        },
+        {
+          "2438428": null
+        },
+        {
+          "2005264": null
+        }
+      ],
+      "time_started": 1605278325,
+      "time_ready": 1605537525,
+      "time_left": 0,
+      "time_completed": 1605550230,
+      "initiated": 1,
+      "initiated_by": 307626,
+      "planned_by": 1913341,
+      "success": 1,
+      "money_gain": 100000,
+      "respect_gain": 9
+    },
+    "8304522": {
+      "crime_id": 3,
+      "crime_name": "Bomb threat",
+      "participants": [
+        {
+          "656797": null
+        },
+        {
+          "931420": null
+        },
+        {
+          "1870531": null
+        }
+      ],
+      "time_started": 1605278316,
+      "time_ready": 1605537516,
+      "time_left": 0,
+      "time_completed": 1605578778,
+      "initiated": 1,
+      "initiated_by": 1870531,
+      "planned_by": 1913341,
+      "success": 1,
+      "money_gain": 150000,
+      "respect_gain": 8
+    },
+    "8304347": {
+      "crime_id": 1,
+      "crime_name": "Blackmailing",
+      "participants": [
+        {
+          "1419093": null
+        },
+        {
+          "2601839": null
+        }
+      ],
+      "time_started": 1605274450,
+      "time_ready": 1605360850,
+      "time_left": 0,
+      "time_completed": 1605399202,
+      "initiated": 1,
+      "initiated_by": 2594452,
+      "planned_by": 2015200,
+      "success": 1,
+      "money_gain": 10000,
+      "respect_gain": 1
+    },
+    "8302287": {
+      "crime_id": 1,
+      "crime_name": "Blackmailing",
+      "participants": [
+        {
+          "2600123": null
+        },
+        {
+          "2601735": null
+        }
+      ],
+      "time_started": 1605221384,
+      "time_ready": 1605307784,
+      "time_left": 0,
+      "time_completed": 1605311370,
+      "initiated": 1,
+      "initiated_by": 2015200,
+      "planned_by": 2600123,
+      "success": 1,
+      "money_gain": 9000,
+      "respect_gain": 2
+    },
+    "8301081": {
+      "crime_id": 1,
+      "crime_name": "Blackmailing",
+      "participants": [
+        {
+          "2594452": null
+        },
+        {
+          "2570992": null
+        }
+      ],
+      "time_started": 1605196944,
+      "time_ready": 1605283344,
+      "time_left": 0,
+      "time_completed": 1605287343,
+      "initiated": 1,
+      "initiated_by": 2573890,
+      "planned_by": 1519188,
+      "success": 1,
+      "money_gain": 10000,
+      "respect_gain": 1
+    },
+    "8300650": {
+      "crime_id": 8,
+      "crime_name": "Political Assassination",
+      "participants": [
+        {
+          "887003": null
+        },
+        {
+          "1413127": null
+        },
+        {
+          "372369": null
+        },
+        {
+          "2092393": null
+        }
+      ],
+      "time_started": 1605187643,
+      "time_ready": 1605878843,
+      "time_left": 0,
+      "time_completed": 1605881367,
+      "initiated": 1,
+      "initiated_by": 384108,
+      "planned_by": 1519188,
+      "success": 0,
+      "money_gain": 0,
+      "respect_gain": 0
+    },
+    "8300450": {
+      "crime_id": 1,
+      "crime_name": "Blackmailing",
+      "participants": [
+        {
+          "1419093": null
+        },
+        {
+          "2601839": null
+        }
+      ],
+      "time_started": 1605182325,
+      "time_ready": 1605268725,
+      "time_left": 0,
+      "time_completed": 1605274445,
+      "initiated": 1,
+      "initiated_by": 2015200,
+      "planned_by": 2015200,
+      "success": 1,
+      "money_gain": 7000,
+      "respect_gain": 2
+    },
+    "8297681": {
+      "crime_id": 5,
+      "crime_name": "Robbing of a money train",
+      "participants": [
+        {
+          "1519188": null
+        },
+        {
+          "2163841": null
+        },
+        {
+          "1700315": null
+        },
+        {
+          "538653": null
+        },
+        {
+          "2130567": null
+        },
+        {
+          "1746371": null
+        }
+      ],
+      "time_started": 1605113466,
+      "time_ready": 1605545466,
+      "time_left": 0,
+      "time_completed": 1605550277,
+      "initiated": 1,
+      "initiated_by": 307626,
+      "planned_by": 1519188,
+      "success": 1,
+      "money_gain": 4000000,
+      "respect_gain": 26
+    },
+    "8297680": {
+      "crime_id": 1,
+      "crime_name": "Blackmailing",
+      "participants": [
+        {
+          "2600123": null
+        },
+        {
+          "2601735": null
+        }
+      ],
+      "time_started": 1605113455,
+      "time_ready": 1605199855,
+      "time_left": 0,
+      "time_completed": 1605221379,
+      "initiated": 1,
+      "initiated_by": 2600123,
+      "planned_by": 1519188,
+      "success": 1,
+      "money_gain": 9000,
+      "respect_gain": 1
+    },
+    "8297503": {
+      "crime_id": 1,
+      "crime_name": "Blackmailing",
+      "participants": [
+        {
+          "2594452": null
+        },
+        {
+          "2570992": null
+        }
+      ],
+      "time_started": 1605108488,
+      "time_ready": 1605194888,
+      "time_left": 0,
+      "time_completed": 1605196938,
+      "initiated": 1,
+      "initiated_by": 1519188,
+      "planned_by": 1519188,
+      "success": 1,
+      "money_gain": 7000,
+      "respect_gain": 1
+    },
+    "8293617": {
+      "crime_id": 5,
+      "crime_name": "Robbing of a money train",
+      "participants": [
+        {
+          "544391": null
+        },
+        {
+          "2162919": null
+        },
+        {
+          "1044045": null
+        },
+        {
+          "80036": null
+        },
+        {
+          "2093366": null
+        },
+        {
+          "867156": null
+        }
+      ],
+      "time_started": 1605018669,
+      "time_ready": 1605450669,
+      "time_left": 0,
+      "time_completed": 1605455434,
+      "initiated": 1,
+      "initiated_by": 2098045,
+      "planned_by": 1913341,
+      "success": 1,
+      "money_gain": 3750000,
+      "respect_gain": 29
+    },
+    "8293615": {
+      "crime_id": 5,
+      "crime_name": "Robbing of a money train",
+      "participants": [
+        {
+          "2058049": null
+        },
+        {
+          "384108": null
+        },
+        {
+          "295233": null
+        },
+        {
+          "717290": null
+        },
+        {
+          "528024": null
+        },
+        {
+          "465182": null
+        }
+      ],
+      "time_started": 1605018651,
+      "time_ready": 1605450651,
+      "time_left": 0,
+      "time_completed": 1605455428,
+      "initiated": 1,
+      "initiated_by": 2098045,
+      "planned_by": 1913341,
+      "success": 1,
+      "money_gain": 3750000,
+      "respect_gain": 33
+    },
+    "8293613": {
+      "crime_id": 7,
+      "crime_name": "Plane hijacking",
+      "participants": [
+        {
+          "524028": null
+        },
+        {
+          "1419046": null
+        },
+        {
+          "1961768": null
+        },
+        {
+          "1913341": null
+        },
+        {
+          "2058787": null
+        },
+        {
+          "527397": null
+        },
+        {
+          "2222285": null
+        },
+        {
+          "202437": null
+        }
+      ],
+      "time_started": 1605018621,
+      "time_ready": 1605623421,
+      "time_left": 0,
+      "time_completed": 1605627123,
+      "initiated": 1,
+      "initiated_by": 527397,
+      "planned_by": 1913341,
+      "success": 0,
+      "money_gain": 0,
+      "respect_gain": 0
+    },
+    "8293609": {
+      "crime_id": 5,
+      "crime_name": "Robbing of a money train",
+      "participants": [
+        {
+          "1903715": null
+        },
+        {
+          "519291": null
+        },
+        {
+          "2098045": null
+        },
+        {
+          "2354229": null
+        },
+        {
+          "2043996": null
+        },
+        {
+          "1959482": null
+        }
+      ],
+      "time_started": 1605018558,
+      "time_ready": 1605450558,
+      "time_left": 0,
+      "time_completed": 1605456149,
+      "initiated": 1,
+      "initiated_by": 2098045,
+      "planned_by": 1913341,
+      "success": 1,
+      "money_gain": 3500000,
+      "respect_gain": 30
+    },
+    "8293607": {
+      "crime_id": 4,
+      "crime_name": "Planned robbery",
+      "participants": [
+        {
+          "1592260": null
+        },
+        {
+          "2433583": null
+        },
+        {
+          "2340663": null
+        },
+        {
+          "2346087": null
+        },
+        {
+          "2299907": null
+        }
+      ],
+      "time_started": 1605018535,
+      "time_ready": 1605364135,
+      "time_left": 0,
+      "time_completed": 1605365402,
+      "initiated": 1,
+      "initiated_by": 2338543,
+      "planned_by": 1913341,
+      "success": 1,
+      "money_gain": 500000,
+      "respect_gain": 23
+    },
+    "8293605": {
+      "crime_id": 4,
+      "crime_name": "Planned robbery",
+      "participants": [
+        {
+          "2104114": null
+        },
+        {
+          "2338543": null
+        },
+        {
+          "2160167": null
+        },
+        {
+          "2346077": null
+        },
+        {
+          "1991347": null
+        }
+      ],
+      "time_started": 1605018495,
+      "time_ready": 1605364095,
+      "time_left": 0,
+      "time_completed": 1605365393,
+      "initiated": 1,
+      "initiated_by": 2338543,
+      "planned_by": 1913341,
+      "success": 1,
+      "money_gain": 400000,
+      "respect_gain": 19
+    },
+    "8293601": {
+      "crime_id": 3,
+      "crime_name": "Bomb threat",
+      "participants": [
+        {
+          "2233606": null
+        },
+        {
+          "1467320": null
+        },
+        {
+          "2525435": null
+        }
+      ],
+      "time_started": 1605018470,
+      "time_ready": 1605277670,
+      "time_left": 0,
+      "time_completed": 1605306173,
+      "initiated": 1,
+      "initiated_by": 2525435,
+      "planned_by": 1913341,
+      "success": 1,
+      "money_gain": 100000,
+      "respect_gain": 7
+    },
+    "8293600": {
+      "crime_id": 3,
+      "crime_name": "Bomb threat",
+      "participants": [
+        {
+          "307626": null
+        },
+        {
+          "2438428": null
+        },
+        {
+          "2005264": null
+        }
+      ],
+      "time_started": 1605018454,
+      "time_ready": 1605277654,
+      "time_left": 0,
+      "time_completed": 1605278319,
+      "initiated": 1,
+      "initiated_by": 1913341,
+      "planned_by": 1913341,
+      "success": 1,
+      "money_gain": 150000,
+      "respect_gain": 7
+    },
+    "8293599": {
+      "crime_id": 3,
+      "crime_name": "Bomb threat",
+      "participants": [
+        {
+          "656797": null
+        },
+        {
+          "931420": null
+        },
+        {
+          "1870531": null
+        }
+      ],
+      "time_started": 1605018440,
+      "time_ready": 1605277640,
+      "time_left": 0,
+      "time_completed": 1605278302,
+      "initiated": 1,
+      "initiated_by": 1913341,
+      "planned_by": 1913341,
+      "success": 1,
+      "money_gain": 100000,
+      "respect_gain": 7
+    },
+    "8293598": {
+      "crime_id": 3,
+      "crime_name": "Bomb threat",
+      "participants": [
+        {
+          "2211394": null
+        },
+        {
+          "1183116": null
+        },
+        {
+          "1446944": null
+        }
+      ],
+      "time_started": 1605018424,
+      "time_ready": 1605277624,
+      "time_left": 0,
+      "time_completed": 1605301628,
+      "initiated": 1,
+      "initiated_by": 2525435,
+      "planned_by": 1913341,
+      "success": 1,
+      "money_gain": 150000,
+      "respect_gain": 9
+    },
+    "8293597": {
+      "crime_id": 3,
+      "crime_name": "Bomb threat",
+      "participants": [
+        {
+          "2385186": null
+        },
+        {
+          "2518230": null
+        },
+        {
+          "2573890": null
+        }
+      ],
+      "time_started": 1605018350,
+      "time_ready": 1605277550,
+      "time_left": 0,
+      "time_completed": 1605280393,
+      "initiated": 1,
+      "initiated_by": 2518230,
+      "planned_by": 1913341,
+      "success": 0,
+      "money_gain": 0,
+      "respect_gain": 0
+    },
+    "8293596": {
+      "crime_id": 1,
+      "crime_name": "Blackmailing",
+      "participants": [
+        {
+          "2594452": null
+        },
+        {
+          "2570992": null
+        }
+      ],
+      "time_started": 1605018333,
+      "time_ready": 1605104733,
+      "time_left": 0,
+      "time_completed": 1605108483,
+      "initiated": 1,
+      "initiated_by": 1519188,
+      "planned_by": 1913341,
+      "success": 1,
+      "money_gain": 9000,
+      "respect_gain": 2
+    },
+    "8293594": {
+      "crime_id": 1,
+      "crime_name": "Blackmailing",
+      "participants": [
+        {
+          "2600123": null
+        },
+        {
+          "2601735": null
+        }
+      ],
+      "time_started": 1605018171,
+      "time_ready": 1605104571,
+      "time_left": 0,
+      "time_completed": 1605113452,
+      "initiated": 1,
+      "initiated_by": 1519188,
+      "planned_by": 1913341,
+      "success": 1,
+      "money_gain": 9000,
+      "respect_gain": 2
+    },
+    "8293593": {
+      "crime_id": 1,
+      "crime_name": "Blackmailing",
+      "participants": [
+        {
+          "1419093": null
+        },
+        {
+          "2601839": null
+        }
+      ],
+      "time_started": 1605018161,
+      "time_ready": 1605104561,
+      "time_left": 0,
+      "time_completed": 1605182320,
+      "initiated": 1,
+      "initiated_by": 2015200,
+      "planned_by": 1913341,
+      "success": 1,
+      "money_gain": 10000,
+      "respect_gain": 2
+    },
+    "8289106": {
+      "crime_id": 7,
+      "crime_name": "Plane hijacking",
+      "participants": [
+        {
+          "2038706": null
+        },
+        {
+          "1563257": null
+        },
+        {
+          "1944535": null
+        },
+        {
+          "2172225": null
+        },
+        {
+          "2112841": null
+        },
+        {
+          "606826": null
+        },
+        {
+          "1832621": null
+        },
+        {
+          "1286893": null
+        }
+      ],
+      "time_started": 1604910034,
+      "time_ready": 1605514834,
+      "time_left": 0,
+      "time_completed": 1605521673,
+      "initiated": 1,
+      "initiated_by": 2172225,
+      "planned_by": 2172225,
+      "success": 1,
+      "money_gain": 50000000,
+      "respect_gain": 91
+    },
+    "8287790": {
+      "crime_id": 3,
+      "crime_name": "Bomb threat",
+      "participants": [
+        {
+          "1994452": null
+        },
+        {
+          "2349315": null
+        },
+        {
+          "512875": null
+        }
+      ],
+      "time_started": 1604875998,
+      "time_ready": 1605135198,
+      "time_left": 0,
+      "time_completed": 1605137578,
+      "initiated": 1,
+      "initiated_by": 2104114,
+      "planned_by": 1519188,
+      "success": 1,
+      "money_gain": 100000,
+      "respect_gain": 8
+    },
+    "8287387": {
+      "crime_id": 3,
+      "crime_name": "Bomb threat",
+      "participants": [
+        {
+          "2569763": null
+        },
+        {
+          "2175576": null
+        },
+        {
+          "2363342": null
+        }
+      ],
+      "time_started": 1604865731,
+      "time_ready": 1605124931,
+      "time_left": 0,
+      "time_completed": 1605164612,
+      "initiated": 1,
+      "initiated_by": 524028,
+      "planned_by": 2363342,
+      "success": 1,
+      "money_gain": 125000,
+      "respect_gain": 10
+    },
+    "8284065": {
+      "crime_id": 2,
+      "crime_name": "Kidnapping",
+      "participants": [
+        {
+          "1183116": null
+        },
+        {
+          "2573890": null
+        }
+      ],
+      "time_started": 1604786684,
+      "time_ready": 1604959484,
+      "time_left": 0,
+      "time_completed": 1604966286,
+      "initiated": 1,
+      "initiated_by": 2015200,
+      "planned_by": 2525435,
+      "success": 1,
+      "money_gain": 25000,
+      "respect_gain": 5
+    },
+    "8283502": {
+      "crime_id": 3,
+      "crime_name": "Bomb threat",
+      "participants": [
+        {
+          "1818631": null
+        },
+        {
+          "2513229": null
+        },
+        {
+          "2003679": null
+        }
+      ],
+      "time_started": 1604773743,
+      "time_ready": 1605032943,
+      "time_left": 0,
+      "time_completed": 1605035822,
+      "initiated": 1,
+      "initiated_by": 2222285,
+      "planned_by": 2015200,
+      "success": 0,
+      "money_gain": 0,
+      "respect_gain": 0
+    },
+    "8279487": {
+      "crime_id": 5,
+      "crime_name": "Robbing of a money train",
+      "participants": [
+        {
+          "1519188": null
+        },
+        {
+          "2163841": null
+        },
+        {
+          "1700315": null
+        },
+        {
+          "538653": null
+        },
+        {
+          "2130567": null
+        },
+        {
+          "1746371": null
+        }
+      ],
+      "time_started": 1604673210,
+      "time_ready": 1605105210,
+      "time_left": 0,
+      "time_completed": 1605113461,
+      "initiated": 1,
+      "initiated_by": 1519188,
+      "planned_by": 1746371,
+      "success": 1,
+      "money_gain": 4250000,
+      "respect_gain": 25
+    },
+    "8276972": {
+      "crime_id": 2,
+      "crime_name": "Kidnapping",
+      "participants": [
+        {
+          "1043922": null
+        },
+        {
+          "2594452": null
+        }
+      ],
+      "time_started": 1604611426,
+      "time_ready": 1604784226,
+      "time_left": 0,
+      "time_completed": 1604847265,
+      "initiated": 1,
+      "initiated_by": 524028,
+      "planned_by": 2338543,
+      "success": 0,
+      "money_gain": 0,
+      "respect_gain": 0
+    },
+    "8276970": {
+      "crime_id": 3,
+      "crime_name": "Bomb threat",
+      "participants": [
+        {
+          "931420": null
+        },
+        {
+          "2005264": null
+        },
+        {
+          "2385186": null
+        }
+      ],
+      "time_started": 1604611415,
+      "time_ready": 1604870615,
+      "time_left": 0,
+      "time_completed": 1604873950,
+      "initiated": 1,
+      "initiated_by": 2005264,
+      "planned_by": 2338543,
+      "success": 1,
+      "money_gain": 50000,
+      "respect_gain": 9
+    },
+    "8276969": {
+      "crime_id": 3,
+      "crime_name": "Bomb threat",
+      "participants": [
+        {
+          "1994452": null
+        },
+        {
+          "2349315": null
+        },
+        {
+          "512875": null
+        }
+      ],
+      "time_started": 1604611400,
+      "time_ready": 1604870600,
+      "time_left": 0,
+      "time_completed": 1604875993,
+      "initiated": 1,
+      "initiated_by": 1519188,
+      "planned_by": 2338543,
+      "success": 1,
+      "money_gain": 100000,
+      "respect_gain": 10
+    },
+    "8276968": {
+      "crime_id": 4,
+      "crime_name": "Planned robbery",
+      "participants": [
+        {
+          "544391": null
+        },
+        {
+          "1913341": null
+        },
+        {
+          "224402": null
+        },
+        {
+          "519291": null
+        },
+        {
+          "2433583": null
+        }
+      ],
+      "time_started": 1604611390,
+      "time_ready": 1604956990,
+      "time_left": 0,
+      "time_completed": 1604966271,
+      "initiated": 1,
+      "initiated_by": 2015200,
+      "planned_by": 2338543,
+      "success": 1,
+      "money_gain": 450000,
+      "respect_gain": 20
+    },
+    "8276966": {
+      "crime_id": 4,
+      "crime_name": "Planned robbery",
+      "participants": [
+        {
+          "2340663": null
+        },
+        {
+          "2233606": null
+        },
+        {
+          "1467320": null
+        },
+        {
+          "1991347": null
+        },
+        {
+          "2518230": null
+        }
+      ],
+      "time_started": 1604611345,
+      "time_ready": 1604956945,
+      "time_left": 0,
+      "time_completed": 1604958017,
+      "initiated": 1,
+      "initiated_by": 2518230,
+      "planned_by": 2338543,
+      "success": 1,
+      "money_gain": 550000,
+      "respect_gain": 18
+    },
+    "8276664": {
+      "crime_id": 8,
+      "crime_name": "Political Assassination",
+      "participants": [
+        {
+          "1280063": null
+        },
+        {
+          "2015200": null
+        },
+        {
+          "79148": null
+        },
+        {
+          "248367": null
+        }
+      ],
+      "time_started": 1604604378,
+      "time_ready": 1605295578,
+      "time_left": 0,
+      "time_completed": 1605306181,
+      "initiated": 1,
+      "initiated_by": 2525435,
+      "planned_by": 2015200,
+      "success": 1,
+      "money_gain": 150000000,
+      "respect_gain": 204
+    },
+    "8276662": {
+      "crime_id": 2,
+      "crime_name": "Kidnapping",
+      "participants": [
+        {
+          "1183116": null
+        },
+        {
+          "2573890": null
+        }
+      ],
+      "time_started": 1604604329,
+      "time_ready": 1604777129,
+      "time_left": 0,
+      "time_completed": 1604786680,
+      "initiated": 1,
+      "initiated_by": 2525435,
+      "planned_by": 2015200,
+      "success": 1,
+      "money_gain": 20000,
+      "respect_gain": 5
+    },
+    "8275823": {
+      "crime_id": 4,
+      "crime_name": "Planned robbery",
+      "participants": [
+        {
+          "2104114": null
+        },
+        {
+          "2338543": null
+        },
+        {
+          "2160167": null
+        },
+        {
+          "2299907": null
+        },
+        {
+          "307626": null
+        }
+      ],
+      "time_started": 1604584285,
+      "time_ready": 1604929885,
+      "time_left": 0,
+      "time_completed": 1604943564,
+      "initiated": 1,
+      "initiated_by": 307626,
+      "planned_by": 2338543,
+      "success": 1,
+      "money_gain": 550000,
+      "respect_gain": 18
+    },
+    "8274668": {
+      "crime_id": 3,
+      "crime_name": "Bomb threat",
+      "participants": [
+        {
+          "2148971": null
+        },
+        {
+          "2600123": null
+        },
+        {
+          "1419093": null
+        }
+      ],
+      "time_started": 1604551906,
+      "time_ready": 1604811106,
+      "time_left": 0,
+      "time_completed": 1604943584,
+      "initiated": 1,
+      "initiated_by": 307626,
+      "planned_by": 307626,
+      "success": 0,
+      "money_gain": 0,
+      "respect_gain": 0
+    },
+    "8273477": {
+      "crime_id": 3,
+      "crime_name": "Bomb threat",
+      "participants": [
+        {
+          "2175576": null
+        },
+        {
+          "2569763": null
+        },
+        {
+          "2363342": null
+        }
+      ],
+      "time_started": 1604524583,
+      "time_ready": 1604783783,
+      "time_left": 0,
+      "time_completed": 1604865727,
+      "initiated": 1,
+      "initiated_by": 2363342,
+      "planned_by": 2363342,
+      "success": 1,
+      "money_gain": 50000,
+      "respect_gain": 8
+    },
+    "8272223": {
+      "crime_id": 3,
+      "crime_name": "Bomb threat",
+      "participants": [
+        {
+          "1818631": null
+        },
+        {
+          "2003679": null
+        },
+        {
+          "2513229": null
+        }
+      ],
+      "time_started": 1604498048,
+      "time_ready": 1604757248,
+      "time_left": 0,
+      "time_completed": 1604773739,
+      "initiated": 1,
+      "initiated_by": 2015200,
+      "planned_by": 295233,
+      "success": 1,
+      "money_gain": 100000,
+      "respect_gain": 10
+    },
+    "8272222": {
+      "crime_id": 3,
+      "crime_name": "Bomb threat",
+      "participants": [
+        {
+          "2211394": null
+        },
+        {
+          "656797": null
+        },
+        {
+          "2438428": null
+        }
+      ],
+      "time_started": 1604498038,
+      "time_ready": 1604757238,
+      "time_left": 0,
+      "time_completed": 1604773726,
+      "initiated": 1,
+      "initiated_by": 2015200,
+      "planned_by": 295233,
+      "success": 1,
+      "money_gain": 125000,
+      "respect_gain": 7
+    },
+    "8272087": {
+      "crime_id": 8,
+      "crime_name": "Political Assassination",
+      "participants": [
+        {
+          "887003": null
+        },
+        {
+          "1413127": null
+        },
+        {
+          "372369": null
+        },
+        {
+          "2092393": null
+        }
+      ],
+      "time_started": 1604494160,
+      "time_ready": 1605185360,
+      "time_left": 0,
+      "time_completed": 1605187622,
+      "initiated": 1,
+      "initiated_by": 1519188,
+      "planned_by": 2015200,
+      "success": 0,
+      "money_gain": 0,
+      "respect_gain": 0
+    },
+    "8272086": {
+      "crime_id": 5,
+      "crime_name": "Robbing of a money train",
+      "participants": [
+        {
+          "528024": null
+        },
+        {
+          "1592260": null
+        },
+        {
+          "2043996": null
+        },
+        {
+          "1959482": null
+        },
+        {
+          "2282199": null
+        },
+        {
+          "202437": null
+        }
+      ],
+      "time_started": 1604494148,
+      "time_ready": 1604926148,
+      "time_left": 0,
+      "time_completed": 1604933614,
+      "initiated": 1,
+      "initiated_by": 1519188,
+      "planned_by": 2015200,
+      "success": 1,
+      "money_gain": 3500000,
+      "respect_gain": 25
+    },
+    "8269326": {
+      "crime_id": 2,
+      "crime_name": "Kidnapping",
+      "participants": [
+        {
+          "1183116": null
+        },
+        {
+          "2573890": null
+        }
+      ],
+      "time_started": 1604431207,
+      "time_ready": 1604604007,
+      "time_left": 0,
+      "time_completed": 1604604323,
+      "initiated": 1,
+      "initiated_by": 2015200,
+      "planned_by": 2525435,
+      "success": 1,
+      "money_gain": 20000,
+      "respect_gain": 4
+    },
+    "8269290": {
+      "crime_id": 4,
+      "crime_name": "Planned robbery",
+      "participants": [
+        {
+          "2346077": null
+        },
+        {
+          "2525435": null
+        },
+        {
+          "221006": null
+        },
+        {
+          "1446944": null
+        },
+        {
+          "1870531": null
+        }
+      ],
+      "time_started": 1604430548,
+      "time_ready": 1604776148,
+      "time_left": 0,
+      "time_completed": 1604877989,
+      "initiated": 1,
+      "initiated_by": 1870531,
+      "planned_by": 2346077,
+      "success": 1,
+      "money_gain": 550000,
+      "respect_gain": 20
+    },
+    "8268329": {
+      "crime_id": 2,
+      "crime_name": "Kidnapping",
+      "participants": [
+        {
+          "2385186": null
+        },
+        {
+          "2594452": null
+        }
+      ],
+      "time_started": 1604411089,
+      "time_ready": 1604583889,
+      "time_left": 0,
+      "time_completed": 1604585340,
+      "initiated": 1,
+      "initiated_by": 384108,
+      "planned_by": 2525435,
+      "success": 1,
+      "money_gain": 25000,
+      "respect_gain": 5
+    },
+    "8263956": {
+      "crime_id": 7,
+      "crime_name": "Plane hijacking",
+      "participants": [
+        {
+          "2038706": null
+        },
+        {
+          "1563257": null
+        },
+        {
+          "1944535": null
+        },
+        {
+          "2172225": null
+        },
+        {
+          "2112841": null
+        },
+        {
+          "606826": null
+        },
+        {
+          "1832621": null
+        },
+        {
+          "1286893": null
+        }
+      ],
+      "time_started": 1604299750,
+      "time_ready": 1604904550,
+      "time_left": 0,
+      "time_completed": 1604908966,
+      "initiated": 1,
+      "initiated_by": 2104114,
+      "planned_by": 2038706,
+      "success": 1,
+      "money_gain": 30000000,
+      "respect_gain": 99
+    }
+  }
+}

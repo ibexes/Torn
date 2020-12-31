@@ -1,8 +1,10 @@
 package com.torn.api.model.faction;
 
-import java.util.*;
+import java.io.Serializable;
+import java.util.HashSet;
+import java.util.Set;
 
-public class Contribution {
+public class Contribution implements Serializable {
     private Stat stat;
     private Set<Contributor> contributors;
 
