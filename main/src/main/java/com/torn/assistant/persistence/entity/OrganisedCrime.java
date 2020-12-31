@@ -7,6 +7,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 import java.util.Date;
 import java.util.Set;
 
@@ -21,6 +22,10 @@ public class OrganisedCrime {
 
     @Column(nullable = false)
     private OrganisedCrimeType crimeType;
+
+    @ManyToOne(optional = false)
+    private Faction faction;
+
     private Date plannedAt;
     private Long plannedBy;
     private Date readyAt;
@@ -125,5 +130,13 @@ public class OrganisedCrime {
 
     public void setInitiatedAt(Date initiatedAt) {
         this.initiatedAt = initiatedAt;
+    }
+
+    public Faction getFaction() {
+        return faction;
+    }
+
+    public void setFaction(Faction faction) {
+        this.faction = faction;
     }
 }

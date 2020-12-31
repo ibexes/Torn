@@ -9,7 +9,7 @@ public enum OrganisedCrimeType implements Serializable {
     PLANNED_ROBBERY(4, "Planned robbery"),
     MONEY_TRAIN(5, "Robbing of a money train"),
     CRUISE_LINER(6, "Take over a cruise liner"),
-    PLANE_HIJACKING(7, "Planned robbery"),
+    PLANE_HIJACKING(7, "Hijack a plane"),
     POLITICAL_ASSASSINATION(8, "Political Assassination");
 
     private String name;
