@@ -7,4 +7,5 @@ import java.util.List;
 
 public interface FactionDao extends JpaRepository<Faction, Long> {
     List<Faction> findByTrackContributionsIsTrue();
+    List<Faction> findByTrackOrganisedCrimesIsTrue();
 }

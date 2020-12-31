@@ -11,12 +11,14 @@ import java.util.Set;
 public class Faction {
 
     @Id
-    @Column(unique = true)
+    @Column(unique = true, nullable = false)
     private Long id;
 
     private String name;
 
     private Boolean trackContributions;
+
+    private Boolean trackOrganisedCrimes;
 
     @ElementCollection
     private Set<String> apiKey;
@@ -52,6 +54,14 @@ public class Faction {
 
     public void setApiKey(Set<String> apiKey) {
         this.apiKey = apiKey;
+    }
+
+    public Boolean getTrackOrganisedCrimes() {
+        return trackOrganisedCrimes;
+    }
+
+    public void setTrackOrganisedCrimes(Boolean trackOrganisedCrimes) {
+        this.trackOrganisedCrimes = trackOrganisedCrimes;
     }
 
     @Override

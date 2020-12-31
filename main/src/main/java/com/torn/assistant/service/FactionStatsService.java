@@ -201,7 +201,7 @@ public class FactionStatsService {
         }
     }
 
-    @Scheduled(cron = "${STATS_CRON:0 0 */1 * * ?}")
+    @Scheduled(cron = "${STATS_CRON:0 0 * * * ?}")
     @Transactional
     public void run() throws JsonProcessingException, TornApiAccessException {
         for (Faction faction : factionDao.findByTrackContributionsIsTrue()) {
