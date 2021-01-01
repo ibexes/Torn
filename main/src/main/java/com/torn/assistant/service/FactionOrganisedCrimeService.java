@@ -58,11 +58,13 @@ public class FactionOrganisedCrimeService {
         OrganisedCrimeSummaryDTO summaryDTO = new OrganisedCrimeSummaryDTO();
         organisedCrimes.forEach(organisedCrime -> {
             OrganisedCrimeStatDTO statDTO = summaryDTO.getStats().get(organisedCrime.getCrimeType());
-            statDTO.setAttempts(statDTO.getAttempts() + 1);
-            if (Boolean.TRUE.equals(organisedCrime.getSuccess())) {
-                statDTO.setSuccesses(statDTO.getSuccesses() + 1);
-                statDTO.setProfit(statDTO.getProfit() + organisedCrime.getMoneyGained());
-                statDTO.setRespect(statDTO.getRespect() + organisedCrime.getRespectGained());
+            if (Boolean.TRUE.equals(organisedCrime.getInitiated())) {
+                statDTO.setAttempts(statDTO.getAttempts() + 1);
+                if (Boolean.TRUE.equals(organisedCrime.getSuccess())) {
+                    statDTO.setSuccesses(statDTO.getSuccesses() + 1);
+                    statDTO.setProfit(statDTO.getProfit() + organisedCrime.getMoneyGained());
+                    statDTO.setRespect(statDTO.getRespect() + organisedCrime.getRespectGained());
+                }
             }
         });
         return summaryDTO;

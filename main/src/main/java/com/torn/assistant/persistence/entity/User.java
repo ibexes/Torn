@@ -2,6 +2,7 @@ package com.torn.assistant.persistence.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -21,7 +22,7 @@ public class User {
     @Column(unique = true)
     private String apiKey;
 
-    @OneToOne
+    @OneToOne(fetch = FetchType.LAZY)
     private Faction faction;
 
     public User() {

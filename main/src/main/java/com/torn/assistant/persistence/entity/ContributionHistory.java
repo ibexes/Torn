@@ -1,5 +1,6 @@
 package com.torn.assistant.persistence.entity;
 
+import javax.persistence.Cacheable;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -12,6 +13,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 @Entity
+@Cacheable
 public class ContributionHistory {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -19,10 +21,10 @@ public class ContributionHistory {
 
     private LocalDateTime fetchedAt;
 
-    @OneToOne
+    @OneToOne(fetch = FetchType.LAZY)
     private Faction faction;
 
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @OneToMany(cascade = CascadeType.ALL)
     private List<UserContribution> userActivities;
 
     public ContributionHistory() {
