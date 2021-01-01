@@ -61,6 +61,8 @@ public class FactionOrganisedCrimeService {
             statDTO.setAttempts(statDTO.getAttempts() + 1);
             if (Boolean.TRUE.equals(organisedCrime.getSuccess())) {
                 statDTO.setSuccesses(statDTO.getSuccesses() + 1);
+                statDTO.setProfit(statDTO.getProfit() + organisedCrime.getMoneyGained());
+                statDTO.setRespect(statDTO.getRespect() + organisedCrime.getRespectGained());
             }
         });
         return summaryDTO;

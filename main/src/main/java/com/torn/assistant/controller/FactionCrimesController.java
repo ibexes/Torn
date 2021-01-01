@@ -17,7 +17,7 @@ import java.util.Date;
 
 @RestController
 public class FactionCrimesController {
-    private static final Logger logger = LoggerFactory.getLogger(FactionGymController.class);
+    private static final Logger logger = LoggerFactory.getLogger(FactionCrimesController.class);
     private final FactionOrganisedCrimeService factionOrganisedCrimeService;
 
     public FactionCrimesController(FactionOrganisedCrimeService factionOrganisedCrimeService) {
@@ -40,7 +40,7 @@ public class FactionCrimesController {
     public OrganisedCrimeSummaryDTO getContributionSummary(Principal principal,
                                                                  @PathVariable @DateTimeFormat(pattern = "yyyy-MM-dd'T'HH:mm") Date start,
                                                                  @PathVariable @DateTimeFormat(pattern = "yyyy-MM-dd'T'HH:mm") Date end) {
-        logger.info("Getting contribution summary between {} and {} for {}", start, end, principal.getName());
+        logger.info("Getting OC summary between {} and {} for {}", start, end, principal.getName());
         return factionOrganisedCrimeService.getCrimesSummary(principal.getName(), start, end);
     }
 }

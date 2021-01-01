@@ -6,6 +6,8 @@ public class OrganisedCrimeStatDTO implements Serializable {
     private String name;
     private Integer successes = 0;
     private Integer attempts = 0;
+    private Long profit = 0L;
+    private Long respect = 0L;
 
     public OrganisedCrimeStatDTO(String name) {
         this.name = name;
@@ -33,5 +35,21 @@ public class OrganisedCrimeStatDTO implements Serializable {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Long getProfit() {
+        return profit;
+    }
+
+    public void setProfit(Long profit) {
+        this.profit = profit;
+    }
+
+    public Long getRespect() {
+        return respect;
+    }
+
+    public void setRespect(Long respect) {
+        this.respect = respect;
     }
 }
