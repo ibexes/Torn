@@ -41,7 +41,7 @@ public class FactionApiClientTest {
         List<OrganisedCrime> organisedCrimes = convertToOrganisedCrimeList(convertToJson(response));
 
         assertEquals(250, organisedCrimes.size());
-        List<OrganisedCrime> selectedCrimeList = organisedCrimes.parallelStream()
+        List<OrganisedCrime> selectedCrimeList = organisedCrimes.stream()
                 .filter(organisedCrime -> organisedCrime.getId() == 8276664).collect(Collectors.toList());
         assertEquals(1, selectedCrimeList.size());
         OrganisedCrime selectedCrime = selectedCrimeList.get(0);
