@@ -118,7 +118,7 @@ public class FactionStatsService {
     }
 
     public Optional<UserContribution> getContributionForUser(List<UserContribution> userContributions, Long userId) {
-        return userContributions.parallelStream().filter(userContribution -> userContribution.getUser().getUserId().equals(userId))
+        return userContributions.stream().filter(userContribution -> userContribution.getUser().getUserId().equals(userId))
                 .findFirst();
     }
 
