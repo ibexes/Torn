@@ -1,12 +1,12 @@
 package com.torn.api.model.faction;
 
 import java.util.Date;
-import java.util.Set;
+import java.util.List;
 
 public class OrganisedCrime {
     private Long id;
     private OrganisedCrimeType crimeType;
-    private Set<Long> participants;
+    private List<Long> participants;
     private Long moneyGained;
     private Long respectGained;
     private Boolean initiated;
@@ -37,11 +37,11 @@ public class OrganisedCrime {
         this.crimeType = crimeType;
     }
 
-    public Set<Long> getParticipants() {
+    public List<Long> getParticipants() {
         return participants;
     }
 
-    public void setParticipants(Set<Long> participants) {
+    public void setParticipants(List<Long> participants) {
         this.participants = participants;
     }
 

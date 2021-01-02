@@ -13,10 +13,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Set;
 
 import static com.torn.api.model.faction.OrganisedCrimeType.convertToOrganisedCrimeType;
 import static com.torn.api.utils.JsonConverter.convertJsonToList;
@@ -77,15 +75,15 @@ public class FactionApiClient {
             organisedCrime.setReadyAt(convertToDate(crime.get("time_ready").asLong()));
             organisedCrime.setInitiatedAt(convertToDate(crime.get("time_completed").asLong()));
 
-            Set<Long> participantSet = new HashSet<>();
+            List<Long> participantList = new ArrayList<>();
             List<JsonNode> participants = convertJsonToList(crime.get("participants"));
             for (JsonNode participant : participants) {
                 for (Iterator<String> pit = participant.fieldNames(); pit.hasNext(); ) {
                     String participantId = pit.next();
-                    participantSet.add(Long.parseLong(participantId));
+                    participantList.add(Long.parseLong(participantId));
                 }
             }
-            organisedCrime.setParticipants(participantSet);
+            organisedCrime.setParticipants(participantList);
             organisedCrimes.add(organisedCrime);
         }
         return organisedCrimes;

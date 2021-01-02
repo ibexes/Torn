@@ -8,8 +8,9 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
+import javax.persistence.OrderColumn;
 import java.util.Date;
-import java.util.Set;
+import java.util.List;
 
 @Entity
 public class OrganisedCrime {
@@ -18,7 +19,8 @@ public class OrganisedCrime {
     private Long id;
 
     @ManyToMany(cascade = CascadeType.ALL)
-    private Set<User> participants;
+    @OrderColumn
+    private List<User> participants;
 
     @Column(nullable = false)
     private OrganisedCrimeType crimeType;
@@ -48,11 +50,11 @@ public class OrganisedCrime {
         this.id = id;
     }
 
-    public Set<User> getParticipants() {
+    public List<User> getParticipants() {
         return participants;
     }
 
-    public void setParticipants(Set<User> participants) {
+    public void setParticipants(List<User> participants) {
         this.participants = participants;
     }
 

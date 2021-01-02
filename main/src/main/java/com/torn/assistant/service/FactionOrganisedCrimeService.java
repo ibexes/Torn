@@ -23,10 +23,8 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Comparator;
 import java.util.Date;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Optional;
-import java.util.Set;
 import java.util.stream.Collectors;
 
 import static com.torn.api.client.FactionApiClient.getOrganisedCrimes;
@@ -149,7 +147,7 @@ public class FactionOrganisedCrimeService {
                 organisedCrimeEntity.setReadyAt(organisedCrime.getReadyAt());
                 organisedCrimeEntity.setFaction(faction);
 
-                Set<User> participants = new HashSet<>();
+                List<User> participants = new ArrayList<>();
                 for (Long userId : organisedCrime.getParticipants()) {
                     User user = userService.findByUserId(userId).orElse(new User(userId, "unknown user"));
                     participants.add(user);

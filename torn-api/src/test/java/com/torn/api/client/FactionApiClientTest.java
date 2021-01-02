@@ -58,6 +58,7 @@ public class FactionApiClientTest {
         assertTrue(selectedCrime.getParticipants().contains(2015200L));
         assertTrue(selectedCrime.getParticipants().contains(79148L));
         assertTrue(selectedCrime.getParticipants().contains(248367L));
+        assertEquals(79148L, selectedCrime.getParticipants().get(2));
         assertTrue(selectedCrime.getInitiated());
         assertTrue(selectedCrime.getSuccess());
     }
