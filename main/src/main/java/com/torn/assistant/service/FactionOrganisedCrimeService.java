@@ -21,6 +21,7 @@ import org.springframework.stereotype.Service;
 import javax.transaction.Transactional;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Comparator;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
@@ -56,7 +57,7 @@ public class FactionOrganisedCrimeService {
         }
     }
 
-    public Set<UserDTO> getParticipantUsers(String username) {
+    public List<UserDTO> getParticipantUsers(String username) {
         return organisedCrimeDao.findByFaction(factionService.getFaction(username))
                 .stream()
                 .map(organisedCrime -> organisedCrime.getParticipants()
@@ -64,7 +65,9 @@ public class FactionOrganisedCrimeService {
                         .map(userService::convertToUserDto)
                         .collect(Collectors.toSet()))
                 .flatMap(Collection::stream)
-                .collect(Collectors.toSet());
+                .distinct()
+                .sorted(Comparator.comparing(UserDTO::getUserId))
+                .collect(Collectors.toList());
     }
 
     public OrganisedCrimeSummaryDTO getCrimesSummary(String username, Date start, Date end) {

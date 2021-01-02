@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.security.Principal;
 import java.util.Date;
-import java.util.Set;
+import java.util.List;
 
 @RestController
 public class FactionCrimesController {
@@ -39,7 +39,7 @@ public class FactionCrimesController {
     }
 
     @GetMapping("/api/faction/ocs/members")
-    public Set<UserDTO> getParticipantUsers(Principal principal) {
+    public List<UserDTO> getParticipantUsers(Principal principal) {
         return factionOrganisedCrimeService.getParticipantUsers(principal.getName());
     }
 
@@ -53,8 +53,8 @@ public class FactionCrimesController {
 
     @GetMapping("/api/faction/ocs/summary/{start}/{end}")
     public OrganisedCrimeSummaryDTO getContributionSummary(Principal principal,
-                                                                 @PathVariable @DateTimeFormat(pattern = "yyyy-MM-dd'T'HH:mm") Date start,
-                                                                 @PathVariable @DateTimeFormat(pattern = "yyyy-MM-dd'T'HH:mm") Date end) {
+                                                           @PathVariable @DateTimeFormat(pattern = "yyyy-MM-dd'T'HH:mm") Date start,
+                                                           @PathVariable @DateTimeFormat(pattern = "yyyy-MM-dd'T'HH:mm") Date end) {
         logger.info("Getting OC summary between {} and {} for {}", start, end, principal.getName());
         return factionOrganisedCrimeService.getCrimesSummary(principal.getName(), start, end);
     }
