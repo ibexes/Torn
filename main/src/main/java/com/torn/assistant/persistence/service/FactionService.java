@@ -7,6 +7,8 @@ import com.torn.assistant.persistence.entity.Faction;
 import com.torn.assistant.persistence.entity.User;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 import static com.torn.assistant.utils.UserUtils.getUserId;
 
 @Service
@@ -28,5 +30,9 @@ public class FactionService {
             User user = userDao.findByUserId(userId).orElseThrow(() -> new RuntimeException("No user found"));
             return user.getFaction();
         }
+    }
+
+    public List<User> getMembers(Long factionId) {
+        return userDao.findByFactionEquals(factionDao.findById(factionId).orElse(null));
     }
 }

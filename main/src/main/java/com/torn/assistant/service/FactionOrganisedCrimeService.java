@@ -5,6 +5,7 @@ import com.torn.api.model.exceptions.TornApiAccessException;
 import com.torn.assistant.model.dto.OrganisedCrimeDTO;
 import com.torn.assistant.model.dto.OrganisedCrimeStatDTO;
 import com.torn.assistant.model.dto.OrganisedCrimeSummaryDTO;
+import com.torn.assistant.model.dto.UserDTO;
 import com.torn.assistant.persistence.dao.FactionDao;
 import com.torn.assistant.persistence.dao.OrganisedCrimeDao;
 import com.torn.assistant.persistence.entity.Faction;
@@ -18,11 +19,14 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Optional;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 import static com.torn.api.client.FactionApiClient.getOrganisedCrimes;
 import static com.torn.assistant.utils.CollectionUtils.getRandomElement;
@@ -52,9 +56,36 @@ public class FactionOrganisedCrimeService {
         }
     }
 
+    public Set<UserDTO> getParticipantUsers(String username) {
+        return organisedCrimeDao.findByFaction(factionService.getFaction(username))
+                .stream()
+                .map(organisedCrime -> organisedCrime.getParticipants()
+                        .stream()
+                        .map(userService::convertToUserDto)
+                        .collect(Collectors.toSet()))
+                .flatMap(Collection::stream)
+                .collect(Collectors.toSet());
+    }
+
     public OrganisedCrimeSummaryDTO getCrimesSummary(String username, Date start, Date end) {
         Faction faction = factionService.getFaction(username);
         List<OrganisedCrime> organisedCrimes = organisedCrimeDao.findByFactionEqualsAndPlannedAtBetween(faction, start, end);
+        return convertToOrganisedCrimeSummaryDTO(organisedCrimes);
+
+    }
+
+    public OrganisedCrimeSummaryDTO getCrimesSummary(String username, Long userId, Date start, Date end) {
+        Faction faction = factionService.getFaction(username);
+        Optional<User> user = userService.findByUserId(userId);
+        if (!user.isPresent()) {
+            return convertToOrganisedCrimeSummaryDTO(new ArrayList<>());
+        }
+        List<OrganisedCrime> organisedCrimes = organisedCrimeDao
+                .findByFactionEqualsAndParticipantsAndPlannedAtBetween(faction, user.get(), start, end);
+        return convertToOrganisedCrimeSummaryDTO(organisedCrimes);
+    }
+
+    public OrganisedCrimeSummaryDTO convertToOrganisedCrimeSummaryDTO(List<OrganisedCrime> organisedCrimes) {
 
         OrganisedCrimeSummaryDTO summaryDTO = new OrganisedCrimeSummaryDTO();
         organisedCrimes.forEach(organisedCrime -> {

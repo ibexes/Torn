@@ -28,13 +28,13 @@ public class OrganisedCrime {
 
     private Date plannedAt;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     private User plannedBy;
     private Date readyAt;
     private Boolean initiated;
     private Date initiatedAt;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     private User initiatedBy;
     private Boolean success;
     private Long moneyGained;
