@@ -1,6 +1,8 @@
 package com.torn.assistant.model.dto;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 public class OrganisedCrimeStatDTO implements Serializable {
     private String name;
@@ -8,9 +10,11 @@ public class OrganisedCrimeStatDTO implements Serializable {
     private Integer attempts = 0;
     private Long profit = 0L;
     private Long respect = 0L;
+    private List<OrganisedCrimeDTO> history;
 
     public OrganisedCrimeStatDTO(String name) {
         this.name = name;
+        this.history = new ArrayList<>();
     }
 
     public Integer getSuccesses() {
@@ -51,5 +55,13 @@ public class OrganisedCrimeStatDTO implements Serializable {
 
     public void setRespect(Long respect) {
         this.respect = respect;
+    }
+
+    public List<OrganisedCrimeDTO> getHistory() {
+        return history;
+    }
+
+    public void setHistory(List<OrganisedCrimeDTO> history) {
+        this.history = history;
     }
 }

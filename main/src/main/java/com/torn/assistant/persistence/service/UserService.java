@@ -1,6 +1,7 @@
 package com.torn.assistant.persistence.service;
 
 import com.torn.api.model.faction.Member;
+import com.torn.assistant.model.dto.UserDTO;
 import com.torn.assistant.persistence.dao.FactionDao;
 import com.torn.assistant.persistence.dao.UserDao;
 import com.torn.assistant.persistence.entity.User;
@@ -17,6 +18,27 @@ public class UserService {
     public UserService(UserDao userDao, FactionDao factionDao) {
         this.userDao = userDao;
         this.factionDao = factionDao;
+    }
+
+    public UserDTO convertToUserDto(User user) {
+        if(user != null) {
+            UserDTO userDTO = new UserDTO();
+            userDTO.setName(user.getName());
+            userDTO.setUserId(user.getUserId());
+            return userDTO;
+        }
+        return UserDTO.unknownUser();
+    }
+
+    public UserDTO getUserDto(Long userId) {
+        Optional<User> user = findByUserId(userId);
+        if(user.isPresent()) {
+            UserDTO userDTO = new UserDTO();
+            userDTO.setName(user.get().getName());
+            userDTO.setUserId(userId);
+            return userDTO;
+        }
+        return UserDTO.unknownUser();
     }
 
     public Optional<User> findByUserId(Long userId) {

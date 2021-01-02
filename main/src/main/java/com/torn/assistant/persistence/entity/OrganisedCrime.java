@@ -27,11 +27,15 @@ public class OrganisedCrime {
     private Faction faction;
 
     private Date plannedAt;
-    private Long plannedBy;
+
+    @ManyToOne
+    private User plannedBy;
     private Date readyAt;
     private Boolean initiated;
     private Date initiatedAt;
-    private Long initiatedBy;
+
+    @ManyToOne
+    private User initiatedBy;
     private Boolean success;
     private Long moneyGained;
     private Long respectGained;
@@ -92,19 +96,19 @@ public class OrganisedCrime {
         this.success = success;
     }
 
-    public Long getPlannedBy() {
+    public User getPlannedBy() {
         return plannedBy;
     }
 
-    public void setPlannedBy(Long plannedBy) {
+    public void setPlannedBy(User plannedBy) {
         this.plannedBy = plannedBy;
     }
 
-    public Long getInitiatedBy() {
+    public User getInitiatedBy() {
         return initiatedBy;
     }
 
-    public void setInitiatedBy(Long initiatedBy) {
+    public void setInitiatedBy(User initiatedBy) {
         this.initiatedBy = initiatedBy;
     }
 

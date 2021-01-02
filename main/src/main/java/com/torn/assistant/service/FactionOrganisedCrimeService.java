@@ -2,6 +2,7 @@ package com.torn.assistant.service;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.torn.api.model.exceptions.TornApiAccessException;
+import com.torn.assistant.model.dto.OrganisedCrimeDTO;
 import com.torn.assistant.model.dto.OrganisedCrimeStatDTO;
 import com.torn.assistant.model.dto.OrganisedCrimeSummaryDTO;
 import com.torn.assistant.persistence.dao.FactionDao;
@@ -57,13 +58,28 @@ public class FactionOrganisedCrimeService {
 
         OrganisedCrimeSummaryDTO summaryDTO = new OrganisedCrimeSummaryDTO();
         organisedCrimes.forEach(organisedCrime -> {
+            OrganisedCrimeDTO organisedCrimeDTO = new OrganisedCrimeDTO();
             OrganisedCrimeStatDTO statDTO = summaryDTO.getStats().get(organisedCrime.getCrimeType());
+
+            organisedCrimeDTO.setPlannedAt(organisedCrime.getPlannedAt());
+            organisedCrimeDTO.setPlannedBy(userService.convertToUserDto(organisedCrime.getPlannedBy()));
+            organisedCrime.getParticipants().forEach(user -> {
+                organisedCrimeDTO.getParticipants().add(userService.convertToUserDto(user));
+            });
+
             if (Boolean.TRUE.equals(organisedCrime.getInitiated())) {
+                statDTO.getHistory().add(organisedCrimeDTO);
+                organisedCrimeDTO.setInitiatedAt(organisedCrime.getInitiatedAt());
+                organisedCrimeDTO.setInitiatedBy(userService.convertToUserDto(organisedCrime.getInitiatedBy()));
+
                 statDTO.setAttempts(statDTO.getAttempts() + 1);
                 if (Boolean.TRUE.equals(organisedCrime.getSuccess())) {
                     statDTO.setSuccesses(statDTO.getSuccesses() + 1);
                     statDTO.setProfit(statDTO.getProfit() + organisedCrime.getMoneyGained());
                     statDTO.setRespect(statDTO.getRespect() + organisedCrime.getRespectGained());
+                    organisedCrimeDTO.setMoneyGained(organisedCrime.getMoneyGained());
+                    organisedCrimeDTO.setRespectGained(organisedCrime.getRespectGained());
+                    organisedCrimeDTO.setSuccess(true);
                 }
             }
         });
@@ -87,13 +103,15 @@ public class FactionOrganisedCrimeService {
                 organisedCrimeEntity.setInitiated(organisedCrime.getInitiated());
                 if (organisedCrime.getInitiated()) {
                     organisedCrimeEntity.setInitiatedAt(organisedCrime.getInitiatedAt());
-                    organisedCrimeEntity.setInitiatedBy(organisedCrime.getInitiatedBy());
+                    organisedCrimeEntity.setInitiatedBy(userService.findByUserId(organisedCrime.getInitiatedBy())
+                            .orElse(new User(organisedCrime.getInitiatedBy(), "unknown user")));
                     organisedCrimeEntity.setSuccess(organisedCrime.getSuccess());
                     organisedCrimeEntity.setRespectGained(organisedCrime.getRespectGained());
                     organisedCrimeEntity.setMoneyGained(organisedCrime.getMoneyGained());
                 }
                 organisedCrimeEntity.setPlannedAt(organisedCrime.getPlannedAt());
-                organisedCrimeEntity.setPlannedBy(organisedCrime.getPlannedBy());
+                organisedCrimeEntity.setPlannedBy(userService.findByUserId(organisedCrime.getPlannedBy())
+                        .orElse(new User(organisedCrime.getPlannedBy(), "unknown user")));
                 organisedCrimeEntity.setReadyAt(organisedCrime.getReadyAt());
                 organisedCrimeEntity.setFaction(faction);
 
