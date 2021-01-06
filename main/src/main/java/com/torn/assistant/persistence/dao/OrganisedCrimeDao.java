@@ -11,6 +11,7 @@ import java.util.Optional;
 
 public interface OrganisedCrimeDao extends JpaRepository<OrganisedCrime, Long> {
     List<OrganisedCrime> findByFaction(Faction faction);
+    List<OrganisedCrime> findByFactionOrderByCrimeTypeDesc(Faction faction);
     Optional<OrganisedCrime> findTopByFactionEqualsOrderByPlannedAtAsc(Faction faction);
     List<OrganisedCrime> findByFactionEqualsAndPlannedAtBetween(Faction faction, Date start, Date end);
     List<OrganisedCrime> findByFactionEqualsAndParticipantsAndPlannedAtBetween(Faction faction, User user, Date plannedAt, Date plannedAt2);

@@ -57,8 +57,15 @@ public class FactionGymController {
 
     @PreAuthorize("hasRole('ROLE_ADMIN')")
     @GetMapping("/api/faction/contributions/poll")
-    public void poll() throws JsonProcessingException, TornApiAccessException {
+    public void poll() {
         logger.info("Manual poll invoked");
         factionStatsService.run();
+    }
+
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
+    @GetMapping("/api/faction/contributions/poll/force")
+    public void forcePoll() {
+        logger.info("Manual force poll invoked");
+        factionStatsService.run(true);
     }
 }

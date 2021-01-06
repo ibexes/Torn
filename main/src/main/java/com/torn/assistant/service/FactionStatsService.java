@@ -18,6 +18,7 @@ import com.torn.assistant.persistence.entity.Faction;
 import com.torn.assistant.persistence.entity.User;
 import com.torn.assistant.persistence.entity.UserContribution;
 import com.torn.assistant.persistence.service.FactionService;
+import com.torn.assistant.utils.DateUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.scheduling.annotation.Scheduled;
@@ -198,10 +199,19 @@ public class FactionStatsService {
         }
     }
 
-    @Scheduled(cron = "${STATS_CRON:0 0 * * * ?}")
+    @Scheduled(cron = "${STATS_CRON:0 */5 * * * ?}")
     @Transactional
-    public void run() throws JsonProcessingException, TornApiAccessException {
-        for (Faction faction : factionDao.findByTrackContributionsIsTrue()) {
+    public void run()  {
+        run(false);
+    }
+
+    @Transactional
+    public void run(boolean force) {
+        LocalDateTime fetchedAt = LocalDateTime.now().withSecond(0).withNano(0);
+        List<Faction> factions = force? factionDao.findByTrackContributionsIsTrue() :
+                factionDao.findByTrackContributionsIsTrueAndTrackContributionsLastRunBeforeOrTrackContributionsIsTrueAndTrackContributionsLastRunIsNull(DateUtils.toDate(fetchedAt.withMinute(0)));
+
+        for (Faction faction : factions) {
             logger.info("Updating contribution stats for {}", faction.getName());
             Set<String> apiKeys = faction.getApiKey();
 
@@ -211,47 +221,51 @@ public class FactionStatsService {
             }
 
             ContributionHistory contributionHistory = new ContributionHistory(faction);
-            LocalDateTime fetchedAt = LocalDateTime.now().withSecond(0).withNano(0);
-
             Map<Long, UserContribution> userContributionMap = new HashMap<>();
 
-            Contribution speedContribution = getContribution(getRandomElement(apiKeys), faction.getId(), Stat.SPEED);
-            Contribution dexterityContribution = getContribution(getRandomElement(apiKeys), faction.getId(), Stat.DEXTERITY);
-            Contribution strengthContribution = getContribution(getRandomElement(apiKeys), faction.getId(), Stat.STRENGTH);
-            Contribution defenceContribution = getContribution(getRandomElement(apiKeys), faction.getId(), Stat.DEFENCE);
+            try {
+                Contribution speedContribution = getContribution(getRandomElement(apiKeys), faction.getId(), Stat.SPEED);
+                Contribution dexterityContribution = getContribution(getRandomElement(apiKeys), faction.getId(), Stat.DEXTERITY);
+                Contribution strengthContribution = getContribution(getRandomElement(apiKeys), faction.getId(), Stat.STRENGTH);
+                Contribution defenceContribution = getContribution(getRandomElement(apiKeys), faction.getId(), Stat.DEFENCE);
 
-            speedContribution.getContributors().forEach(
-                    contributor -> {
-                        UserContribution userContribution = getUserContribution(faction, userContributionMap, contributor);
-                        userContribution.setGymSpeed(contributor.getContribution());
-                    }
-            );
+                speedContribution.getContributors().forEach(
+                        contributor -> {
+                            UserContribution userContribution = getUserContribution(faction, userContributionMap, contributor);
+                            userContribution.setGymSpeed(contributor.getContribution());
+                        }
+                );
 
-            dexterityContribution.getContributors().forEach(
-                    contributor -> {
-                        UserContribution userContribution = getUserContribution(faction, userContributionMap, contributor);
-                        userContribution.setGymDexterity(contributor.getContribution());
-                    }
-            );
+                dexterityContribution.getContributors().forEach(
+                        contributor -> {
+                            UserContribution userContribution = getUserContribution(faction, userContributionMap, contributor);
+                            userContribution.setGymDexterity(contributor.getContribution());
+                        }
+                );
 
-            strengthContribution.getContributors().forEach(
-                    contributor -> {
-                        UserContribution userContribution = getUserContribution(faction, userContributionMap, contributor);
-                        userContribution.setGymStrength(contributor.getContribution());
-                    }
-            );
+                strengthContribution.getContributors().forEach(
+                        contributor -> {
+                            UserContribution userContribution = getUserContribution(faction, userContributionMap, contributor);
+                            userContribution.setGymStrength(contributor.getContribution());
+                        }
+                );
 
-            defenceContribution.getContributors().forEach(
-                    contributor -> {
-                        UserContribution userContribution = getUserContribution(faction, userContributionMap, contributor);
-                        userContribution.setGymDefence(contributor.getContribution());
-                    }
-            );
+                defenceContribution.getContributors().forEach(
+                        contributor -> {
+                            UserContribution userContribution = getUserContribution(faction, userContributionMap, contributor);
+                            userContribution.setGymDefence(contributor.getContribution());
+                        }
+                );
 
-            contributionHistory.setUserActivities(new ArrayList<>(userContributionMap.values()));
-            contributionHistory.setFetchedAt(fetchedAt);
+                contributionHistory.setUserActivities(new ArrayList<>(userContributionMap.values()));
+                contributionHistory.setFetchedAt(fetchedAt);
+                faction.setTrackContributionsLastRun(new Date());
 
-            contributionHistoryDao.save(contributionHistory);
+                contributionHistoryDao.save(contributionHistory);
+                factionDao.save(faction);
+            } catch (JsonProcessingException | TornApiAccessException e) {
+                logger.info("Unable to fetch data from API for faction {}", faction.getName(), e);
+            }
         }
     }
 

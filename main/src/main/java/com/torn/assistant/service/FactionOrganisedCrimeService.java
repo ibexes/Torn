@@ -23,11 +23,13 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Comparator;
 import java.util.Date;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
 import static com.torn.api.client.FactionApiClient.getOrganisedCrimes;
+import static com.torn.assistant.persistence.service.UserService.convertToUserDto;
 import static com.torn.assistant.utils.CollectionUtils.getRandomElement;
 
 @Service
@@ -60,7 +62,7 @@ public class FactionOrganisedCrimeService {
                 .stream()
                 .map(organisedCrime -> organisedCrime.getParticipants()
                         .stream()
-                        .map(userService::convertToUserDto)
+                        .map(UserService::convertToUserDto)
                         .collect(Collectors.toSet()))
                 .flatMap(Collection::stream)
                 .distinct()
@@ -94,15 +96,15 @@ public class FactionOrganisedCrimeService {
             OrganisedCrimeStatDTO statDTO = summaryDTO.getStats().get(organisedCrime.getCrimeType());
 
             organisedCrimeDTO.setPlannedAt(organisedCrime.getPlannedAt());
-            organisedCrimeDTO.setPlannedBy(userService.convertToUserDto(organisedCrime.getPlannedBy()));
+            organisedCrimeDTO.setPlannedBy(convertToUserDto(organisedCrime.getPlannedBy()));
             organisedCrime.getParticipants().forEach(user -> {
-                organisedCrimeDTO.getParticipants().add(userService.convertToUserDto(user));
+                organisedCrimeDTO.getParticipants().add(convertToUserDto(user));
             });
 
             if (Boolean.TRUE.equals(organisedCrime.getInitiated())) {
                 statDTO.getHistory().add(organisedCrimeDTO);
                 organisedCrimeDTO.setInitiatedAt(organisedCrime.getInitiatedAt());
-                organisedCrimeDTO.setInitiatedBy(userService.convertToUserDto(organisedCrime.getInitiatedBy()));
+                organisedCrimeDTO.setInitiatedBy(convertToUserDto(organisedCrime.getInitiatedBy()));
 
                 statDTO.setAttempts(statDTO.getAttempts() + 1);
                 if (Boolean.TRUE.equals(organisedCrime.getSuccess())) {
@@ -120,42 +122,64 @@ public class FactionOrganisedCrimeService {
 
     @Scheduled(cron = "${ORGANISED_CRIME_CRON:0 30 * * * ?}")
     @Transactional
-    public void run() throws JsonProcessingException, TornApiAccessException {
+    public void run() {
         for (Faction faction : factionDao.findByTrackOrganisedCrimesIsTrue()) {
             logger.info("Updating OCs for {}", faction.getName());
             if (faction.getApiKey().isEmpty()) {
                 logger.warn("There are no api keys for {}", faction.getName());
                 continue;
             }
-            List<com.torn.api.model.faction.OrganisedCrime> organisedCrimeList = getOrganisedCrimes(getRandomElement(faction.getApiKey()));
-            for (com.torn.api.model.faction.OrganisedCrime organisedCrime : organisedCrimeList) {
-                OrganisedCrime organisedCrimeEntity = new OrganisedCrime();
-                organisedCrimeEntity.setId(organisedCrime.getId());
-                organisedCrimeEntity.setCrimeType(organisedCrime.getCrimeType());
-                organisedCrimeEntity.setInitiated(organisedCrime.getInitiated());
-                if (organisedCrime.getInitiated()) {
-                    organisedCrimeEntity.setInitiatedAt(organisedCrime.getInitiatedAt());
-                    organisedCrimeEntity.setInitiatedBy(userService.findByUserId(organisedCrime.getInitiatedBy())
-                            .orElse(new User(organisedCrime.getInitiatedBy(), "unknown user")));
-                    organisedCrimeEntity.setSuccess(organisedCrime.getSuccess());
-                    organisedCrimeEntity.setRespectGained(organisedCrime.getRespectGained());
-                    organisedCrimeEntity.setMoneyGained(organisedCrime.getMoneyGained());
-                }
-                organisedCrimeEntity.setPlannedAt(organisedCrime.getPlannedAt());
-                organisedCrimeEntity.setPlannedBy(userService.findByUserId(organisedCrime.getPlannedBy())
-                        .orElse(new User(organisedCrime.getPlannedBy(), "unknown user")));
-                organisedCrimeEntity.setReadyAt(organisedCrime.getReadyAt());
-                organisedCrimeEntity.setFaction(faction);
 
-                List<User> participants = new ArrayList<>();
-                for (Long userId : organisedCrime.getParticipants()) {
-                    User user = userService.findByUserId(userId).orElse(new User(userId, "unknown user"));
-                    participants.add(user);
-                }
+            try {
+                List<com.torn.api.model.faction.OrganisedCrime> organisedCrimeList = getOrganisedCrimes(getRandomElement(faction.getApiKey()));
+                for (com.torn.api.model.faction.OrganisedCrime organisedCrime : organisedCrimeList) {
+                    OrganisedCrime organisedCrimeEntity = new OrganisedCrime();
+                    organisedCrimeEntity.setId(organisedCrime.getId());
+                    organisedCrimeEntity.setCrimeType(organisedCrime.getCrimeType());
+                    organisedCrimeEntity.setInitiated(organisedCrime.getInitiated());
+                    if (organisedCrime.getInitiated()) {
+                        organisedCrimeEntity.setInitiatedAt(organisedCrime.getInitiatedAt());
+                        organisedCrimeEntity.setInitiatedBy(userService.findByUserId(organisedCrime.getInitiatedBy())
+                                .orElse(new User(organisedCrime.getInitiatedBy(), "unknown user")));
+                        organisedCrimeEntity.setSuccess(organisedCrime.getSuccess());
+                        organisedCrimeEntity.setRespectGained(organisedCrime.getRespectGained());
+                        organisedCrimeEntity.setMoneyGained(organisedCrime.getMoneyGained());
+                    }
+                    organisedCrimeEntity.setPlannedAt(organisedCrime.getPlannedAt());
+                    organisedCrimeEntity.setPlannedBy(userService.findByUserId(organisedCrime.getPlannedBy())
+                            .orElse(new User(organisedCrime.getPlannedBy(), "unknown user")));
+                    organisedCrimeEntity.setReadyAt(organisedCrime.getReadyAt());
+                    organisedCrimeEntity.setFaction(faction);
 
-                organisedCrimeEntity.setParticipants(participants);
-                organisedCrimeDao.save(organisedCrimeEntity);
+                    List<User> participants = new ArrayList<>();
+                    for (Long userId : organisedCrime.getParticipants()) {
+                        User user = userService.findByUserId(userId).orElse(new User(userId, "unknown user"));
+                        participants.add(user);
+                    }
+
+                    organisedCrimeEntity.setParticipants(participants);
+                    organisedCrimeDao.save(organisedCrimeEntity);
+                }
+            } catch (JsonProcessingException | TornApiAccessException e) {
+                logger.info("Unable to fetch data from API for faction {}", faction.getName(), e);
             }
         }
+    }
+
+    public List<UserDTO> getPredictedRankings(String username) {
+        Faction faction = factionService.getFaction(username);
+        List<OrganisedCrime> organisedCrimes = organisedCrimeDao.findByFactionOrderByCrimeTypeDesc(faction);
+
+        List<UserDTO> rankings = new LinkedList<>();
+        for(OrganisedCrime organisedCrime : organisedCrimes) {
+            List<User> participants = organisedCrime.getParticipants();
+            for (User participant : participants) {
+                UserDTO userDTO = convertToUserDto(participant);
+                if (!rankings.contains(userDTO)) {
+                    rankings.add(userDTO);
+                }
+            }
+        }
+        return rankings;
     }
 }

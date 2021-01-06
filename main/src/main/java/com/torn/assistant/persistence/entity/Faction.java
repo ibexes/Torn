@@ -4,6 +4,7 @@ import javax.persistence.Column;
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import java.util.Date;
 import java.util.Objects;
 import java.util.Set;
 
@@ -19,6 +20,8 @@ public class Faction {
     private Boolean trackContributions;
 
     private Boolean trackOrganisedCrimes;
+
+    private Date trackContributionsLastRun;
 
     @ElementCollection
     private Set<String> apiKey;
@@ -62,6 +65,14 @@ public class Faction {
 
     public void setTrackOrganisedCrimes(Boolean trackOrganisedCrimes) {
         this.trackOrganisedCrimes = trackOrganisedCrimes;
+    }
+
+    public Date getTrackContributionsLastRun() {
+        return trackContributionsLastRun;
+    }
+
+    public void setTrackContributionsLastRun(Date trackContributionsLastRun) {
+        this.trackContributionsLastRun = trackContributionsLastRun;
     }
 
     @Override

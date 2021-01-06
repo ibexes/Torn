@@ -1,7 +1,5 @@
 package com.torn.assistant.controller;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.torn.api.model.exceptions.TornApiAccessException;
 import com.torn.assistant.model.dto.OrganisedCrimeSummaryDTO;
 import com.torn.assistant.model.dto.UserDTO;
 import com.torn.assistant.service.FactionOrganisedCrimeService;
@@ -28,7 +26,7 @@ public class FactionCrimesController {
 
     @PreAuthorize("hasRole('ROLE_ADMIN')")
     @GetMapping("/api/faction/ocs/poll")
-    public void poll() throws JsonProcessingException, TornApiAccessException {
+    public void poll() {
         logger.info("Manual OC poll invoked");
         factionOrganisedCrimeService.run();
     }
@@ -57,5 +55,10 @@ public class FactionCrimesController {
                                                            @PathVariable @DateTimeFormat(pattern = "yyyy-MM-dd'T'HH:mm") Date end) {
         logger.info("Getting OC summary between {} and {} for {}", start, end, principal.getName());
         return factionOrganisedCrimeService.getCrimesSummary(principal.getName(), start, end);
+    }
+
+    @GetMapping("/api/faction/ocs/rankings")
+    public List<UserDTO> getPredictedRanking(Principal principal) {
+        return factionOrganisedCrimeService.getPredictedRankings(principal.getName());
     }
 }

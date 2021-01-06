@@ -20,8 +20,8 @@ public class UserService {
         this.factionDao = factionDao;
     }
 
-    public UserDTO convertToUserDto(User user) {
-        if(user != null) {
+    public static UserDTO convertToUserDto(User user) {
+        if (user != null) {
             UserDTO userDTO = new UserDTO();
             userDTO.setName(user.getName());
             userDTO.setUserId(user.getUserId());
@@ -32,7 +32,7 @@ public class UserService {
 
     public UserDTO getUserDto(Long userId) {
         Optional<User> user = findByUserId(userId);
-        if(user.isPresent()) {
+        if (user.isPresent()) {
             UserDTO userDTO = new UserDTO();
             userDTO.setName(user.get().getName());
             userDTO.setUserId(userId);
