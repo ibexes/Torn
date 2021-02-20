@@ -4,6 +4,7 @@ import org.apache.catalina.Context;
 import org.apache.catalina.connector.Connector;
 import org.apache.tomcat.util.descriptor.web.SecurityCollection;
 import org.apache.tomcat.util.descriptor.web.SecurityConstraint;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory;
 import org.springframework.boot.web.servlet.server.ServletWebServerFactory;
 import org.springframework.context.annotation.Bean;
@@ -14,7 +15,8 @@ import org.springframework.context.annotation.Profile;
 @Profile("https")
 public class ServerConfig {
     @Bean
-    public ServletWebServerFactory servletContainer() {
+    public ServletWebServerFactory servletContainer(@Value("${server.port.http:8080}") int redirectPort,
+                                                    @Value("${server.port:8443}") int serverPort) {
         TomcatServletWebServerFactory tomcat = new TomcatServletWebServerFactory() {
             @Override
             protected void postProcessContext(Context context) {
@@ -26,16 +28,16 @@ public class ServerConfig {
                 context.addConstraint(securityConstraint);
             }
         };
-        tomcat.addAdditionalTomcatConnectors(redirectConnector());
+        tomcat.addAdditionalTomcatConnectors(redirectConnector(redirectPort, serverPort));
         return tomcat;
     }
 
-    private Connector redirectConnector() {
+    private Connector redirectConnector(int port, int httpsPort) {
         Connector connector = new Connector(TomcatServletWebServerFactory.DEFAULT_PROTOCOL);
         connector.setScheme("http");
-        connector.setPort(80);
+        connector.setPort(port);
         connector.setSecure(false);
-        connector.setRedirectPort(443);
+        connector.setRedirectPort(httpsPort);
         return connector;
     }
 }

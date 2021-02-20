@@ -189,7 +189,7 @@ public class FactionStatsService {
 
             for (Member member : members) {
                 User user = this.userDao.findByUserId(member.getUserId()).orElse(new User());
-                if (user.getName() == null || user.getUserId() == null || !faction.equals(user.getFaction())) {
+                if (user.getName() == null || user.getName().equals("unknown user") || user.getUserId() == null || !faction.equals(user.getFaction())) {
                     user.setName(member.getName());
                     user.setUserId(member.getUserId());
                     user.setFaction(faction);
