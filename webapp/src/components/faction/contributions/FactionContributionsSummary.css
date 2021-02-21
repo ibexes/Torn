@@ -1,0 +1,15 @@
+.table-control {
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.date-picker-container {
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+}
+
+.not-in-faction {
+    background: #e5ffff;
+}
