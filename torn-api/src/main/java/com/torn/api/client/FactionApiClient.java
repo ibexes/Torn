@@ -4,6 +4,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import com.torn.api.model.exceptions.TornApiAccessException;
+import com.torn.api.model.faction.AttackLog;
 import com.torn.api.model.faction.Contribution;
 import com.torn.api.model.faction.Contributor;
 import com.torn.api.model.faction.Member;
@@ -18,6 +19,7 @@ import java.util.List;
 
 import static com.torn.api.model.faction.OrganisedCrimeType.convertToOrganisedCrimeType;
 import static com.torn.api.utils.JsonConverter.convertJsonToList;
+import static com.torn.api.utils.JsonConverter.convertToAttackLog;
 import static com.torn.api.utils.JsonConverter.convertToDate;
 import static com.torn.api.utils.JsonConverter.convertToJson;
 import static com.torn.api.utils.JsonConverter.convertToMember;
@@ -25,6 +27,14 @@ import static com.torn.api.utils.JsonConverter.convertToMember;
 public class FactionApiClient {
     private FactionApiClient() {
 
+    }
+
+    public static List<AttackLog> getAttacksFull(String key) throws JsonProcessingException, TornApiAccessException {
+        String url = "https://api.torn.com/faction/?selections=attacks&key=" + key;
+        RestTemplate restTemplate = new RestTemplate();
+
+        ResponseEntity<String> response = restTemplate.getForEntity(url, String.class);
+        return convertToAttackLogList(convertToJson(response.getBody()));
     }
 
     public static List<Member> getMembers(String key) throws JsonProcessingException, TornApiAccessException {
@@ -87,6 +97,20 @@ public class FactionApiClient {
             organisedCrimes.add(organisedCrime);
         }
         return organisedCrimes;
+    }
+
+
+    static  List<AttackLog> convertToAttackLogList(JsonNode jsonNode) {
+        JsonNode attacks = jsonNode.get("attacks");
+        List<AttackLog> attackLogs = new ArrayList<>();
+
+        for (Iterator<String> it = attacks.fieldNames(); it.hasNext(); ) {
+            String id = it.next();
+            JsonNode attackNode = attacks.get(id);
+            attackLogs.add(convertToAttackLog(attackNode));
+        }
+
+        return attackLogs;
     }
 
     static List<Member> convertToMemberList(JsonNode jsonNode) {

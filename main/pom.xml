@@ -67,6 +67,11 @@
             <version>${version}</version>
         </dependency>
 
+        <dependency>
+            <groupId>io.github.mineflash07</groupId>
+            <artifactId>discord-webhook</artifactId>
+            <version>1.0.1</version>
+        </dependency>
     </dependencies>
 
     <build>

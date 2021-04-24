@@ -5,6 +5,7 @@ import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import java.util.Date;
+import java.util.List;
 import java.util.Objects;
 import java.util.Set;
 
@@ -20,6 +21,11 @@ public class Faction {
     private Boolean trackContributions;
 
     private Boolean trackOrganisedCrimes;
+
+    private Boolean trackAttacks;
+
+    @ElementCollection
+    private List<String> attacksWebhooks;
 
     private Date trackContributionsLastRun;
 
@@ -73,6 +79,22 @@ public class Faction {
 
     public void setTrackContributionsLastRun(Date trackContributionsLastRun) {
         this.trackContributionsLastRun = trackContributionsLastRun;
+    }
+
+    public Boolean getTrackAttacks() {
+        return trackAttacks;
+    }
+
+    public void setTrackAttacks(Boolean trackAttacks) {
+        this.trackAttacks = trackAttacks;
+    }
+
+    public List<String> getAttacksWebhooks() {
+        return attacksWebhooks;
+    }
+
+    public void setAttacksWebhooks(List<String> attacksWebhooks) {
+        this.attacksWebhooks = attacksWebhooks;
     }
 
     @Override
