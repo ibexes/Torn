@@ -61,6 +61,15 @@ public class FactionApiClient {
         return convertToMemberList(convertToJson(response.getBody()));
     }
 
+    public static List<Member> getMembers(String key, Long factionId) throws JsonProcessingException, TornApiAccessException {
+        String url = "https://api.torn.com/faction/"+factionId+"?selections=timestamp,basic&key=" + key;
+        RestTemplate restTemplate = new RestTemplate();
+
+        ResponseEntity<String> response = restTemplate.getForEntity(url, String.class);
+
+        return convertToMemberList(convertToJson(response.getBody()));
+    }
+
     public static Contribution getContribution(String key, Long factionId, Stat stat) throws JsonProcessingException, TornApiAccessException {
         String url = "https://api.torn.com/faction/" + factionId + "?selections=timestamp,basic,contributors&stat=" + stat.getValue() + "&key=" + key;
         RestTemplate restTemplate = new RestTemplate();

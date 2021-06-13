@@ -11,6 +11,7 @@ import com.torn.api.model.exceptions.TornApiAccessException;
 import com.torn.api.model.faction.AttackLog;
 import com.torn.api.model.faction.AttackType;
 import com.torn.api.model.faction.Member;
+import com.torn.api.model.faction.Player;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -26,7 +27,7 @@ public class JsonConverter {
             if (root.get("error").get("code").asInt() == 2) {
                 throw new IncorrectKeyException();
             }
-            if (root.get("code").get("code").asInt() == 7) {
+            if (root.get("error").get("code").asInt() == 7) {
                 throw new InvalidAccessException("'Incorrect ID-entity relation' : A requested selection is private");
             }
             throw new TornApiAccessException("Error in response " + root.get("error"));
@@ -43,6 +44,20 @@ public class JsonConverter {
         } catch (IOException e) {
             return new ArrayList<>();
         }
+    }
+
+    public static Player convertToPlayer(JsonNode jsonNode) {
+        Player player = new Player();
+        player.setUserId(jsonNode.get("player_id").asLong());
+        player.setName(jsonNode.get("name").asText());
+        player.setLevel(jsonNode.get("level").asLong());
+        player.setXanax(jsonNode.get("personalstats").get("xantaken").asLong());
+        player.setAttacks(jsonNode.get("personalstats").get("attackswon").asLong());
+        player.setEnergyRefill(jsonNode.get("personalstats").get("refills").asLong());
+        player.setFactionId(jsonNode.get("faction").get("faction_id").asLong());
+        player.setTimestamp(convertToDate(jsonNode.get("timestamp").asLong()));
+        player.setLastAction(convertToDate(jsonNode.get("last_action").get("timestamp").asLong()));
+        return player;
     }
 
     public static Member convertToMember(String userId, JsonNode memberNode) {

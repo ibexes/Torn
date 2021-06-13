@@ -59,7 +59,7 @@ public class FactionGymController {
     @GetMapping("/api/faction/contributions/poll")
     public void poll() {
         logger.info("Manual poll invoked");
-        factionStatsService.run();
+        factionStatsService.run(false);
     }
 
     @PreAuthorize("hasRole('ROLE_ADMIN')")

@@ -21,7 +21,6 @@ import com.torn.assistant.persistence.service.FactionService;
 import com.torn.assistant.utils.DateUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
@@ -197,12 +196,6 @@ public class FactionStatsService {
                 }
             }
         }
-    }
-
-    @Scheduled(cron = "${STATS_CRON:0 */5 * * * ?}")
-    @Transactional
-    public void run()  {
-        run(false);
     }
 
     @Transactional

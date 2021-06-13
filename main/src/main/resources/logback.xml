@@ -20,6 +20,9 @@
         </encoder>
     </appender>
 
+    <Logger name="org.hibernate.engine.jdbc.spi.SqlExceptionHelper" level="OFF" additivity="false">
+
+    </Logger>
 
     <root level="INFO">
         <appender-ref ref="STDOUT" />

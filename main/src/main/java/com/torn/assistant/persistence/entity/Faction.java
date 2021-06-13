@@ -24,6 +24,8 @@ public class Faction {
 
     private Boolean trackAttacks;
 
+    private Boolean trackStats;
+
     @ElementCollection
     private List<String> attacksWebhooks;
 
@@ -95,6 +97,14 @@ public class Faction {
 
     public void setAttacksWebhooks(List<String> attacksWebhooks) {
         this.attacksWebhooks = attacksWebhooks;
+    }
+
+    public Boolean getTrackStats() {
+        return trackStats;
+    }
+
+    public void setTrackStats(Boolean trackStats) {
+        this.trackStats = trackStats;
     }
 
     @Override

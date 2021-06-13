@@ -7,6 +7,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
+import javax.persistence.Version;
 
 @Entity
 public class User {
@@ -24,6 +25,9 @@ public class User {
 
     @OneToOne(fetch = FetchType.LAZY)
     private Faction faction;
+
+    @Version
+    private Long version;
 
     public User() {
     }
@@ -71,5 +75,13 @@ public class User {
 
     public void setFaction(Faction faction) {
         this.faction = faction;
+    }
+
+    public Long getVersion() {
+        return version;
+    }
+
+    public void setVersion(Long version) {
+        this.version = version;
     }
 }
