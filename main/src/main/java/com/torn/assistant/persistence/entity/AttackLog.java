@@ -34,6 +34,10 @@ public class AttackLog {
     private String log;
     private Date initiated;
 
+    private Double fairFight;
+    private Integer chain;
+    private Double respect;
+
     public Long getId() {
         return id;
     }
@@ -104,6 +108,30 @@ public class AttackLog {
 
     public void setInitiated(Date initiated) {
         this.initiated = initiated;
+    }
+
+    public Double getFairFight() {
+        return fairFight;
+    }
+
+    public void setFairFight(Double fairFight) {
+        this.fairFight = fairFight;
+    }
+
+    public Integer getChain() {
+        return chain;
+    }
+
+    public void setChain(Integer chain) {
+        this.chain = chain;
+    }
+
+    public Double getRespect() {
+        return respect;
+    }
+
+    public void setRespect(Double respect) {
+        this.respect = respect;
     }
 
     @Override

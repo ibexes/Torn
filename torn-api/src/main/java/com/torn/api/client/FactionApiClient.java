@@ -10,12 +10,15 @@ import com.torn.api.model.faction.Contributor;
 import com.torn.api.model.faction.Member;
 import com.torn.api.model.faction.OrganisedCrime;
 import com.torn.api.model.faction.Stat;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Random;
 
 import static com.torn.api.model.faction.OrganisedCrimeType.convertToOrganisedCrimeType;
 import static com.torn.api.utils.JsonConverter.convertJsonToList;
@@ -25,8 +28,20 @@ import static com.torn.api.utils.JsonConverter.convertToJson;
 import static com.torn.api.utils.JsonConverter.convertToMember;
 
 public class FactionApiClient {
+    private static final Logger logger = LoggerFactory.getLogger(FactionApiClient.class);
     private FactionApiClient() {
 
+    }
+
+    public static List<AttackLog> getAttacksFullBetween(String key, String from, String to)
+            throws JsonProcessingException, TornApiAccessException {
+        String url = "https://api.torn.com/faction/?selections=basic,attacks&from=" + from + "&to=" + to + "&key=" + key + "&v=" +
+                new Random().nextInt(1000000);
+        logger.info("Accessing {}", url);
+        RestTemplate restTemplate = new RestTemplate();
+
+        ResponseEntity<String> response = restTemplate.getForEntity(url, String.class);
+        return convertToAttackLogList(convertToJson(response.getBody()));
     }
 
     public static List<AttackLog> getAttacksFull(String key) throws JsonProcessingException, TornApiAccessException {

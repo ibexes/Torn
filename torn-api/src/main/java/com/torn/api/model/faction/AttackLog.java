@@ -8,13 +8,17 @@ public class AttackLog {
     private String attacker;
     private Long attackerId;
     private Long attackerFaction;
+    private String attackerFactionName;
     private String defender;
     private Long defenderId;
     private Long defenderFaction;
+    private String defenderFactionName;
     private AttackType attackType;
     private Boolean stealth;
     private Date initiated;
     private Double respect;
+    private Double fairFight;
+    private Integer chain;
 
     public String getLog() {
         return log;
@@ -102,5 +106,37 @@ public class AttackLog {
 
     public void setDefender(String defender) {
         this.defender = defender;
+    }
+
+    public String getAttackerFactionName() {
+        return attackerFactionName;
+    }
+
+    public void setAttackerFactionName(String attackerFactionName) {
+        this.attackerFactionName = attackerFactionName;
+    }
+
+    public String getDefenderFactionName() {
+        return defenderFactionName;
+    }
+
+    public void setDefenderFactionName(String defenderFactionName) {
+        this.defenderFactionName = defenderFactionName;
+    }
+
+    public Double getFairFight() {
+        return fairFight;
+    }
+
+    public void setFairFight(Double fairFight) {
+        this.fairFight = fairFight;
+    }
+
+    public Integer getChain() {
+        return chain;
+    }
+
+    public void setChain(Integer chain) {
+        this.chain = chain;
     }
 }

@@ -100,6 +100,8 @@ public class FactionApiClientTest {
         assertEquals(914502, selectedAttackLogList.get(0).getDefenderId());
         assertEquals(8151, selectedAttackLogList.get(0).getDefenderFaction());
         assertEquals(MUGGED, selectedAttackLogList.get(0).getAttackType());
+        assertEquals(1, selectedAttackLogList.get(0).getChain());
+        assertEquals(1.53, selectedAttackLogList.get(0).getFairFight());
         assertTrue(selectedAttackLogList.get(0).getStealth());
     }
 }

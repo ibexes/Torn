@@ -69,7 +69,12 @@ public class JsonConverter {
         attackLog.setInitiated(convertToDate(jsonNode.get("timestamp_started").asLong()));
         attackLog.setStealth(jsonNode.get("stealthed").asBoolean());
         attackLog.setAttacker(jsonNode.get("attacker_name").asText());
+        attackLog.setAttackerFactionName(jsonNode.get("attacker_factionname").asText());
         attackLog.setDefender(jsonNode.get("defender_name").asText());
+        attackLog.setDefenderFactionName(jsonNode.get("defender_factionname").asText());
+        attackLog.setFairFight(jsonNode.get("modifiers").get("fair_fight").asDouble());
+        attackLog.setChain(jsonNode.get("chain").asInt());
+        attackLog.setRespect(jsonNode.get("respect").asDouble());
         return attackLog;
     }
 
