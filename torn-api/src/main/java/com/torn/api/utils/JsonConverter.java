@@ -55,6 +55,7 @@ public class JsonConverter {
         player.setAttacks(jsonNode.get("personalstats").get("attackswon").asLong());
         player.setEnergyRefill(jsonNode.get("personalstats").get("refills").asLong());
         player.setFactionId(jsonNode.get("faction").get("faction_id").asLong());
+        player.setTotalCrimes(jsonNode.get("criminalrecord").get("total").asLong());
         player.setTimestamp(convertToDate(jsonNode.get("timestamp").asLong()));
         player.setLastAction(convertToDate(jsonNode.get("last_action").get("timestamp").asLong()));
         return player;

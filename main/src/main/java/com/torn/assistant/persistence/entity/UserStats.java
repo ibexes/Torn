@@ -1,6 +1,5 @@
 package com.torn.assistant.persistence.entity;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -12,7 +11,7 @@ import javax.persistence.UniqueConstraint;
 import java.util.Date;
 
 @Entity
-@Table(name = "USER_STATS", uniqueConstraints={@UniqueConstraint(columnNames={"USER_ID", "LAST_ACTION"})})
+@Table(name = "USER_STATS", uniqueConstraints={@UniqueConstraint(columnNames={"USER_ID", "USER_ACTIVITY"})})
 public class UserStats {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -30,8 +29,11 @@ public class UserStats {
 
     private Long energyRefill;
 
-    @Column(name = "LAST_ACTION")
-    private Date lastAction;
+    private Long totalCrimes;
+
+    @ManyToOne
+    @JoinColumn(name = "USER_ACTIVITY", nullable = false)
+    private UserActivity userActivity;
 
     public UserStats() {
     }
@@ -88,11 +90,19 @@ public class UserStats {
         this.energyRefill = energyRefill;
     }
 
-    public Date getLastAction() {
-        return lastAction;
+    public UserActivity getUserActivity() {
+        return userActivity;
     }
 
-    public void setLastAction(Date lastAction) {
-        this.lastAction = lastAction;
+    public void setUserActivity(UserActivity userActivity) {
+        this.userActivity = userActivity;
+    }
+
+    public Long getTotalCrimes() {
+        return totalCrimes;
+    }
+
+    public void setTotalCrimes(Long totalCrimes) {
+        this.totalCrimes = totalCrimes;
     }
 }

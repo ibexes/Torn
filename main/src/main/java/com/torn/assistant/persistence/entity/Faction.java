@@ -4,6 +4,7 @@ import javax.persistence.Column;
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Version;
 import java.util.Date;
 import java.util.List;
 import java.util.Objects;
@@ -26,10 +27,19 @@ public class Faction {
 
     private Boolean trackStats;
 
+    private Boolean trackActivity;
+
     @ElementCollection
     private List<String> attacksWebhooks;
 
     private Date trackContributionsLastRun;
+
+    private Long chain;
+
+    private Date updateTimestamp;
+
+    @Version
+    private Long version;
 
     @ElementCollection
     private Set<String> apiKey;
@@ -105,6 +115,38 @@ public class Faction {
 
     public void setTrackStats(Boolean trackStats) {
         this.trackStats = trackStats;
+    }
+
+    public Boolean getTrackActivity() {
+        return trackActivity;
+    }
+
+    public void setTrackActivity(Boolean trackActivity) {
+        this.trackActivity = trackActivity;
+    }
+
+    public Long getChain() {
+        return chain;
+    }
+
+    public void setChain(Long chain) {
+        this.chain = chain;
+    }
+
+    public Date getUpdateTimestamp() {
+        return updateTimestamp;
+    }
+
+    public void setUpdateTimestamp(Date updateTimestamp) {
+        this.updateTimestamp = updateTimestamp;
+    }
+
+    public Long getVersion() {
+        return version;
+    }
+
+    public void setVersion(Long version) {
+        this.version = version;
     }
 
     @Override

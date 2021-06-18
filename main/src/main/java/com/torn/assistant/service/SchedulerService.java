@@ -4,38 +4,48 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.torn.api.model.exceptions.TornApiAccessException;
 import com.torn.api.model.faction.Member;
 import com.torn.assistant.persistence.dao.FactionDao;
-import com.torn.assistant.persistence.dao.SettingsDao;
+import com.torn.assistant.persistence.dao.UserDao;
 import com.torn.assistant.persistence.entity.Faction;
 import com.torn.assistant.persistence.entity.Settings;
+import com.torn.assistant.persistence.entity.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
-import java.time.LocalDateTime;
-import java.time.temporal.ChronoUnit;
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
+import java.util.concurrent.Callable;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.atomic.AtomicInteger;
 
 import static com.torn.api.client.FactionApiClient.getMembers;
 
 @Service
 public class SchedulerService {
     private static final Logger logger = LoggerFactory.getLogger(SchedulerService.class);
-    private static final Double USAGE_CAPACITY = 0.6; // use 60%
-    private final SettingsDao settingsDao;
     private final FactionDao factionDao;
+    private final UserDao userDao;
     private final PlayerTrackerService playerTrackerService;
     private final FactionStatsService factionStatsService;
+    private final TornApiService tornApiService;
+    private final ExecutorService es;
 
-    public SchedulerService(SettingsDao settingsDao, FactionDao factionDao, PlayerTrackerService playerTrackerService,
-                            FactionStatsService factionStatsService) {
-        this.settingsDao = settingsDao;
+    public SchedulerService(FactionDao factionDao, UserDao userDao, PlayerTrackerService playerTrackerService,
+                            FactionStatsService factionStatsService, TornApiService tornApiService,
+                            @Value("${activity.threads:4}") int threads) {
         this.factionDao = factionDao;
+        this.userDao = userDao;
         this.playerTrackerService = playerTrackerService;
         this.factionStatsService = factionStatsService;
+        this.tornApiService = tornApiService;
+        this.es = Executors.newFixedThreadPool(threads);
     }
 
     @Scheduled(cron = "${STATS_CRON:0 */5 * * * ?}")
@@ -44,10 +54,53 @@ public class SchedulerService {
         factionStatsService.run(false);
     }
 
-    @Scheduled(cron = "${TRACKER_CRON:0 */15 * * * ?}")
+    @Scheduled(cron = "${ACTIVITY_CRON:0 */5 * * * ?}")
+    @Transactional
+    public void processFactionActivity() throws InterruptedException {
+        AtomicInteger count = new AtomicInteger();
+        Settings settings = tornApiService.getSettings();
+        List<Faction> factions = factionDao.findByTrackActivityTrue();
+
+        List<Callable<Object>> todo = new ArrayList<>(factions.size());
+
+        if (settings.getApiKeys().isEmpty()) {
+            logger.warn("There are no api keys in settings, skipping activity tracking");
+            return;
+        }
+
+        for (Faction faction : factions) {
+            todo.add(Executors.callable(() -> {
+                logger.info("Tracking player activity for {}", faction.getName());
+                try {
+                    Date now = new Date();
+                    List<Member> memberList = getMembers(tornApiService.getApiKey(settings), faction.getId());
+                    for (Member member : memberList) {
+                        try {
+                            playerTrackerService.trackActivity(member.getUserId(), member.getName(), member.getLastAction(), now);
+                            playerTrackerService.updateFaction(member.getUserId(), member.getName(), member.getFactionId());
+                            count.getAndIncrement();
+                        } catch (DataIntegrityViolationException ignored) {
+
+                        } catch (Exception e) {
+                            logger.error("error processing user {}", member.getName(), e);
+                        }
+                    }
+                } catch (JsonProcessingException | TornApiAccessException | InterruptedException e) {
+                    logger.error("error processing faction {}", faction.getName(), e);
+                }
+            }));
+        }
+
+        es.invokeAll(todo);
+
+        logger.info("Processed {} people activity this iteration", count.get());
+    }
+
+    @Scheduled(cron = "${TRACKER_CRON:30 0 * * * ?}")
     @Transactional
     public void processFactions() throws InterruptedException {
-        Settings settings = getSettings();
+        int count = 0;
+        Settings settings = tornApiService.getSettings();
         for (Faction faction : factionDao.findByTrackStatsTrue()) {
             logger.info("Tracking player stats for {}", faction.getName());
             if (settings.getApiKeys().isEmpty()) {
@@ -56,10 +109,19 @@ public class SchedulerService {
             }
 
             try {
-                List<Member> memberList = getMembers(getApiKey(settings), faction.getId());
+                List<Member> memberList = getMembers(tornApiService.getApiKey(settings), faction.getId());
                 for (Member member : memberList) {
                     try {
-                        playerTrackerService.processUser(member.getUserId(), getApiKey(settings));
+                        // skip them if their last action was the same or before the one we got
+                        Optional<User> user = userDao.findByUserId(member.getUserId());
+                        if(user.isPresent()) {
+                            if (user.get().getLastAction() != null &&
+                                    member.getLastAction().compareTo(user.get().getLastAction()) == 0) {
+                                continue;
+                            }
+                        }
+                        playerTrackerService.processUser(member.getUserId(), tornApiService.getApiKey(settings));
+                        count++;
                     } catch (DataIntegrityViolationException ignored) {
 
                     } catch (Exception e) {
@@ -70,21 +132,6 @@ public class SchedulerService {
                 logger.error("error processing faction {}", faction.getName(), e);
             }
         }
-        settingsDao.save(settings);
-    }
-
-    private String getApiKey(Settings settings) throws InterruptedException {
-        settings.getStart();
-        if (settings.getCount() >= Math.round(settings.getApiKeys().size() * 100 * USAGE_CAPACITY)) {
-            long sleep = LocalDateTime.now().until(settings.getStart().plusMinutes(1), ChronoUnit.MILLIS);
-            logger.info("Called api {} times, sleeping for {}", settings.getCount(), sleep);
-            Thread.sleep(sleep);
-        }
-        return settings.getApiKey();
-    }
-
-    private Settings getSettings() {
-        Optional<Settings> settings = settingsDao.findById(1L);
-        return settings.orElseGet(() -> settingsDao.save(new Settings()));
+        logger.info("Processed {} people personal stats this iteration", count);
     }
 }

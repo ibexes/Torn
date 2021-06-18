@@ -35,4 +35,8 @@ public class FactionService {
     public List<User> getMembers(Long factionId) {
         return userDao.findByFactionEquals(factionDao.findById(factionId).orElse(null));
     }
+
+    public Faction getFaction(Long factionId) {
+        return factionDao.findById(factionId).orElse(null);
+    }
 }

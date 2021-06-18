@@ -73,7 +73,7 @@ public class FactionAttackMonitorService {
     @Transactional
     public void fetchUpdates() {
         for (Faction faction : factionDao.findByTrackAttacksTrue()) {
-            logger.info("Updating attacks for {}", faction.getName());
+            logger.debug("Updating attacks for {}", faction.getName());
             if (faction.getApiKey().isEmpty()) {
                 logger.warn("There are no api keys for {}", faction.getName());
                 continue;

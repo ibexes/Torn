@@ -12,4 +12,5 @@ public interface FactionDao extends JpaRepository<Faction, Long> {
     List<Faction> findByTrackOrganisedCrimesIsTrue();
     List<Faction> findByTrackAttacksTrue();
     List<Faction> findByTrackStatsTrue();
+    List<Faction> findByTrackActivityTrue();
 }

@@ -8,6 +8,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
 import javax.persistence.Version;
+import java.util.Date;
+import java.util.Objects;
 
 @Entity
 public class User {
@@ -25,6 +27,8 @@ public class User {
 
     @OneToOne(fetch = FetchType.LAZY)
     private Faction faction;
+
+    private Date lastAction;
 
     @Version
     private Long version;
@@ -77,11 +81,32 @@ public class User {
         this.faction = faction;
     }
 
+    public Date getLastAction() {
+        return lastAction;
+    }
+
+    public void setLastAction(Date lastAction) {
+        this.lastAction = lastAction;
+    }
+
     public Long getVersion() {
         return version;
     }
 
     public void setVersion(Long version) {
         this.version = version;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        User user = (User) o;
+        return Objects.equals(id, user.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
     }
 }

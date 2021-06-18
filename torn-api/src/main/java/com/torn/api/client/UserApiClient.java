@@ -15,7 +15,7 @@ public class UserApiClient {
     }
 
     public static Player getPlayerDetails(String key, Long id) throws JsonProcessingException, TornApiAccessException {
-        String url = "https://api.torn.com/user/"+id+"?selections=profile,personalstats,timestamp&key=" + key;
+        String url = "https://api.torn.com/user/"+id+"?selections=profile,personalstats,crimes,timestamp&key=" + key;
         RestTemplate restTemplate = new RestTemplate();
 
         ResponseEntity<String> response = restTemplate.getForEntity(url, String.class);

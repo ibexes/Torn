@@ -12,6 +12,7 @@ public class Player implements Serializable {
     private Long xanax;
     private Long level;
     private Long attacks;
+    private Long totalCrimes;
     private Date timestamp;
 
     public Long getUserId() {
@@ -84,5 +85,13 @@ public class Player implements Serializable {
 
     public void setAttacks(Long attacks) {
         this.attacks = attacks;
+    }
+
+    public Long getTotalCrimes() {
+        return totalCrimes;
+    }
+
+    public void setTotalCrimes(Long totalCrimes) {
+        this.totalCrimes = totalCrimes;
     }
 }
