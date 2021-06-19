@@ -1,0 +1,71 @@
+.activity-table th, .activity-table .date {
+    border: black solid 1px;
+    padding: 2px 0px;
+}
+
+.activity-table td {
+    border: #d6d6d6 solid 1px;
+    padding: 0;
+    margin: 0;
+}
+
+.lbl {
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+}
+
+.activity-table {
+    border: black double 1px;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 0;
+}
+
+.activity-table tr :last-child {
+    border-right: none;
+}
+
+.active {
+    background: red;
+}
+
+.activity-button-group {
+
+}
+
+.activity-container {
+    width: fit-content;
+}
+
+.title-wrapper {
+    padding: 14px 0px 4px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: bold;
+    vertical-align: center;
+}
+
+.hour {
+    width: 4px;
+    height: 12px;
+    display: inline-block;
+}
+
+.date {
+    min-width: 100px;
+}
+
+.cell {
+    min-width: 48px;
+    max-height: 12px;
+}
+
+.button {
+    cursor: pointer;
+}
