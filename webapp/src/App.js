@@ -4,7 +4,6 @@ import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import {Helmet} from 'react-helmet';
 import FactionContributions from "./components/faction/contributions/FactionContributions";
 import OrganisedCrimes from "./components/faction/organisedcrimes/OrganisedCrimes";
-import DayActivityTable from "./components/faction/activity/DayActivityTable";
 import UserActivity from "./components/faction/activity/UserActivity";
 
 function App() {
