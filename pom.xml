@@ -20,7 +20,7 @@
         <frontend-src-dir>${project.basedir}/webapp</frontend-src-dir>
         <node.version>v12.3.1</node.version>
         <install-dir>target</install-dir>
-        <spring.boot.version>2.3.7.RELEASE</spring.boot.version>
+        <spring.boot.version>2.4.2</spring.boot.version>
     </properties>
 
     <repositories>
